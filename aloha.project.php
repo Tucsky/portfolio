@@ -1,2 +1,0 @@
-<p>Invoices, billing, purchases, sales, inventory, business operations and human resources management, all in one web app.</p>
-<p>The website has been crafted from scratch using mostly the Laravel framework. I made everything from desiging the UI to the general backend structure, through most of the JS component required for the a best experience and user-friendliness.</p>

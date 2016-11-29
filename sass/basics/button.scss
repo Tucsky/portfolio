@@ -7,6 +7,22 @@
 		transition: all 0.25s cubic-bezier(0.34,1.61,0.7,1);
 		cursor: pointer;
 	} 
+
+	i:first-child {
+		position: relative;
+		left: -2px;
+	}
+
+	i:last-child {
+		position: relative;
+		right: -2px;
+	}
+
+	&.btn-sm {
+		i:first-child {
+			top: 1px;
+		}
+	}
 }
 
 .btn-primary { @include button-variant(#fff, $brand-primary, $brand-primary); }

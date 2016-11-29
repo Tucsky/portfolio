@@ -1,43 +1,52 @@
 [{
 	"name": "Aloha",
-	"description": "Lorem Ipsum\nDSFSDFDS",
+	"description": "Invoices, billing, purchases, sales, inventory, business operations and human resources management, all in one web app.<br><br>
+	The website has been crafted from scratch using mostly the Laravel framework. I made everything from desiging the UI to the general backend structure, through most of the JS component required for the a best experience and user-friendliness.",
 	"tags": ["laravel", "jquery", "charts", "dompdf"],
 	"date": "2015",
 	"active": true
 },{
 	"name": "Neural Network",
-	"description": "The simplest neural network",
+	"description": "A simple neural network implementation featuring the Backward Propagation and the sigmoid function for activation.<br><br>Made in vanilla JS for a school exercise.",
 	"tags": ["jsfiddle", "javascript", "vanilla", "school"],
-	"date": "2016"
+	"date": "2016",
+	"url": "https://jsfiddle.net/Tucsky/sL1wx816/"
 },{
 	"name": "Honi",
-	"description": "Lorem Ipsum\nDSFSDFDS",
+	"description": "Honi is a free mobile application for couples allowing them to spice up their everyday's life by doing some missions.",
 	"tags": ["laravel", "angular", "parse server"],
 	"date": "2015",
-	"active": true
+	"active": true,
+	"url": "https://gethoni.com"
 },{
 	"name": "Xavier William",
-	"description": "Lorem Ipsum\nDSFSDFDS",
-	"tags": ["laravel", "jquery", "parse"],
-	"date": "2016"
+	"description": "Musician, singer et composer <i>pop/variété française</i> (french pop). A website showcasing 4 albums, including a player, audio visualiser, svg animations, and a one click album checkout using stripe.",
+	"tags": ["laravel", "webaudioapi", "stripe"],
+	"date": "2016",
+	"url": "https://xavierwilliam.com"
 },{
 	"name": "Gooey Effect",
-	"description": "Lorem Ipsum\nDSFSDFDS",
+	"description": "A demonstration of the svg filters effect, through a pleasing drawing experiment only made with the help of vanilla JS.<br><br>Feel free to explore the different presets or play with the settings !",
 	"tags": ["svg", "canvas", "interactive", "codepen.io"],
-	"date": "2015"
+	"date": "2015",
+	"url": "https://codepen.io/tucsky/full/zvRzBO"
 },{
 	"name": "Andesol",
-	"description": "Lorem Ipsum\nDSFSDFDS",
+	"description": "A corporate website made for the mushroom wholesaler Andesol. I imagined the visuals, then built the website with wordpress.",
 	"tags": ["wordpress"],
-	"date": "2015"
+	"date": "2015",
+	"url": "http://andesol.fr/"
 },{
 	"name": "Snorkeling Report",
-	"description": "Lorem Ipsum\nDSFSDFDS",
-	"tags": ["wordpress", "d3.js"],
-	"date": "2015"
+	"description": "",
+	"tags": ["wordpress", "d3.js", "buddypress"],
+	"date": "2015",
+	"url": "http://snorkeling-report.com"
 },{
 	"name": "Flap.IO",
-	"description": "Lorem Ipsum\nDSFSDFDS",
+	"slug": "flapio",
+	"description": "A fun Socket.IO + HTML Canvas experiement I made based on the game Flappy Bird which consisted in playing the original game but this time going all multiplayer !",
 	"tags": ["node.js", "socket.io", "canvas"],
-	"date": "2014"
+	"date": "2014",
+	"url": "https://kevinrostagni.me/flap.io"
 }]

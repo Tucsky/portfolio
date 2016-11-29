@@ -1,7 +1,9 @@
 <?php 
 	$projects = array();
 
-	foreach (json_decode(file_get_contents('projects.json')) ?: array() as $index => $project) {
+	$raw = preg_replace("/\t/", "", preg_replace("/\n/", "", file_get_contents('projects.json')));
+
+	foreach (json_decode($raw) ?: array() as $index => $project) {
 		if (!isset($project->name))
 			continue;
 
@@ -26,6 +28,12 @@
 
 		if (!isset($project->date))
 			$project->date = date('Y');
+
+		if (isset($project->url)) {
+			$domain = str_ireplace('www.', '', parse_url($project->url, PHP_URL_HOST));
+			$path = parse_url($project->url, PHP_URL_PATH);
+			$project->_url = $domain.(mb_strlen(trim($path)) > 1 ? (mb_strlen($path) > 10 ? substr($path, 0, 10).'...' : $path) : '');
+		}
 
 		$project->active = isset($project->active) && $project->active;
 
@@ -87,10 +95,10 @@
 		</div>
 		<div id="top">
 			<nav class="nav nav-inline">
-				<a class="nav-link active" href="#">Who Am I ?</a>
-				<a class="nav-link" href="#">Experiences</a>
-				<a class="nav-link" href="#">Portfolio</a>
-				<a class="nav-link disabled" href="#">Get In Touch</a>
+				<a class="nav-link active" href="#whoiam">Who Am I ?</a>
+				<a class="nav-link" href="#experiences">Experiences</a>
+				<a class="nav-link" href="#portfolio">Portfolio</a>
+				<a class="nav-link" href="#contact">Get In Touch</a>
 			</nav>
 		</div>
 		<div id="hi">
@@ -106,7 +114,11 @@
 					<div class="col-xs-12 col-sm-8"><p>I'm an avid programmer from France, passinate about code, design, startup and technology. I like science, travelling and music.</p></div>
 					<div class="col-xs-12 col-sm-8 offset-sm-4"><div class="sub">What I do ?</div><p>I craft websites since the age of 13, build mobile applications, manage servers, design innovative user interfaces / experiences, and will transform your ideas into a finished digital project.</p></div>
 				</div>
-				<p class="attention text-xs-center"><span class="sub">Oh</span> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever, contact me :-) !</p>
+				<p class="attention text-xs-center"><span class="sub">Oh</span> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever,<br><br>
+					<a href="#contact" class="btn btn-outline-info"><i class="icon-chat"></i> Contact me :-)</a>
+					<span class="text-dark"> or </span>
+					<a target="_blank" href="cv_kevinrostagni.pdf" class="btn btn-outline-danger"><i class="icon-cloud-download"></i> Download my CV</a>
+				</p>
 			</div>
 		</section>
 		<section id="experiences" class="section-odd">
@@ -131,7 +143,7 @@
 								<li>Business development</li>
 								<li>Digital entrepreneurship</li>
 							</ul>
-							<a href="#0" class="btn btn-dark btn-tilt">Read more</a>
+							<!--<a href="#0" class="btn btn-dark btn-tilt">Read more</a>-->
 						</div>
 					</div>
 
@@ -144,7 +156,7 @@
 							<span class="timeline-date">2015</span>
 							<h3>Web developer at <a href="https://orangerine.com">Orangerine</a></h3>
 							<p>Development & integration of the website dedicated to the Quebec Manufacturing Fund</p>
-							<a href="#0" class="btn btn-dark btn-tilt">Read more</a>
+							<!--<a href="#0" class="btn btn-dark btn-tilt">Read more</a>-->
 						</div>
 					</div>
 					<div class="timeline-block" style="display:none;"></div>
@@ -155,9 +167,9 @@
 
 						<div class="timeline-content">
 							<span class="timeline-date">2015</span>
-							<h3>Web developer at <a href="#">Hypractif</a></h3>
+							<h3>Web developer at <a href="http://hypractif.ca">Hypractif</a></h3>
 							<p>Development of a free-sharing art website (mostly backend w/ Laravel), web-design & integration of several showcase websites and prototyped a shopify e-commerce website</p>
-							<a href="#0" class="btn btn-dark btn-tilt">Read more</a>
+							<!--<a href="#0" class="btn btn-dark btn-tilt">Read more</a>-->
 						</div>
 					</div>
 
@@ -177,7 +189,7 @@
 								<li>Digital project management</li>
 								<li>Team-leading</li>
 							</ul>
-							<a href="#0" class="btn btn-dark btn-tilt">Read more</a>
+							<!--<a href="#0" class="btn btn-dark btn-tilt">Read more</a>-->
 						</div>
 					</div>
 
@@ -219,7 +231,7 @@
 									<a data-dialog="<?php echo $project->slug; ?>" href="#" class="project-thumbnail">
 										<div style="background-image:url('<?php echo $project->cover; ?>');"></div>
 									</a>
-									<a href="#" class="btn btn-outline-white project-title"><?php echo $project->name; ?></a>
+									<a data-dialog="<?php echo $project->slug; ?>" href="#" class="btn btn-outline-white project-title"><?php echo $project->name; ?></a>
 									<span class="project-date"><?php echo $project->date.($project->active ? '+ <i class="icon-bolt text-danger" data-toggle="tooltip" title="Active"></i>' : ''); ?></span>
 								</div>
 							</div>
@@ -256,23 +268,33 @@
 				<?php endif; ?>
 				<div class="dialog-padding">
 					<div class="row">
-						<div class="col-xs-12 col-sm-9">
+						<div class="col-xs-12 col-sm-9 project-left">
 							<h2><?php echo $project->name; ?></h2>
 							<?php if (isset($project->description)):
 								if (file_exists($project->slug.'.project.php')):
 									include $project->slug.'.project.php';
 								else: ?>
 								<p><?php echo nl2br($project->description); ?></p>
+								<?php if (isset($project->url)): ?>
+									<a target="_blank" href="<?php echo $project->url; ?>" class="btn btn-sm btn-dark"><i class="icon-link"></i> <?php echo $project->_url; ?></a>
+								<?php endif; ?>
 							<?php endif; 
 							endif; ?>
 						</div>
-						<?php if ($project->tags): ?>
-							<div class="col-xs-12 col-sm-3 text-xs-left text-sm-right tags">
-								<?php foreach ($project->tags as $tag): 
-									?><button class="btn btn-sm btn-primary btn-tilt"><?php echo $tag; ?></button><?php 
-								endforeach; ?>
+						<div class="col-xs-12 col-sm-3 text-xs-left text-sm-right project-right">
+							<ul class="meta">
+								<?php if (isset($project->url)): ?>
+									<li><a target="_blank" href="<?php echo $project->url; ?>"><?php echo $project->_url; ?> <i class="icon-link"></i></a></li>
+								<?php endif; ?>
+							</ul>
+							<?php if ($project->tags): ?>
+								<div class="tags">
+									<?php foreach ($project->tags as $tag): 
+										?><button class="btn btn-sm btn-primary btn-tilt"><?php echo $tag; ?></button><?php 
+									endforeach; ?>
+								</div>
+							<?php endif; ?>
 							</div>
-						<?php endif; ?>
 					</div>
 				</div>
 			</div>

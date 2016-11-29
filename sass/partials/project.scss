@@ -5,7 +5,7 @@
 	}
 	
 	.screenshots {
-		background-color: $gray-lightest;
+		//background-color: $gray-lightest;
 		border-radius: 4px 4px 0 0;
 		overflow: hidden;
 		height: 50vh;
@@ -21,7 +21,7 @@
 
 		.flickity-slider {
 			> div {
-				background-position: center center;
+				background-position: top center;
 				background-size: cover;
 				width: 100%;
 				height: 100%;
@@ -84,6 +84,35 @@
 		font-weight: 700;
 		color: black;
 		text-shadow: 4px 4px #ffffff, 8px 8px rgba(black, .1);
+	}
+
+	.project-left {
+		margin-bottom: 15px;
+	}
+
+	.meta {
+		display: none;
+		padding: 0px;
+		margin: 0px;
+		li {
+			list-style: none;
+			padding: 0px;
+			float: right;
+
+			a {
+				text-decoration: none;
+				//color: $gray-light;
+				white-space: nowrap;
+			}
+
+			&:last-child {
+				margin-bottom: 15px;
+			}
+		}
+
+		@include media-breakpoint-up(sm) {
+			display: block;
+		}
 	}
 
 	.tags {

@@ -14,20 +14,6 @@ section {
 		}
 	}
 
-	.sub {
-		font-family: $font-family-sans-serif;
-		text-transform: uppercase;
-		font-weight: 700;
-		text-shadow: 2px 2px #f4f4f4, 4px 4px rgba(black, .1);
-	}
-
-	div.sub {
-		font-size: 1.5rem;
-		@include media-breakpoint-up(sm) {
-			font-size: 2rem;
-		}
-	}
-
 	p.attention {
 		margin: 1rem;
 		@include media-breakpoint-up(sm) {
