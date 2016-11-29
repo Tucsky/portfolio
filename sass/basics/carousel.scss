@@ -1,0 +1,121 @@
+@import 'vendor/flickity/dist/flickity';
+.flickity-prev-next-button {
+	background-color: transparent;
+	width: 30%;
+	top: 0;
+	transform: none;
+	border-radius: 0px;
+	height: 100%;
+	color: white;
+	transition: all .2s ease-in-out;
+
+	@include media-breakpoint-up(md) {
+		width: 15%;
+	}
+
+	&:before {
+		@include icon-styles;
+		font-size: 3rem;
+		color: white;
+		display: inline-block;
+		transition: all .2s $ease-elastic;
+	}
+
+	&.previous {
+		left: 0;
+		&:before {
+			content: icon-char(angle-left);
+		}
+	}
+	&.next {
+		right: 0;
+		&:before {
+			content: icon-char(angle-right);
+		}
+	}
+
+	&:hover {
+		background-color: rgba(black, .1);
+		&.previous:before {
+			transform: scale(1.1) translateX(-10%);
+		}
+		&.next:before {
+			transform: scale(1.1) translateX(10%);
+		}
+	}
+
+	&:active {
+		opacity: 1;
+
+		&.previous:before {
+			transform: scale(.9) translateX(-10%);
+		}
+		&.next:before {
+			transform: scale(.9) translateX(10%);
+		}
+	}
+
+	&[disabled], &.disabled {
+		opacity: 0;
+		cursor: auto;
+	}
+
+	svg {
+		display: none;
+	}
+
+	&, &:focus, &:active {
+		box-shadow: none;
+	}
+}
+/*
+.owl-carousel {
+	.owl-nav {
+		margin-top: 10px;
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		[class*='owl-'] {
+			@extend .btn;
+		}
+
+		.disabled {
+			opacity: .5;
+			cursor: default;
+		}
+	}
+
+	.owl-nav.disabled + .owl-dots {
+		margin-top: 10px;
+	}
+
+	.owl-dots {
+		text-align: center;
+		-webkit-tap-highlight-color: transparent;
+
+		.owl-dot {
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+
+			span {
+				width: 32px;
+				height: 32px;
+				margin: 10px;
+				background: $brand-primary;
+				display: block;
+				-webkit-backface-visibility: visible;
+				transition: opacity 200ms ease;
+				border-radius: 30px;
+			}
+
+			&.active,
+			&:hover {
+				span {
+					background: $brand-primary - 10%;
+				}
+			}
+		}
+	}
+}
+*/

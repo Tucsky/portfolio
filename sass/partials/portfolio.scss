@@ -1,0 +1,139 @@
+.grid {
+    margin-right: -2px;
+    margin-left: -2px;
+	.grid-item { 
+		padding: 0px 2px;
+		margin-bottom: 4px;
+		//padding: 0px;
+		/*width: 100%; 
+
+		@include media-breakpoint-up(sm) {
+			width: 50%;
+		}
+
+		@include media-breakpoint-up(md) {
+			width: (1/3*100)+%;
+		}*/
+
+		&.project-invert {
+			.project {
+				.project-title {
+					border-color: $body-color;
+					color: $body-color;
+				}
+
+				.project-date {
+					color: $body-color;
+				}
+
+				&:hover {
+					.project-title {
+						background-color: $body-color;
+						border-color: $body-color;
+						color: white;
+					}
+				}
+			}
+		}
+
+		&.one-one:before {
+			padding-top: 56.25%;
+
+			@include media-breakpoint-up(sm) {
+				padding-top: 75%;
+			}
+
+			@include media-breakpoint-up(md) {
+				padding-top: 100%;
+			}
+
+			@include media-breakpoint-up(lg) {
+				padding-top: 75%;
+			}
+		}
+
+		div.project {
+			display: block;
+			background-color: $brand-primary;
+			@include background-pattern();
+
+			> * {
+				position: absolute;
+			}
+
+			.project-date, .project-type {
+				top: 10px;
+				left: 10px;
+				font-family: $font-family-sans-serif;
+				color: white;
+			}
+
+			.project-date {
+				font-size: .8rem;
+				text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+
+				i {
+					text-shadow: 0 0 2px $brand-danger;
+					top: -1px;
+					position: relative;
+				}
+
+				@include media-breakpoint-up(lg) {
+					font-size: 1rem;
+				}
+			}
+
+			.project-type {
+				right: 0;
+				left: auto;
+				font-size: 2rem;
+				top: 0;
+				width: 3rem;
+				text-align: center;
+				opacity: .4;
+			}
+
+			.project-thumbnail {
+				display: block;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+
+				> div {
+					width: 100%;
+					height: 100%;
+					background-size: cover;
+					background-position: center center;
+					transition: transform .3s $ease-elastic-back;
+				}
+			}
+
+			.project-title {
+				bottom: 20px;
+				right: 20px;
+				max-width: calc(100% - 40px);
+				box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.1);
+				//transition: transform .3s $ease-elastic;
+				font-weight: 700;
+				text-transform: uppercase;
+				white-space: initial;
+				text-align: right;
+				text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1);
+			}
+
+			&:hover {
+				.project-thumbnail {
+					> div {
+						transform: scale(1.1);
+						transition: transform .2s $ease-elastic;
+					}
+				}
+				.project-title {
+					color: $body-color;
+					background-color: white;
+					text-shadow: none;
+				}
+			}
+		}
+	}
+}

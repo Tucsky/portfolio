@@ -1,0 +1,43 @@
+#motion {
+	i {
+		position: absolute;
+		color: rgba(black, .1);
+		font-size: 3rem;
+		display: inline-block;
+		transform: scale(0);
+		opacity: 0;
+		z-index: 0;
+		transition: transform .5s $ease-elastic, opacity .5s $ease-elastic, top 3s $ease-elastic;
+		pointer-events: none;
+		top: 0;
+		left: 0;
+
+		&.node-appearing {
+			transform: scale(1) rotateZ(0deg);
+			opacity: 1;
+
+			&:before {
+				animation: spin 20s linear infinite;
+				display: inline-block;
+			}
+
+			@for $i from 1 through 10 {
+				&.node-variant-#{$i} {
+					&:before {
+						animation-duration: (20 + random(30))+s;
+						animation-delay: (random(50) - 50)+s;
+					}
+				}
+			}
+		}
+
+		&.node-disappearing {
+			transform: scale(2);
+			opacity: 0;
+		}
+	}
+}
+
+@keyframes spin { 
+	100% { transform: rotateZ(360deg); } 
+}

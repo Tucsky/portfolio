@@ -1,0 +1,59 @@
+*:focus {
+	outline: none !important;
+}
+
+body {
+	font-family: $font-family-serif;
+	@if $pattern {
+		background-image: url(img/#{$pattern}.png);
+		background-position: center center;
+		@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
+			background-image: url(img/#{$pattern}2x.png);
+			background-size: 410px;
+		}
+	}
+}
+
+.container {
+	padding: 0 30px;
+	position: relative;
+	@include media-breakpoint-up(sm) {
+		padding: 0 15px;
+		width: 75%;
+	}
+	@include media-breakpoint-up(md) {
+		width: 50%;
+	}
+}
+
+.ratio {
+	position: relative;
+	display: block;
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+	}
+	> * {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+}
+
+.sixteen-nine {
+	@extend .ratio;
+	&:before { padding-top: 56.25%; }
+}
+
+.four-three {
+	@extend .ratio;
+	&:before { padding-top: 75%; }
+}
+
+.one-one {
+	@extend .ratio;
+	&:before { padding-top: 100%; }
+}

@@ -1,0 +1,43 @@
+{
+  "name": "flickity-bg-lazyload",
+  "description": "Flickity lazyload background images",
+  "main": "bg-lazyload.js",
+  "dependencies": {
+    "flickity": "^2.0.0",
+    "fizzy-ui-utils": "^2.0.2"
+  },
+  "devDependencies": {
+    "qunit": "^2.0.0"
+  },
+  "keywords": [
+    "flickity",
+    "background",
+    "lazyload",
+    "image"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/metafizzy/flickity-bg-lazyload",
+  "authors": [
+    "David DeSandro"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "sandbox",
+    "package.json"
+  ],
+  "version": "1.0.0",
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "6b618a55df8dec2a9bb21ca6022ae7c124eb48e0"
+  },
+  "_source": "https://github.com/metafizzy/flickity-bg-lazyload.git",
+  "_target": "^1.0.0",
+  "_originalSource": "flickity-bg-lazyload",
+  "_direct": true
+}

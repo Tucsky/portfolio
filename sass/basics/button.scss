@@ -1,0 +1,31 @@
+.btn {
+	font-family: $font-family-sans-serif;
+	border-width: 2px;
+
+	&.btn-tilt {
+		transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+		transition: all 0.25s cubic-bezier(0.34,1.61,0.7,1);
+		cursor: pointer;
+	} 
+}
+
+.btn-primary { @include button-variant(#fff, $brand-primary, $brand-primary); }
+.btn-outline-primary { @include button-outline-variant($brand-primary); }
+
+.btn-success { @include button-variant(#fff, $brand-success, $brand-success); }
+.btn-outline-success { @include button-outline-variant($brand-success); }
+
+.btn-warning { @include button-variant(#fff, $brand-warning, $brand-warning); }
+.btn-outline-warning { @include button-outline-variant($brand-warning); }
+
+.btn-info { @include button-variant(#fff, $brand-info, $brand-info); }
+.btn-outline-info { @include button-outline-variant($brand-info); }
+
+.btn-danger { @include button-variant(#fff, $brand-danger, $brand-danger); }
+.btn-outline-danger { @include button-outline-variant($brand-danger); }
+
+.btn-dark { @include button-variant(#fff, $brand-dark, $brand-dark); }
+.btn-outline-dark { @include button-outline-variant($brand-dark); }
+
+.btn-white { @include button-variant($brand-dark, #fff, #fff); }
+.btn-outline-white { @include button-outline-variant(#fff, $body-color); }

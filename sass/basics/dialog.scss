@@ -1,0 +1,126 @@
+.dialog,
+.dialog-overlay {
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
+.dialog {
+    position: fixed;
+    z-index: 100;
+    display: none;
+	pointer-events: none;
+	padding: 20px;
+
+	.dialog-content {
+	    background: #fff;
+	    text-align: center;
+	    position: relative;
+	    z-index: 5;
+	    border-radius: 4px;
+	    max-width: 100%;
+	    opacity: 0;
+		transform: translateY(-10%);
+	    visibility: hidden;
+	    transition: all .5s $ease-elastic, visibility .2s linear 1s;
+
+		&, .dialog-padding {
+			padding: 2em;
+
+			@include media-breakpoint-up(sm) {
+				max-width: 90%;
+			}
+
+			@include media-breakpoint-up(md) {
+				max-width: 75%;
+				padding: 4em;
+			}
+		}
+
+		.dialog-padding {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		> h2 {
+			margin: 0;
+			font-weight: 400;
+			font-size: 2em;
+			padding: 0 0 1.5em;
+			margin: 0;
+			&:last-child {
+				padding-bottom: 0px;
+			}
+		}
+
+		p {
+			margin-left: auto;
+			margin-right: auto;
+			&:last-child {
+				margin-bottom: 0px;
+			}
+		}
+
+		&.content-borderless {
+			padding: 0px;
+		}
+	}
+
+	&.dialog-open {
+		pointer-events: auto;
+		overflow: auto;
+		.dialog-content {
+			transition: all .5s $ease-elastic .2s;
+			visibility: visible;
+		    transform: translateY(0%);
+		    opacity: 1;
+		}
+	}
+}
+
+.dialog-overlay {
+	position: fixed;
+	z-index: 1;
+	background: rgba(black, .9);
+	opacity: 0;
+	transition: opacity .2s ease-out .25s;
+	-webkit-backface-visibility: hidden;
+}
+
+.dialog-open .dialog-overlay {
+	opacity: 1;
+	pointer-events: auto;
+    overflow: auto;
+	transition: opacity .2s ease-in;
+}
+
+.dialog-toggle {
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	font-size: 1.5rem;
+	width: 40px;
+	height: 40px;
+	background-color: $brand-danger;
+	border-radius: 50%;
+	transition: all .3s $ease-elastic;
+	cursor: pointer;
+	transform: scale(1.3);
+	z-index: 2;
+	text-align: center;
+
+	&:before {
+		@include icon-styles;
+		vertical-align: middle;
+		content: icon-char(times);
+		position: relative;
+		color: white;
+		display: inline-block;
+	}
+
+	&:hover {
+		background-color: $brand-danger - 20%;
+		transform: scale(1.5);
+	}
+}

@@ -1,0 +1,305 @@
+$S: 320px;   
+$M: 768px;     
+$L: 1170px;     
+
+@mixin MQ($canvas) {
+	@if $canvas == S {
+		@media only screen and (min-width: $S) { @content; } 
+	}
+	@else if $canvas == M {
+		@media only screen and (min-width: $M) { @content; } 
+	}
+	@else if $canvas == L {
+		@media only screen and (min-width: $L) { @content; } 
+	}
+}
+
+@mixin border-radius($radius:.25em) {
+	border-radius: $radius;
+}
+
+$main-text: #7f8c97;
+$link: #acb7c0;
+$background: #e9f0f5;
+
+$color-1: #303e49; // blue dark
+$color-2: #c03b44; // red
+$color-3: #ffffff; // white
+$color-4: #75ce66; // green
+$color-5: #f0ca45; // yellow
+
+#timeline {
+	position: relative;
+	padding: 2em 0;
+	margin: {
+		top: 2em;
+		bottom: 2em;
+	}
+
+	&::before {
+		/* this is the vertical line */
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 18px;
+		height: 100%;
+		width: 4px;
+		background: rgba(white, .25);
+	}
+
+	@include MQ(L) {
+		margin: {
+			top: 3em;
+			bottom: 3em;
+		}
+
+		&::before {
+			left: 50%;
+			margin-left: -2px;
+		}
+	}
+}
+
+.timeline-block {
+	position: relative;
+	margin: 2em 0;
+	@include clearfix;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@include MQ(L) {
+		margin: 4em 0;
+
+		&:first-child {
+			margin-top: 0;
+		}
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.timeline-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	box-shadow: 0 0 0 4px $color-3, inset 0 2px 0 rgba(#000, .08), 0 3px 0 4px rgba(#000, .05) ;
+
+	i {
+		display: block;
+		padding: 6px 0;
+		font-size: 1.2rem;
+		text-align: center;
+		text-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+	}
+
+	&.timeline-picture {
+		background: $color-4;
+	}
+
+	&.timeline-movie {
+		background: $color-2;
+	}
+
+	&.timeline-location {
+		background: $color-5;
+	}
+
+	@include MQ(L) {
+		width: 60px;
+		height: 60px;
+		left: 50%;
+		margin-left: -30px;
+
+		i {
+			padding: 7px 0;
+			font-size: 1.9rem;
+		}
+
+		/* Force Hardware Acceleration in WebKit */
+		-webkit-transform: translateZ(0);
+		-webkit-backface-visibility: hidden;
+
+		.cssanimations &.is-hidden {
+			visibility: hidden;
+		}
+
+		.cssanimations &.bounce-in {
+			visibility: visible;
+			animation: timeline-bounce-1 .6s;
+		}
+	}
+}
+
+@keyframes timeline-bounce-1 {
+	0% {
+		opacity: 0;
+		transform: scale(.5);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale(1.2);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}
+
+.timeline-content {
+	position: relative;
+	margin-left: 60px;
+	background: $color-3;
+	padding: 1em;
+	clear: both;
+	color: $gray;
+
+	h3 {
+		font-family: $font-family-sans-serif;
+		color: $brand-dark;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+
+	.timeline-date {
+		display: inline-block;
+	}
+
+	p {
+		margin: 1em 0;
+	}
+
+	p:last-child, ul:last-child {
+		margin-bottom: 0px;
+	}
+
+	.btn {
+		float: right;
+	}
+
+	&:after {
+		content: ' ';
+		display: block;
+		clear: both;
+	}
+
+	.timeline-date {
+		float: right;
+		opacity: .7;
+		color: rgba(black, .5);
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 16px;
+		right: 100%;
+		height: 0;
+		width: 0;
+		border: 7px solid transparent;
+		border-right: 7px solid $color-3;
+	}
+
+	@include MQ(L) {
+		margin-left: 0;
+		padding: 1.6em;
+		width: 43%;
+
+		&::before {
+			top: 24px;
+			left: 100%;
+			border-color: transparent;
+			border-left-color: $color-3;
+		}
+
+		.timeline-date {
+			position: absolute;
+			width: 100%;
+			left: 130%;
+			top: 6px;
+			padding: .8em 0;
+		}
+
+		.timeline-block:nth-child(even) & {
+			float: right;
+
+			&::before {
+				top: 24px;
+				left: auto;
+				right: 100%;
+				border-color: transparent;
+				border-right-color: $color-3;
+			}
+
+			.read-more {
+				float: right;
+			}
+
+			.timeline-date {
+				left: auto;
+				right: 130%;
+				text-align: right;
+			}
+		}
+
+		.cssanimations &.is-hidden {
+			visibility: hidden;
+		}
+
+		.cssanimations &.bounce-in {
+			visibility: visible;
+			animation: timeline-bounce-2 .6s;
+		}
+	}
+}
+
+@include MQ(L) {
+	/* inverse bounce effect on even content blocks */
+	.cssanimations .timeline-block:nth-child(even) .timeline-content.bounce-in {
+		animation: timeline-bounce-2-inverse .6s;
+	}
+}
+
+@keyframes timeline-bounce-2 {
+	0% {
+		opacity: 0;
+		transform: translateX(-100px);
+	}
+
+	60% {
+		opacity: 1;
+		transform: translateX(20px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+
+@keyframes timeline-bounce-2-inverse {
+	0% {
+		opacity: 0;
+		transform: translateX(100px);
+	}
+
+	60% {
+		opacity: 1;
+		transform: translateX(-20px);
+	}
+
+	100% {
+		transform: translateX(0);
+	}
+}
+

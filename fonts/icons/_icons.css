@@ -1,0 +1,4208 @@
+@font-face {
+	font-family: "icons";
+	src: url('fonts/icons/icons.eot');
+	src: url('fonts/icons/icons.eot?#iefix') format('eot'),
+		url('fonts/icons/icons.woff2') format('woff2'),
+		url('fonts/icons/icons.woff') format('woff'),
+		url('fonts/icons/icons.ttf') format('truetype'),
+		url('fonts/icons/icons.svg#icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	// speak: none; // only necessary if not using the private unicode range (firstGlyph option)
+	text-decoration: none;
+	text-transform: none;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == 500px {
+		$char: "\E001";
+	}
+	@if $filename == adjust {
+		$char: "\E002";
+	}
+	@if $filename == adn {
+		$char: "\E003";
+	}
+	@if $filename == align-center {
+		$char: "\E004";
+	}
+	@if $filename == align-justify {
+		$char: "\E005";
+	}
+	@if $filename == align-left {
+		$char: "\E006";
+	}
+	@if $filename == align-right {
+		$char: "\E007";
+	}
+	@if $filename == amazon {
+		$char: "\E008";
+	}
+	@if $filename == ambulance {
+		$char: "\E009";
+	}
+	@if $filename == anchor {
+		$char: "\E00A";
+	}
+	@if $filename == android {
+		$char: "\E00B";
+	}
+	@if $filename == angellist {
+		$char: "\E00C";
+	}
+	@if $filename == angle-double-down {
+		$char: "\E00D";
+	}
+	@if $filename == angle-double-left {
+		$char: "\E00E";
+	}
+	@if $filename == angle-double-right {
+		$char: "\E00F";
+	}
+	@if $filename == angle-double-up {
+		$char: "\E010";
+	}
+	@if $filename == angle-down {
+		$char: "\E011";
+	}
+	@if $filename == angle-left {
+		$char: "\E012";
+	}
+	@if $filename == angle-right {
+		$char: "\E013";
+	}
+	@if $filename == angle-up {
+		$char: "\E014";
+	}
+	@if $filename == apple {
+		$char: "\E015";
+	}
+	@if $filename == archive {
+		$char: "\E016";
+	}
+	@if $filename == area-chart {
+		$char: "\E017";
+	}
+	@if $filename == arrow-circle-down {
+		$char: "\E018";
+	}
+	@if $filename == arrow-circle-left {
+		$char: "\E019";
+	}
+	@if $filename == arrow-circle-o-down {
+		$char: "\E01A";
+	}
+	@if $filename == arrow-circle-o-left {
+		$char: "\E01B";
+	}
+	@if $filename == arrow-circle-o-right {
+		$char: "\E01C";
+	}
+	@if $filename == arrow-circle-o-up {
+		$char: "\E01D";
+	}
+	@if $filename == arrow-circle-right {
+		$char: "\E01E";
+	}
+	@if $filename == arrow-circle-up {
+		$char: "\E01F";
+	}
+	@if $filename == arrow-down {
+		$char: "\E020";
+	}
+	@if $filename == arrow-left {
+		$char: "\E021";
+	}
+	@if $filename == arrow-right {
+		$char: "\E022";
+	}
+	@if $filename == arrow-up {
+		$char: "\E023";
+	}
+	@if $filename == arrows-alt {
+		$char: "\E024";
+	}
+	@if $filename == arrows-h {
+		$char: "\E025";
+	}
+	@if $filename == arrows-v {
+		$char: "\E026";
+	}
+	@if $filename == arrows {
+		$char: "\E027";
+	}
+	@if $filename == asterisk {
+		$char: "\E028";
+	}
+	@if $filename == at {
+		$char: "\E029";
+	}
+	@if $filename == automobile {
+		$char: "\E02A";
+	}
+	@if $filename == backward {
+		$char: "\E02B";
+	}
+	@if $filename == balance-scale {
+		$char: "\E02C";
+	}
+	@if $filename == ban {
+		$char: "\E02D";
+	}
+	@if $filename == bank {
+		$char: "\E02E";
+	}
+	@if $filename == bar-chart-o {
+		$char: "\E02F";
+	}
+	@if $filename == bar-chart {
+		$char: "\E030";
+	}
+	@if $filename == barcode {
+		$char: "\E031";
+	}
+	@if $filename == bars {
+		$char: "\E032";
+	}
+	@if $filename == battery-0 {
+		$char: "\E033";
+	}
+	@if $filename == battery-1 {
+		$char: "\E034";
+	}
+	@if $filename == battery-2 {
+		$char: "\E035";
+	}
+	@if $filename == battery-3 {
+		$char: "\E036";
+	}
+	@if $filename == battery-4 {
+		$char: "\E037";
+	}
+	@if $filename == battery-empty {
+		$char: "\E038";
+	}
+	@if $filename == battery-full {
+		$char: "\E039";
+	}
+	@if $filename == battery-half {
+		$char: "\E03A";
+	}
+	@if $filename == battery-quarter {
+		$char: "\E03B";
+	}
+	@if $filename == battery-three-quarters {
+		$char: "\E03C";
+	}
+	@if $filename == bed {
+		$char: "\E03D";
+	}
+	@if $filename == beer {
+		$char: "\E03E";
+	}
+	@if $filename == behance-square {
+		$char: "\E03F";
+	}
+	@if $filename == behance {
+		$char: "\E040";
+	}
+	@if $filename == bell-o {
+		$char: "\E041";
+	}
+	@if $filename == bell-slash-o {
+		$char: "\E042";
+	}
+	@if $filename == bell-slash {
+		$char: "\E043";
+	}
+	@if $filename == bell {
+		$char: "\E044";
+	}
+	@if $filename == bicycle {
+		$char: "\E045";
+	}
+	@if $filename == binoculars {
+		$char: "\E046";
+	}
+	@if $filename == birthday-cake {
+		$char: "\E047";
+	}
+	@if $filename == bitbucket-square {
+		$char: "\E048";
+	}
+	@if $filename == bitbucket {
+		$char: "\E049";
+	}
+	@if $filename == bitcoin {
+		$char: "\E04A";
+	}
+	@if $filename == black-tie {
+		$char: "\E04B";
+	}
+	@if $filename == bluetooth-b {
+		$char: "\E04C";
+	}
+	@if $filename == bluetooth {
+		$char: "\E04D";
+	}
+	@if $filename == bold {
+		$char: "\E04E";
+	}
+	@if $filename == bolt {
+		$char: "\E04F";
+	}
+	@if $filename == bomb {
+		$char: "\E050";
+	}
+	@if $filename == book {
+		$char: "\E051";
+	}
+	@if $filename == bookmark-o {
+		$char: "\E052";
+	}
+	@if $filename == bookmark {
+		$char: "\E053";
+	}
+	@if $filename == briefcase {
+		$char: "\E054";
+	}
+	@if $filename == btc {
+		$char: "\E055";
+	}
+	@if $filename == bug {
+		$char: "\E056";
+	}
+	@if $filename == building-o {
+		$char: "\E057";
+	}
+	@if $filename == building {
+		$char: "\E058";
+	}
+	@if $filename == bullhorn {
+		$char: "\E059";
+	}
+	@if $filename == bullseye {
+		$char: "\E05A";
+	}
+	@if $filename == bus {
+		$char: "\E05B";
+	}
+	@if $filename == buysellads {
+		$char: "\E05C";
+	}
+	@if $filename == cab {
+		$char: "\E05D";
+	}
+	@if $filename == calculator {
+		$char: "\E05E";
+	}
+	@if $filename == calendar-check-o {
+		$char: "\E05F";
+	}
+	@if $filename == calendar-minus-o {
+		$char: "\E060";
+	}
+	@if $filename == calendar-o {
+		$char: "\E061";
+	}
+	@if $filename == calendar-plus-o {
+		$char: "\E062";
+	}
+	@if $filename == calendar-times-o {
+		$char: "\E063";
+	}
+	@if $filename == calendar {
+		$char: "\E064";
+	}
+	@if $filename == camera-retro {
+		$char: "\E065";
+	}
+	@if $filename == camera {
+		$char: "\E066";
+	}
+	@if $filename == car {
+		$char: "\E067";
+	}
+	@if $filename == caret-down {
+		$char: "\E068";
+	}
+	@if $filename == caret-left {
+		$char: "\E069";
+	}
+	@if $filename == caret-right {
+		$char: "\E06A";
+	}
+	@if $filename == caret-square-o-down {
+		$char: "\E06B";
+	}
+	@if $filename == caret-square-o-left {
+		$char: "\E06C";
+	}
+	@if $filename == caret-square-o-right {
+		$char: "\E06D";
+	}
+	@if $filename == caret-square-o-up {
+		$char: "\E06E";
+	}
+	@if $filename == caret-up {
+		$char: "\E06F";
+	}
+	@if $filename == cart-arrow-down {
+		$char: "\E070";
+	}
+	@if $filename == cart-plus {
+		$char: "\E071";
+	}
+	@if $filename == cc-amex {
+		$char: "\E072";
+	}
+	@if $filename == cc-diners-club {
+		$char: "\E073";
+	}
+	@if $filename == cc-discover {
+		$char: "\E074";
+	}
+	@if $filename == cc-jcb {
+		$char: "\E075";
+	}
+	@if $filename == cc-mastercard {
+		$char: "\E076";
+	}
+	@if $filename == cc-paypal {
+		$char: "\E077";
+	}
+	@if $filename == cc-stripe {
+		$char: "\E078";
+	}
+	@if $filename == cc-visa {
+		$char: "\E079";
+	}
+	@if $filename == cc {
+		$char: "\E07A";
+	}
+	@if $filename == certificate {
+		$char: "\E07B";
+	}
+	@if $filename == chain-broken {
+		$char: "\E07C";
+	}
+	@if $filename == chain {
+		$char: "\E07D";
+	}
+	@if $filename == check-circle-o {
+		$char: "\E07E";
+	}
+	@if $filename == check-circle {
+		$char: "\E07F";
+	}
+	@if $filename == check-square-o {
+		$char: "\E080";
+	}
+	@if $filename == check-square {
+		$char: "\E081";
+	}
+	@if $filename == check {
+		$char: "\E082";
+	}
+	@if $filename == chevron-circle-down {
+		$char: "\E083";
+	}
+	@if $filename == chevron-circle-left {
+		$char: "\E084";
+	}
+	@if $filename == chevron-circle-right {
+		$char: "\E085";
+	}
+	@if $filename == chevron-circle-up {
+		$char: "\E086";
+	}
+	@if $filename == chevron-down {
+		$char: "\E087";
+	}
+	@if $filename == chevron-left {
+		$char: "\E088";
+	}
+	@if $filename == chevron-right {
+		$char: "\E089";
+	}
+	@if $filename == chevron-up {
+		$char: "\E08A";
+	}
+	@if $filename == child {
+		$char: "\E08B";
+	}
+	@if $filename == chrome {
+		$char: "\E08C";
+	}
+	@if $filename == circle-o-notch {
+		$char: "\E08D";
+	}
+	@if $filename == circle-o {
+		$char: "\E08E";
+	}
+	@if $filename == circle-thin {
+		$char: "\E08F";
+	}
+	@if $filename == circle {
+		$char: "\E090";
+	}
+	@if $filename == clipboard {
+		$char: "\E091";
+	}
+	@if $filename == clock-o {
+		$char: "\E092";
+	}
+	@if $filename == clone {
+		$char: "\E093";
+	}
+	@if $filename == close {
+		$char: "\E094";
+	}
+	@if $filename == cloud-download {
+		$char: "\E095";
+	}
+	@if $filename == cloud-upload {
+		$char: "\E096";
+	}
+	@if $filename == cloud {
+		$char: "\E097";
+	}
+	@if $filename == cny {
+		$char: "\E098";
+	}
+	@if $filename == code-fork {
+		$char: "\E099";
+	}
+	@if $filename == code {
+		$char: "\E09A";
+	}
+	@if $filename == codepen {
+		$char: "\E09B";
+	}
+	@if $filename == codiepie {
+		$char: "\E09C";
+	}
+	@if $filename == coffee {
+		$char: "\E09D";
+	}
+	@if $filename == cog {
+		$char: "\E09E";
+	}
+	@if $filename == cogs {
+		$char: "\E09F";
+	}
+	@if $filename == columns {
+		$char: "\E0A0";
+	}
+	@if $filename == comment-o {
+		$char: "\E0A1";
+	}
+	@if $filename == comment {
+		$char: "\E0A2";
+	}
+	@if $filename == commenting-o {
+		$char: "\E0A3";
+	}
+	@if $filename == commenting {
+		$char: "\E0A4";
+	}
+	@if $filename == comments-o {
+		$char: "\E0A5";
+	}
+	@if $filename == comments {
+		$char: "\E0A6";
+	}
+	@if $filename == compass {
+		$char: "\E0A7";
+	}
+	@if $filename == compress {
+		$char: "\E0A8";
+	}
+	@if $filename == connectdevelop {
+		$char: "\E0A9";
+	}
+	@if $filename == contao {
+		$char: "\E0AA";
+	}
+	@if $filename == copy {
+		$char: "\E0AB";
+	}
+	@if $filename == copyright {
+		$char: "\E0AC";
+	}
+	@if $filename == creative-commons {
+		$char: "\E0AD";
+	}
+	@if $filename == credit-card-alt {
+		$char: "\E0AE";
+	}
+	@if $filename == credit-card {
+		$char: "\E0AF";
+	}
+	@if $filename == crop {
+		$char: "\E0B0";
+	}
+	@if $filename == crosshairs {
+		$char: "\E0B1";
+	}
+	@if $filename == css3 {
+		$char: "\E0B2";
+	}
+	@if $filename == cube {
+		$char: "\E0B3";
+	}
+	@if $filename == cubes {
+		$char: "\E0B4";
+	}
+	@if $filename == cut {
+		$char: "\E0B5";
+	}
+	@if $filename == cutlery {
+		$char: "\E0B6";
+	}
+	@if $filename == dashboard {
+		$char: "\E0B7";
+	}
+	@if $filename == dashcube {
+		$char: "\E0B8";
+	}
+	@if $filename == database {
+		$char: "\E0B9";
+	}
+	@if $filename == dedent {
+		$char: "\E0BA";
+	}
+	@if $filename == delicious {
+		$char: "\E0BB";
+	}
+	@if $filename == desktop {
+		$char: "\E0BC";
+	}
+	@if $filename == deviantart {
+		$char: "\E0BD";
+	}
+	@if $filename == diamond {
+		$char: "\E0BE";
+	}
+	@if $filename == digg {
+		$char: "\E0BF";
+	}
+	@if $filename == dollar {
+		$char: "\E0C0";
+	}
+	@if $filename == dot-circle-o {
+		$char: "\E0C1";
+	}
+	@if $filename == download {
+		$char: "\E0C2";
+	}
+	@if $filename == dribbble {
+		$char: "\E0C3";
+	}
+	@if $filename == dropbox {
+		$char: "\E0C4";
+	}
+	@if $filename == drupal {
+		$char: "\E0C5";
+	}
+	@if $filename == edge {
+		$char: "\E0C6";
+	}
+	@if $filename == edit {
+		$char: "\E0C7";
+	}
+	@if $filename == eject {
+		$char: "\E0C8";
+	}
+	@if $filename == ellipsis-h {
+		$char: "\E0C9";
+	}
+	@if $filename == ellipsis-v {
+		$char: "\E0CA";
+	}
+	@if $filename == empire {
+		$char: "\E0CB";
+	}
+	@if $filename == envelope-o {
+		$char: "\E0CC";
+	}
+	@if $filename == envelope-square {
+		$char: "\E0CD";
+	}
+	@if $filename == envelope {
+		$char: "\E0CE";
+	}
+	@if $filename == eraser {
+		$char: "\E0CF";
+	}
+	@if $filename == eur {
+		$char: "\E0D0";
+	}
+	@if $filename == euro {
+		$char: "\E0D1";
+	}
+	@if $filename == exchange {
+		$char: "\E0D2";
+	}
+	@if $filename == exclamation-circle {
+		$char: "\E0D3";
+	}
+	@if $filename == exclamation-triangle {
+		$char: "\E0D4";
+	}
+	@if $filename == exclamation {
+		$char: "\E0D5";
+	}
+	@if $filename == expand {
+		$char: "\E0D6";
+	}
+	@if $filename == expeditedssl {
+		$char: "\E0D7";
+	}
+	@if $filename == external-link-square {
+		$char: "\E0D8";
+	}
+	@if $filename == external-link {
+		$char: "\E0D9";
+	}
+	@if $filename == eye-slash {
+		$char: "\E0DA";
+	}
+	@if $filename == eye {
+		$char: "\E0DB";
+	}
+	@if $filename == eyedropper {
+		$char: "\E0DC";
+	}
+	@if $filename == facebook-f {
+		$char: "\E0DD";
+	}
+	@if $filename == facebook-official {
+		$char: "\E0DE";
+	}
+	@if $filename == facebook-square {
+		$char: "\E0DF";
+	}
+	@if $filename == facebook {
+		$char: "\E0E0";
+	}
+	@if $filename == fast-backward {
+		$char: "\E0E1";
+	}
+	@if $filename == fast-forward {
+		$char: "\E0E2";
+	}
+	@if $filename == fax {
+		$char: "\E0E3";
+	}
+	@if $filename == feed {
+		$char: "\E0E4";
+	}
+	@if $filename == female {
+		$char: "\E0E5";
+	}
+	@if $filename == fighter-jet {
+		$char: "\E0E6";
+	}
+	@if $filename == file-archive-o {
+		$char: "\E0E7";
+	}
+	@if $filename == file-audio-o {
+		$char: "\E0E8";
+	}
+	@if $filename == file-code-o {
+		$char: "\E0E9";
+	}
+	@if $filename == file-excel-o {
+		$char: "\E0EA";
+	}
+	@if $filename == file-image-o {
+		$char: "\E0EB";
+	}
+	@if $filename == file-movie-o {
+		$char: "\E0EC";
+	}
+	@if $filename == file-o {
+		$char: "\E0ED";
+	}
+	@if $filename == file-pdf-o {
+		$char: "\E0EE";
+	}
+	@if $filename == file-photo-o {
+		$char: "\E0EF";
+	}
+	@if $filename == file-picture-o {
+		$char: "\E0F0";
+	}
+	@if $filename == file-powerpoint-o {
+		$char: "\E0F1";
+	}
+	@if $filename == file-sound-o {
+		$char: "\E0F2";
+	}
+	@if $filename == file-text-o {
+		$char: "\E0F3";
+	}
+	@if $filename == file-text {
+		$char: "\E0F4";
+	}
+	@if $filename == file-video-o {
+		$char: "\E0F5";
+	}
+	@if $filename == file-word-o {
+		$char: "\E0F6";
+	}
+	@if $filename == file-zip-o {
+		$char: "\E0F7";
+	}
+	@if $filename == file {
+		$char: "\E0F8";
+	}
+	@if $filename == files-o {
+		$char: "\E0F9";
+	}
+	@if $filename == film {
+		$char: "\E0FA";
+	}
+	@if $filename == filter {
+		$char: "\E0FB";
+	}
+	@if $filename == fire-extinguisher {
+		$char: "\E0FC";
+	}
+	@if $filename == fire {
+		$char: "\E0FD";
+	}
+	@if $filename == firefox {
+		$char: "\E0FE";
+	}
+	@if $filename == flag-checkered {
+		$char: "\E0FF";
+	}
+	@if $filename == flag-o {
+		$char: "\E100";
+	}
+	@if $filename == flag {
+		$char: "\E101";
+	}
+	@if $filename == flash {
+		$char: "\E102";
+	}
+	@if $filename == flask {
+		$char: "\E103";
+	}
+	@if $filename == flickr {
+		$char: "\E104";
+	}
+	@if $filename == floppy-o {
+		$char: "\E105";
+	}
+	@if $filename == folder-o {
+		$char: "\E106";
+	}
+	@if $filename == folder-open-o {
+		$char: "\E107";
+	}
+	@if $filename == folder-open {
+		$char: "\E108";
+	}
+	@if $filename == folder {
+		$char: "\E109";
+	}
+	@if $filename == font {
+		$char: "\E10A";
+	}
+	@if $filename == fonticons {
+		$char: "\E10B";
+	}
+	@if $filename == fort-awesome {
+		$char: "\E10C";
+	}
+	@if $filename == forumbee {
+		$char: "\E10D";
+	}
+	@if $filename == forward {
+		$char: "\E10E";
+	}
+	@if $filename == foursquare {
+		$char: "\E10F";
+	}
+	@if $filename == frown-o {
+		$char: "\E110";
+	}
+	@if $filename == futbol-o {
+		$char: "\E111";
+	}
+	@if $filename == gamepad {
+		$char: "\E112";
+	}
+	@if $filename == gavel {
+		$char: "\E113";
+	}
+	@if $filename == gbp {
+		$char: "\E114";
+	}
+	@if $filename == ge {
+		$char: "\E115";
+	}
+	@if $filename == gear {
+		$char: "\E116";
+	}
+	@if $filename == gears {
+		$char: "\E117";
+	}
+	@if $filename == genderless {
+		$char: "\E118";
+	}
+	@if $filename == get-pocket {
+		$char: "\E119";
+	}
+	@if $filename == gg-circle {
+		$char: "\E11A";
+	}
+	@if $filename == gg {
+		$char: "\E11B";
+	}
+	@if $filename == gift {
+		$char: "\E11C";
+	}
+	@if $filename == git-square {
+		$char: "\E11D";
+	}
+	@if $filename == git {
+		$char: "\E11E";
+	}
+	@if $filename == github-alt {
+		$char: "\E11F";
+	}
+	@if $filename == github-square {
+		$char: "\E120";
+	}
+	@if $filename == github {
+		$char: "\E121";
+	}
+	@if $filename == gittip {
+		$char: "\E122";
+	}
+	@if $filename == glass {
+		$char: "\E123";
+	}
+	@if $filename == globe {
+		$char: "\E124";
+	}
+	@if $filename == google-plus-square {
+		$char: "\E125";
+	}
+	@if $filename == google-plus {
+		$char: "\E126";
+	}
+	@if $filename == google-wallet {
+		$char: "\E127";
+	}
+	@if $filename == google {
+		$char: "\E128";
+	}
+	@if $filename == graduation-cap {
+		$char: "\E129";
+	}
+	@if $filename == gratipay {
+		$char: "\E12A";
+	}
+	@if $filename == group {
+		$char: "\E12B";
+	}
+	@if $filename == h-square {
+		$char: "\E12C";
+	}
+	@if $filename == hacker-news {
+		$char: "\E12D";
+	}
+	@if $filename == hand-grab-o {
+		$char: "\E12E";
+	}
+	@if $filename == hand-lizard-o {
+		$char: "\E12F";
+	}
+	@if $filename == hand-o-down {
+		$char: "\E130";
+	}
+	@if $filename == hand-o-left {
+		$char: "\E131";
+	}
+	@if $filename == hand-o-right {
+		$char: "\E132";
+	}
+	@if $filename == hand-o-up {
+		$char: "\E133";
+	}
+	@if $filename == hand-paper-o {
+		$char: "\E134";
+	}
+	@if $filename == hand-peace-o {
+		$char: "\E135";
+	}
+	@if $filename == hand-pointer-o {
+		$char: "\E136";
+	}
+	@if $filename == hand-rock-o {
+		$char: "\E137";
+	}
+	@if $filename == hand-scissors-o {
+		$char: "\E138";
+	}
+	@if $filename == hand-spock-o {
+		$char: "\E139";
+	}
+	@if $filename == hand-stop-o {
+		$char: "\E13A";
+	}
+	@if $filename == hashtag {
+		$char: "\E13B";
+	}
+	@if $filename == hdd-o {
+		$char: "\E13C";
+	}
+	@if $filename == header {
+		$char: "\E13D";
+	}
+	@if $filename == headphones {
+		$char: "\E13E";
+	}
+	@if $filename == heart-o {
+		$char: "\E13F";
+	}
+	@if $filename == heart {
+		$char: "\E140";
+	}
+	@if $filename == heartbeat {
+		$char: "\E141";
+	}
+	@if $filename == history {
+		$char: "\E142";
+	}
+	@if $filename == home {
+		$char: "\E143";
+	}
+	@if $filename == hospital-o {
+		$char: "\E144";
+	}
+	@if $filename == hotel {
+		$char: "\E145";
+	}
+	@if $filename == hourglass-1 {
+		$char: "\E146";
+	}
+	@if $filename == hourglass-2 {
+		$char: "\E147";
+	}
+	@if $filename == hourglass-3 {
+		$char: "\E148";
+	}
+	@if $filename == hourglass-end {
+		$char: "\E149";
+	}
+	@if $filename == hourglass-half {
+		$char: "\E14A";
+	}
+	@if $filename == hourglass-o {
+		$char: "\E14B";
+	}
+	@if $filename == hourglass-start {
+		$char: "\E14C";
+	}
+	@if $filename == hourglass {
+		$char: "\E14D";
+	}
+	@if $filename == houzz {
+		$char: "\E14E";
+	}
+	@if $filename == html5 {
+		$char: "\E14F";
+	}
+	@if $filename == i-cursor {
+		$char: "\E150";
+	}
+	@if $filename == ils {
+		$char: "\E151";
+	}
+	@if $filename == image {
+		$char: "\E152";
+	}
+	@if $filename == inbox {
+		$char: "\E153";
+	}
+	@if $filename == indent {
+		$char: "\E154";
+	}
+	@if $filename == industry {
+		$char: "\E155";
+	}
+	@if $filename == info-circle {
+		$char: "\E156";
+	}
+	@if $filename == info {
+		$char: "\E157";
+	}
+	@if $filename == inr {
+		$char: "\E158";
+	}
+	@if $filename == instagram {
+		$char: "\E159";
+	}
+	@if $filename == institution {
+		$char: "\E15A";
+	}
+	@if $filename == internet-explorer {
+		$char: "\E15B";
+	}
+	@if $filename == intersex {
+		$char: "\E15C";
+	}
+	@if $filename == ioxhost {
+		$char: "\E15D";
+	}
+	@if $filename == italic {
+		$char: "\E15E";
+	}
+	@if $filename == joomla {
+		$char: "\E15F";
+	}
+	@if $filename == jpy {
+		$char: "\E160";
+	}
+	@if $filename == jsfiddle {
+		$char: "\E161";
+	}
+	@if $filename == key {
+		$char: "\E162";
+	}
+	@if $filename == keyboard-o {
+		$char: "\E163";
+	}
+	@if $filename == krw {
+		$char: "\E164";
+	}
+	@if $filename == language {
+		$char: "\E165";
+	}
+	@if $filename == laptop {
+		$char: "\E166";
+	}
+	@if $filename == lastfm-square {
+		$char: "\E167";
+	}
+	@if $filename == lastfm {
+		$char: "\E168";
+	}
+	@if $filename == leaf {
+		$char: "\E169";
+	}
+	@if $filename == leanpub {
+		$char: "\E16A";
+	}
+	@if $filename == legal {
+		$char: "\E16B";
+	}
+	@if $filename == lemon-o {
+		$char: "\E16C";
+	}
+	@if $filename == level-down {
+		$char: "\E16D";
+	}
+	@if $filename == level-up {
+		$char: "\E16E";
+	}
+	@if $filename == life-bouy {
+		$char: "\E16F";
+	}
+	@if $filename == life-buoy {
+		$char: "\E170";
+	}
+	@if $filename == life-ring {
+		$char: "\E171";
+	}
+	@if $filename == life-saver {
+		$char: "\E172";
+	}
+	@if $filename == lightbulb-o {
+		$char: "\E173";
+	}
+	@if $filename == line-chart {
+		$char: "\E174";
+	}
+	@if $filename == link {
+		$char: "\E175";
+	}
+	@if $filename == linkedin-square {
+		$char: "\E176";
+	}
+	@if $filename == linkedin {
+		$char: "\E177";
+	}
+	@if $filename == linux {
+		$char: "\E178";
+	}
+	@if $filename == list-alt {
+		$char: "\E179";
+	}
+	@if $filename == list-ol {
+		$char: "\E17A";
+	}
+	@if $filename == list-ul {
+		$char: "\E17B";
+	}
+	@if $filename == list {
+		$char: "\E17C";
+	}
+	@if $filename == location-arrow {
+		$char: "\E17D";
+	}
+	@if $filename == lock {
+		$char: "\E17E";
+	}
+	@if $filename == long-arrow-down {
+		$char: "\E17F";
+	}
+	@if $filename == long-arrow-left {
+		$char: "\E180";
+	}
+	@if $filename == long-arrow-right {
+		$char: "\E181";
+	}
+	@if $filename == long-arrow-up {
+		$char: "\E182";
+	}
+	@if $filename == magic {
+		$char: "\E183";
+	}
+	@if $filename == magnet {
+		$char: "\E184";
+	}
+	@if $filename == mail-forward {
+		$char: "\E185";
+	}
+	@if $filename == mail-reply-all {
+		$char: "\E186";
+	}
+	@if $filename == mail-reply {
+		$char: "\E187";
+	}
+	@if $filename == male {
+		$char: "\E188";
+	}
+	@if $filename == map-marker {
+		$char: "\E189";
+	}
+	@if $filename == map-o {
+		$char: "\E18A";
+	}
+	@if $filename == map-pin {
+		$char: "\E18B";
+	}
+	@if $filename == map-signs {
+		$char: "\E18C";
+	}
+	@if $filename == map {
+		$char: "\E18D";
+	}
+	@if $filename == mars-double {
+		$char: "\E18E";
+	}
+	@if $filename == mars-stroke-h {
+		$char: "\E18F";
+	}
+	@if $filename == mars-stroke-v {
+		$char: "\E190";
+	}
+	@if $filename == mars-stroke {
+		$char: "\E191";
+	}
+	@if $filename == mars {
+		$char: "\E192";
+	}
+	@if $filename == maxcdn {
+		$char: "\E193";
+	}
+	@if $filename == meanpath {
+		$char: "\E194";
+	}
+	@if $filename == medium {
+		$char: "\E195";
+	}
+	@if $filename == medkit {
+		$char: "\E196";
+	}
+	@if $filename == meh-o {
+		$char: "\E197";
+	}
+	@if $filename == mercury {
+		$char: "\E198";
+	}
+	@if $filename == microphone-slash {
+		$char: "\E199";
+	}
+	@if $filename == microphone {
+		$char: "\E19A";
+	}
+	@if $filename == minus-circle {
+		$char: "\E19B";
+	}
+	@if $filename == minus-square-o {
+		$char: "\E19C";
+	}
+	@if $filename == minus-square {
+		$char: "\E19D";
+	}
+	@if $filename == minus {
+		$char: "\E19E";
+	}
+	@if $filename == mixcloud {
+		$char: "\E19F";
+	}
+	@if $filename == mobile-phone {
+		$char: "\E1A0";
+	}
+	@if $filename == mobile {
+		$char: "\E1A1";
+	}
+	@if $filename == modx {
+		$char: "\E1A2";
+	}
+	@if $filename == money {
+		$char: "\E1A3";
+	}
+	@if $filename == moon-o {
+		$char: "\E1A4";
+	}
+	@if $filename == mortar-board {
+		$char: "\E1A5";
+	}
+	@if $filename == motorcycle {
+		$char: "\E1A6";
+	}
+	@if $filename == mouse-pointer {
+		$char: "\E1A7";
+	}
+	@if $filename == music {
+		$char: "\E1A8";
+	}
+	@if $filename == navicon {
+		$char: "\E1A9";
+	}
+	@if $filename == neuter {
+		$char: "\E1AA";
+	}
+	@if $filename == newspaper-o {
+		$char: "\E1AB";
+	}
+	@if $filename == object-group {
+		$char: "\E1AC";
+	}
+	@if $filename == object-ungroup {
+		$char: "\E1AD";
+	}
+	@if $filename == odnoklassniki-square {
+		$char: "\E1AE";
+	}
+	@if $filename == odnoklassniki {
+		$char: "\E1AF";
+	}
+	@if $filename == opencart {
+		$char: "\E1B0";
+	}
+	@if $filename == openid {
+		$char: "\E1B1";
+	}
+	@if $filename == opera {
+		$char: "\E1B2";
+	}
+	@if $filename == optin-monster {
+		$char: "\E1B3";
+	}
+	@if $filename == outdent {
+		$char: "\E1B4";
+	}
+	@if $filename == pagelines {
+		$char: "\E1B5";
+	}
+	@if $filename == paint-brush {
+		$char: "\E1B6";
+	}
+	@if $filename == paper-plane-o {
+		$char: "\E1B7";
+	}
+	@if $filename == paper-plane {
+		$char: "\E1B8";
+	}
+	@if $filename == paperclip {
+		$char: "\E1B9";
+	}
+	@if $filename == paragraph {
+		$char: "\E1BA";
+	}
+	@if $filename == paste {
+		$char: "\E1BB";
+	}
+	@if $filename == pause-circle-o {
+		$char: "\E1BC";
+	}
+	@if $filename == pause-circle {
+		$char: "\E1BD";
+	}
+	@if $filename == pause {
+		$char: "\E1BE";
+	}
+	@if $filename == paw {
+		$char: "\E1BF";
+	}
+	@if $filename == paypal {
+		$char: "\E1C0";
+	}
+	@if $filename == pencil-square-o {
+		$char: "\E1C1";
+	}
+	@if $filename == pencil-square {
+		$char: "\E1C2";
+	}
+	@if $filename == pencil {
+		$char: "\E1C3";
+	}
+	@if $filename == percent {
+		$char: "\E1C4";
+	}
+	@if $filename == phone-square {
+		$char: "\E1C5";
+	}
+	@if $filename == phone {
+		$char: "\E1C6";
+	}
+	@if $filename == photo {
+		$char: "\E1C7";
+	}
+	@if $filename == picture-o {
+		$char: "\E1C8";
+	}
+	@if $filename == pie-chart {
+		$char: "\E1C9";
+	}
+	@if $filename == pied-piper-alt {
+		$char: "\E1CA";
+	}
+	@if $filename == pied-piper {
+		$char: "\E1CB";
+	}
+	@if $filename == pinterest-p {
+		$char: "\E1CC";
+	}
+	@if $filename == pinterest-square {
+		$char: "\E1CD";
+	}
+	@if $filename == pinterest {
+		$char: "\E1CE";
+	}
+	@if $filename == plane {
+		$char: "\E1CF";
+	}
+	@if $filename == play-circle-o {
+		$char: "\E1D0";
+	}
+	@if $filename == play-circle {
+		$char: "\E1D1";
+	}
+	@if $filename == play {
+		$char: "\E1D2";
+	}
+	@if $filename == plug {
+		$char: "\E1D3";
+	}
+	@if $filename == plus-circle {
+		$char: "\E1D4";
+	}
+	@if $filename == plus-square-o {
+		$char: "\E1D5";
+	}
+	@if $filename == plus-square {
+		$char: "\E1D6";
+	}
+	@if $filename == plus {
+		$char: "\E1D7";
+	}
+	@if $filename == power-off {
+		$char: "\E1D8";
+	}
+	@if $filename == print {
+		$char: "\E1D9";
+	}
+	@if $filename == product-hunt {
+		$char: "\E1DA";
+	}
+	@if $filename == puzzle-piece {
+		$char: "\E1DB";
+	}
+	@if $filename == qq {
+		$char: "\E1DC";
+	}
+	@if $filename == qrcode {
+		$char: "\E1DD";
+	}
+	@if $filename == question-circle {
+		$char: "\E1DE";
+	}
+	@if $filename == question {
+		$char: "\E1DF";
+	}
+	@if $filename == quote-left {
+		$char: "\E1E0";
+	}
+	@if $filename == quote-right {
+		$char: "\E1E1";
+	}
+	@if $filename == ra {
+		$char: "\E1E2";
+	}
+	@if $filename == random {
+		$char: "\E1E3";
+	}
+	@if $filename == rebel {
+		$char: "\E1E4";
+	}
+	@if $filename == recycle {
+		$char: "\E1E5";
+	}
+	@if $filename == reddit-alien {
+		$char: "\E1E6";
+	}
+	@if $filename == reddit-square {
+		$char: "\E1E7";
+	}
+	@if $filename == reddit {
+		$char: "\E1E8";
+	}
+	@if $filename == refresh {
+		$char: "\E1E9";
+	}
+	@if $filename == registered {
+		$char: "\E1EA";
+	}
+	@if $filename == remove {
+		$char: "\E1EB";
+	}
+	@if $filename == renren {
+		$char: "\E1EC";
+	}
+	@if $filename == reorder {
+		$char: "\E1ED";
+	}
+	@if $filename == repeat {
+		$char: "\E1EE";
+	}
+	@if $filename == reply-all {
+		$char: "\E1EF";
+	}
+	@if $filename == reply {
+		$char: "\E1F0";
+	}
+	@if $filename == retweet {
+		$char: "\E1F1";
+	}
+	@if $filename == rmb {
+		$char: "\E1F2";
+	}
+	@if $filename == road {
+		$char: "\E1F3";
+	}
+	@if $filename == rocket {
+		$char: "\E1F4";
+	}
+	@if $filename == rotate-left {
+		$char: "\E1F5";
+	}
+	@if $filename == rotate-right {
+		$char: "\E1F6";
+	}
+	@if $filename == rouble {
+		$char: "\E1F7";
+	}
+	@if $filename == rss-square {
+		$char: "\E1F8";
+	}
+	@if $filename == rss {
+		$char: "\E1F9";
+	}
+	@if $filename == rub {
+		$char: "\E1FA";
+	}
+	@if $filename == ruble {
+		$char: "\E1FB";
+	}
+	@if $filename == rupee {
+		$char: "\E1FC";
+	}
+	@if $filename == safari {
+		$char: "\E1FD";
+	}
+	@if $filename == save {
+		$char: "\E1FE";
+	}
+	@if $filename == scissors {
+		$char: "\E1FF";
+	}
+	@if $filename == scribd {
+		$char: "\E200";
+	}
+	@if $filename == search-minus {
+		$char: "\E201";
+	}
+	@if $filename == search-plus {
+		$char: "\E202";
+	}
+	@if $filename == search {
+		$char: "\E203";
+	}
+	@if $filename == sellsy {
+		$char: "\E204";
+	}
+	@if $filename == send-o {
+		$char: "\E205";
+	}
+	@if $filename == send {
+		$char: "\E206";
+	}
+	@if $filename == server {
+		$char: "\E207";
+	}
+	@if $filename == share-alt-square {
+		$char: "\E208";
+	}
+	@if $filename == share-alt {
+		$char: "\E209";
+	}
+	@if $filename == share-square-o {
+		$char: "\E20A";
+	}
+	@if $filename == share-square {
+		$char: "\E20B";
+	}
+	@if $filename == share {
+		$char: "\E20C";
+	}
+	@if $filename == shekel {
+		$char: "\E20D";
+	}
+	@if $filename == sheqel {
+		$char: "\E20E";
+	}
+	@if $filename == shield {
+		$char: "\E20F";
+	}
+	@if $filename == ship {
+		$char: "\E210";
+	}
+	@if $filename == shirtsinbulk {
+		$char: "\E211";
+	}
+	@if $filename == shopping-bag {
+		$char: "\E212";
+	}
+	@if $filename == shopping-basket {
+		$char: "\E213";
+	}
+	@if $filename == shopping-cart {
+		$char: "\E214";
+	}
+	@if $filename == sign-in {
+		$char: "\E215";
+	}
+	@if $filename == sign-out {
+		$char: "\E216";
+	}
+	@if $filename == signal {
+		$char: "\E217";
+	}
+	@if $filename == simplybuilt {
+		$char: "\E218";
+	}
+	@if $filename == sitemap {
+		$char: "\E219";
+	}
+	@if $filename == skyatlas {
+		$char: "\E21A";
+	}
+	@if $filename == skype {
+		$char: "\E21B";
+	}
+	@if $filename == slack {
+		$char: "\E21C";
+	}
+	@if $filename == sliders {
+		$char: "\E21D";
+	}
+	@if $filename == slideshare {
+		$char: "\E21E";
+	}
+	@if $filename == smile-o {
+		$char: "\E21F";
+	}
+	@if $filename == soccer-ball-o {
+		$char: "\E220";
+	}
+	@if $filename == sort-alpha-asc {
+		$char: "\E221";
+	}
+	@if $filename == sort-alpha-desc {
+		$char: "\E222";
+	}
+	@if $filename == sort-amount-asc {
+		$char: "\E223";
+	}
+	@if $filename == sort-amount-desc {
+		$char: "\E224";
+	}
+	@if $filename == sort-asc {
+		$char: "\E225";
+	}
+	@if $filename == sort-desc {
+		$char: "\E226";
+	}
+	@if $filename == sort-down {
+		$char: "\E227";
+	}
+	@if $filename == sort-numeric-asc {
+		$char: "\E228";
+	}
+	@if $filename == sort-numeric-desc {
+		$char: "\E229";
+	}
+	@if $filename == sort-up {
+		$char: "\E22A";
+	}
+	@if $filename == sort {
+		$char: "\E22B";
+	}
+	@if $filename == soundcloud {
+		$char: "\E22C";
+	}
+	@if $filename == space-shuttle {
+		$char: "\E22D";
+	}
+	@if $filename == spinner {
+		$char: "\E22E";
+	}
+	@if $filename == spoon {
+		$char: "\E22F";
+	}
+	@if $filename == spotify {
+		$char: "\E230";
+	}
+	@if $filename == square-o {
+		$char: "\E231";
+	}
+	@if $filename == square {
+		$char: "\E232";
+	}
+	@if $filename == stack-exchange {
+		$char: "\E233";
+	}
+	@if $filename == stack-overflow {
+		$char: "\E234";
+	}
+	@if $filename == star-half-empty {
+		$char: "\E235";
+	}
+	@if $filename == star-half-full {
+		$char: "\E236";
+	}
+	@if $filename == star-half-o {
+		$char: "\E237";
+	}
+	@if $filename == star-half {
+		$char: "\E238";
+	}
+	@if $filename == star-o {
+		$char: "\E239";
+	}
+	@if $filename == star {
+		$char: "\E23A";
+	}
+	@if $filename == steam-square {
+		$char: "\E23B";
+	}
+	@if $filename == steam {
+		$char: "\E23C";
+	}
+	@if $filename == step-backward {
+		$char: "\E23D";
+	}
+	@if $filename == step-forward {
+		$char: "\E23E";
+	}
+	@if $filename == stethoscope {
+		$char: "\E23F";
+	}
+	@if $filename == sticky-note-o {
+		$char: "\E240";
+	}
+	@if $filename == sticky-note {
+		$char: "\E241";
+	}
+	@if $filename == stop-circle-o {
+		$char: "\E242";
+	}
+	@if $filename == stop-circle {
+		$char: "\E243";
+	}
+	@if $filename == stop {
+		$char: "\E244";
+	}
+	@if $filename == street-view {
+		$char: "\E245";
+	}
+	@if $filename == strikethrough {
+		$char: "\E246";
+	}
+	@if $filename == stumbleupon-circle {
+		$char: "\E247";
+	}
+	@if $filename == stumbleupon {
+		$char: "\E248";
+	}
+	@if $filename == subscript {
+		$char: "\E249";
+	}
+	@if $filename == subway {
+		$char: "\E24A";
+	}
+	@if $filename == suitcase {
+		$char: "\E24B";
+	}
+	@if $filename == sun-o {
+		$char: "\E24C";
+	}
+	@if $filename == superscript {
+		$char: "\E24D";
+	}
+	@if $filename == support {
+		$char: "\E24E";
+	}
+	@if $filename == table {
+		$char: "\E24F";
+	}
+	@if $filename == tablet {
+		$char: "\E250";
+	}
+	@if $filename == tachometer {
+		$char: "\E251";
+	}
+	@if $filename == tag {
+		$char: "\E252";
+	}
+	@if $filename == tags {
+		$char: "\E253";
+	}
+	@if $filename == tasks {
+		$char: "\E254";
+	}
+	@if $filename == taxi {
+		$char: "\E255";
+	}
+	@if $filename == television {
+		$char: "\E256";
+	}
+	@if $filename == tencent-weibo {
+		$char: "\E257";
+	}
+	@if $filename == terminal {
+		$char: "\E258";
+	}
+	@if $filename == text-height {
+		$char: "\E259";
+	}
+	@if $filename == text-width {
+		$char: "\E25A";
+	}
+	@if $filename == th-large {
+		$char: "\E25B";
+	}
+	@if $filename == th-list {
+		$char: "\E25C";
+	}
+	@if $filename == th {
+		$char: "\E25D";
+	}
+	@if $filename == thumb-tack {
+		$char: "\E25E";
+	}
+	@if $filename == thumbs-down {
+		$char: "\E25F";
+	}
+	@if $filename == thumbs-o-down {
+		$char: "\E260";
+	}
+	@if $filename == thumbs-o-up {
+		$char: "\E261";
+	}
+	@if $filename == thumbs-up {
+		$char: "\E262";
+	}
+	@if $filename == ticket {
+		$char: "\E263";
+	}
+	@if $filename == times-circle-o {
+		$char: "\E264";
+	}
+	@if $filename == times-circle {
+		$char: "\E265";
+	}
+	@if $filename == times {
+		$char: "\E266";
+	}
+	@if $filename == tint {
+		$char: "\E267";
+	}
+	@if $filename == toggle-down {
+		$char: "\E268";
+	}
+	@if $filename == toggle-left {
+		$char: "\E269";
+	}
+	@if $filename == toggle-off {
+		$char: "\E26A";
+	}
+	@if $filename == toggle-on {
+		$char: "\E26B";
+	}
+	@if $filename == toggle-right {
+		$char: "\E26C";
+	}
+	@if $filename == toggle-up {
+		$char: "\E26D";
+	}
+	@if $filename == trademark {
+		$char: "\E26E";
+	}
+	@if $filename == train {
+		$char: "\E26F";
+	}
+	@if $filename == transgender-alt {
+		$char: "\E270";
+	}
+	@if $filename == transgender {
+		$char: "\E271";
+	}
+	@if $filename == trash-o {
+		$char: "\E272";
+	}
+	@if $filename == trash {
+		$char: "\E273";
+	}
+	@if $filename == tree {
+		$char: "\E274";
+	}
+	@if $filename == trello {
+		$char: "\E275";
+	}
+	@if $filename == tripadvisor {
+		$char: "\E276";
+	}
+	@if $filename == trophy {
+		$char: "\E277";
+	}
+	@if $filename == truck {
+		$char: "\E278";
+	}
+	@if $filename == try {
+		$char: "\E279";
+	}
+	@if $filename == tty {
+		$char: "\E27A";
+	}
+	@if $filename == tumblr-square {
+		$char: "\E27B";
+	}
+	@if $filename == tumblr {
+		$char: "\E27C";
+	}
+	@if $filename == turkish-lira {
+		$char: "\E27D";
+	}
+	@if $filename == tv {
+		$char: "\E27E";
+	}
+	@if $filename == twitch {
+		$char: "\E27F";
+	}
+	@if $filename == twitter-square {
+		$char: "\E280";
+	}
+	@if $filename == twitter {
+		$char: "\E281";
+	}
+	@if $filename == umbrella {
+		$char: "\E282";
+	}
+	@if $filename == underline {
+		$char: "\E283";
+	}
+	@if $filename == undo {
+		$char: "\E284";
+	}
+	@if $filename == university {
+		$char: "\E285";
+	}
+	@if $filename == unlink {
+		$char: "\E286";
+	}
+	@if $filename == unlock-alt {
+		$char: "\E287";
+	}
+	@if $filename == unlock {
+		$char: "\E288";
+	}
+	@if $filename == unsorted {
+		$char: "\E289";
+	}
+	@if $filename == upload {
+		$char: "\E28A";
+	}
+	@if $filename == usb {
+		$char: "\E28B";
+	}
+	@if $filename == usd {
+		$char: "\E28C";
+	}
+	@if $filename == user-md {
+		$char: "\E28D";
+	}
+	@if $filename == user-plus {
+		$char: "\E28E";
+	}
+	@if $filename == user-secret {
+		$char: "\E28F";
+	}
+	@if $filename == user-times {
+		$char: "\E290";
+	}
+	@if $filename == user {
+		$char: "\E291";
+	}
+	@if $filename == users {
+		$char: "\E292";
+	}
+	@if $filename == venus-double {
+		$char: "\E293";
+	}
+	@if $filename == venus-mars {
+		$char: "\E294";
+	}
+	@if $filename == venus {
+		$char: "\E295";
+	}
+	@if $filename == viacoin {
+		$char: "\E296";
+	}
+	@if $filename == video-camera {
+		$char: "\E297";
+	}
+	@if $filename == vimeo-square {
+		$char: "\E298";
+	}
+	@if $filename == vimeo {
+		$char: "\E299";
+	}
+	@if $filename == vine {
+		$char: "\E29A";
+	}
+	@if $filename == vk {
+		$char: "\E29B";
+	}
+	@if $filename == volume-down {
+		$char: "\E29C";
+	}
+	@if $filename == volume-off {
+		$char: "\E29D";
+	}
+	@if $filename == volume-up {
+		$char: "\E29E";
+	}
+	@if $filename == warning {
+		$char: "\E29F";
+	}
+	@if $filename == wechat {
+		$char: "\E2A0";
+	}
+	@if $filename == weibo {
+		$char: "\E2A1";
+	}
+	@if $filename == weixin {
+		$char: "\E2A2";
+	}
+	@if $filename == whatsapp {
+		$char: "\E2A3";
+	}
+	@if $filename == wheelchair {
+		$char: "\E2A4";
+	}
+	@if $filename == wifi {
+		$char: "\E2A5";
+	}
+	@if $filename == wikipedia-w {
+		$char: "\E2A6";
+	}
+	@if $filename == windows {
+		$char: "\E2A7";
+	}
+	@if $filename == won {
+		$char: "\E2A8";
+	}
+	@if $filename == wordpress {
+		$char: "\E2A9";
+	}
+	@if $filename == wrench {
+		$char: "\E2AA";
+	}
+	@if $filename == xing-square {
+		$char: "\E2AB";
+	}
+	@if $filename == xing {
+		$char: "\E2AC";
+	}
+	@if $filename == y-combinator-square {
+		$char: "\E2AD";
+	}
+	@if $filename == y-combinator {
+		$char: "\E2AE";
+	}
+	@if $filename == yahoo {
+		$char: "\E2AF";
+	}
+	@if $filename == yc-square {
+		$char: "\E2B0";
+	}
+	@if $filename == yc {
+		$char: "\E2B1";
+	}
+	@if $filename == yelp {
+		$char: "\E2B2";
+	}
+	@if $filename == yen {
+		$char: "\E2B3";
+	}
+	@if $filename == youtube-play {
+		$char: "\E2B4";
+	}
+	@if $filename == youtube-square {
+		$char: "\E2B5";
+	}
+	@if $filename == youtube {
+		$char: "\E2B6";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-500px {
+	@include icon(500px);
+}
+.icon-adjust {
+	@include icon(adjust);
+}
+.icon-adn {
+	@include icon(adn);
+}
+.icon-align-center {
+	@include icon(align-center);
+}
+.icon-align-justify {
+	@include icon(align-justify);
+}
+.icon-align-left {
+	@include icon(align-left);
+}
+.icon-align-right {
+	@include icon(align-right);
+}
+.icon-amazon {
+	@include icon(amazon);
+}
+.icon-ambulance {
+	@include icon(ambulance);
+}
+.icon-anchor {
+	@include icon(anchor);
+}
+.icon-android {
+	@include icon(android);
+}
+.icon-angellist {
+	@include icon(angellist);
+}
+.icon-angle-double-down {
+	@include icon(angle-double-down);
+}
+.icon-angle-double-left {
+	@include icon(angle-double-left);
+}
+.icon-angle-double-right {
+	@include icon(angle-double-right);
+}
+.icon-angle-double-up {
+	@include icon(angle-double-up);
+}
+.icon-angle-down {
+	@include icon(angle-down);
+}
+.icon-angle-left {
+	@include icon(angle-left);
+}
+.icon-angle-right {
+	@include icon(angle-right);
+}
+.icon-angle-up {
+	@include icon(angle-up);
+}
+.icon-apple {
+	@include icon(apple);
+}
+.icon-archive {
+	@include icon(archive);
+}
+.icon-area-chart {
+	@include icon(area-chart);
+}
+.icon-arrow-circle-down {
+	@include icon(arrow-circle-down);
+}
+.icon-arrow-circle-left {
+	@include icon(arrow-circle-left);
+}
+.icon-arrow-circle-o-down {
+	@include icon(arrow-circle-o-down);
+}
+.icon-arrow-circle-o-left {
+	@include icon(arrow-circle-o-left);
+}
+.icon-arrow-circle-o-right {
+	@include icon(arrow-circle-o-right);
+}
+.icon-arrow-circle-o-up {
+	@include icon(arrow-circle-o-up);
+}
+.icon-arrow-circle-right {
+	@include icon(arrow-circle-right);
+}
+.icon-arrow-circle-up {
+	@include icon(arrow-circle-up);
+}
+.icon-arrow-down {
+	@include icon(arrow-down);
+}
+.icon-arrow-left {
+	@include icon(arrow-left);
+}
+.icon-arrow-right {
+	@include icon(arrow-right);
+}
+.icon-arrow-up {
+	@include icon(arrow-up);
+}
+.icon-arrows-alt {
+	@include icon(arrows-alt);
+}
+.icon-arrows-h {
+	@include icon(arrows-h);
+}
+.icon-arrows-v {
+	@include icon(arrows-v);
+}
+.icon-arrows {
+	@include icon(arrows);
+}
+.icon-asterisk {
+	@include icon(asterisk);
+}
+.icon-at {
+	@include icon(at);
+}
+.icon-automobile {
+	@include icon(automobile);
+}
+.icon-backward {
+	@include icon(backward);
+}
+.icon-balance-scale {
+	@include icon(balance-scale);
+}
+.icon-ban {
+	@include icon(ban);
+}
+.icon-bank {
+	@include icon(bank);
+}
+.icon-bar-chart-o {
+	@include icon(bar-chart-o);
+}
+.icon-bar-chart {
+	@include icon(bar-chart);
+}
+.icon-barcode {
+	@include icon(barcode);
+}
+.icon-bars {
+	@include icon(bars);
+}
+.icon-battery-0 {
+	@include icon(battery-0);
+}
+.icon-battery-1 {
+	@include icon(battery-1);
+}
+.icon-battery-2 {
+	@include icon(battery-2);
+}
+.icon-battery-3 {
+	@include icon(battery-3);
+}
+.icon-battery-4 {
+	@include icon(battery-4);
+}
+.icon-battery-empty {
+	@include icon(battery-empty);
+}
+.icon-battery-full {
+	@include icon(battery-full);
+}
+.icon-battery-half {
+	@include icon(battery-half);
+}
+.icon-battery-quarter {
+	@include icon(battery-quarter);
+}
+.icon-battery-three-quarters {
+	@include icon(battery-three-quarters);
+}
+.icon-bed {
+	@include icon(bed);
+}
+.icon-beer {
+	@include icon(beer);
+}
+.icon-behance-square {
+	@include icon(behance-square);
+}
+.icon-behance {
+	@include icon(behance);
+}
+.icon-bell-o {
+	@include icon(bell-o);
+}
+.icon-bell-slash-o {
+	@include icon(bell-slash-o);
+}
+.icon-bell-slash {
+	@include icon(bell-slash);
+}
+.icon-bell {
+	@include icon(bell);
+}
+.icon-bicycle {
+	@include icon(bicycle);
+}
+.icon-binoculars {
+	@include icon(binoculars);
+}
+.icon-birthday-cake {
+	@include icon(birthday-cake);
+}
+.icon-bitbucket-square {
+	@include icon(bitbucket-square);
+}
+.icon-bitbucket {
+	@include icon(bitbucket);
+}
+.icon-bitcoin {
+	@include icon(bitcoin);
+}
+.icon-black-tie {
+	@include icon(black-tie);
+}
+.icon-bluetooth-b {
+	@include icon(bluetooth-b);
+}
+.icon-bluetooth {
+	@include icon(bluetooth);
+}
+.icon-bold {
+	@include icon(bold);
+}
+.icon-bolt {
+	@include icon(bolt);
+}
+.icon-bomb {
+	@include icon(bomb);
+}
+.icon-book {
+	@include icon(book);
+}
+.icon-bookmark-o {
+	@include icon(bookmark-o);
+}
+.icon-bookmark {
+	@include icon(bookmark);
+}
+.icon-briefcase {
+	@include icon(briefcase);
+}
+.icon-btc {
+	@include icon(btc);
+}
+.icon-bug {
+	@include icon(bug);
+}
+.icon-building-o {
+	@include icon(building-o);
+}
+.icon-building {
+	@include icon(building);
+}
+.icon-bullhorn {
+	@include icon(bullhorn);
+}
+.icon-bullseye {
+	@include icon(bullseye);
+}
+.icon-bus {
+	@include icon(bus);
+}
+.icon-buysellads {
+	@include icon(buysellads);
+}
+.icon-cab {
+	@include icon(cab);
+}
+.icon-calculator {
+	@include icon(calculator);
+}
+.icon-calendar-check-o {
+	@include icon(calendar-check-o);
+}
+.icon-calendar-minus-o {
+	@include icon(calendar-minus-o);
+}
+.icon-calendar-o {
+	@include icon(calendar-o);
+}
+.icon-calendar-plus-o {
+	@include icon(calendar-plus-o);
+}
+.icon-calendar-times-o {
+	@include icon(calendar-times-o);
+}
+.icon-calendar {
+	@include icon(calendar);
+}
+.icon-camera-retro {
+	@include icon(camera-retro);
+}
+.icon-camera {
+	@include icon(camera);
+}
+.icon-car {
+	@include icon(car);
+}
+.icon-caret-down {
+	@include icon(caret-down);
+}
+.icon-caret-left {
+	@include icon(caret-left);
+}
+.icon-caret-right {
+	@include icon(caret-right);
+}
+.icon-caret-square-o-down {
+	@include icon(caret-square-o-down);
+}
+.icon-caret-square-o-left {
+	@include icon(caret-square-o-left);
+}
+.icon-caret-square-o-right {
+	@include icon(caret-square-o-right);
+}
+.icon-caret-square-o-up {
+	@include icon(caret-square-o-up);
+}
+.icon-caret-up {
+	@include icon(caret-up);
+}
+.icon-cart-arrow-down {
+	@include icon(cart-arrow-down);
+}
+.icon-cart-plus {
+	@include icon(cart-plus);
+}
+.icon-cc-amex {
+	@include icon(cc-amex);
+}
+.icon-cc-diners-club {
+	@include icon(cc-diners-club);
+}
+.icon-cc-discover {
+	@include icon(cc-discover);
+}
+.icon-cc-jcb {
+	@include icon(cc-jcb);
+}
+.icon-cc-mastercard {
+	@include icon(cc-mastercard);
+}
+.icon-cc-paypal {
+	@include icon(cc-paypal);
+}
+.icon-cc-stripe {
+	@include icon(cc-stripe);
+}
+.icon-cc-visa {
+	@include icon(cc-visa);
+}
+.icon-cc {
+	@include icon(cc);
+}
+.icon-certificate {
+	@include icon(certificate);
+}
+.icon-chain-broken {
+	@include icon(chain-broken);
+}
+.icon-chain {
+	@include icon(chain);
+}
+.icon-check-circle-o {
+	@include icon(check-circle-o);
+}
+.icon-check-circle {
+	@include icon(check-circle);
+}
+.icon-check-square-o {
+	@include icon(check-square-o);
+}
+.icon-check-square {
+	@include icon(check-square);
+}
+.icon-check {
+	@include icon(check);
+}
+.icon-chevron-circle-down {
+	@include icon(chevron-circle-down);
+}
+.icon-chevron-circle-left {
+	@include icon(chevron-circle-left);
+}
+.icon-chevron-circle-right {
+	@include icon(chevron-circle-right);
+}
+.icon-chevron-circle-up {
+	@include icon(chevron-circle-up);
+}
+.icon-chevron-down {
+	@include icon(chevron-down);
+}
+.icon-chevron-left {
+	@include icon(chevron-left);
+}
+.icon-chevron-right {
+	@include icon(chevron-right);
+}
+.icon-chevron-up {
+	@include icon(chevron-up);
+}
+.icon-child {
+	@include icon(child);
+}
+.icon-chrome {
+	@include icon(chrome);
+}
+.icon-circle-o-notch {
+	@include icon(circle-o-notch);
+}
+.icon-circle-o {
+	@include icon(circle-o);
+}
+.icon-circle-thin {
+	@include icon(circle-thin);
+}
+.icon-circle {
+	@include icon(circle);
+}
+.icon-clipboard {
+	@include icon(clipboard);
+}
+.icon-clock-o {
+	@include icon(clock-o);
+}
+.icon-clone {
+	@include icon(clone);
+}
+.icon-close {
+	@include icon(close);
+}
+.icon-cloud-download {
+	@include icon(cloud-download);
+}
+.icon-cloud-upload {
+	@include icon(cloud-upload);
+}
+.icon-cloud {
+	@include icon(cloud);
+}
+.icon-cny {
+	@include icon(cny);
+}
+.icon-code-fork {
+	@include icon(code-fork);
+}
+.icon-code {
+	@include icon(code);
+}
+.icon-codepen {
+	@include icon(codepen);
+}
+.icon-codiepie {
+	@include icon(codiepie);
+}
+.icon-coffee {
+	@include icon(coffee);
+}
+.icon-cog {
+	@include icon(cog);
+}
+.icon-cogs {
+	@include icon(cogs);
+}
+.icon-columns {
+	@include icon(columns);
+}
+.icon-comment-o {
+	@include icon(comment-o);
+}
+.icon-comment {
+	@include icon(comment);
+}
+.icon-commenting-o {
+	@include icon(commenting-o);
+}
+.icon-commenting {
+	@include icon(commenting);
+}
+.icon-comments-o {
+	@include icon(comments-o);
+}
+.icon-comments {
+	@include icon(comments);
+}
+.icon-compass {
+	@include icon(compass);
+}
+.icon-compress {
+	@include icon(compress);
+}
+.icon-connectdevelop {
+	@include icon(connectdevelop);
+}
+.icon-contao {
+	@include icon(contao);
+}
+.icon-copy {
+	@include icon(copy);
+}
+.icon-copyright {
+	@include icon(copyright);
+}
+.icon-creative-commons {
+	@include icon(creative-commons);
+}
+.icon-credit-card-alt {
+	@include icon(credit-card-alt);
+}
+.icon-credit-card {
+	@include icon(credit-card);
+}
+.icon-crop {
+	@include icon(crop);
+}
+.icon-crosshairs {
+	@include icon(crosshairs);
+}
+.icon-css3 {
+	@include icon(css3);
+}
+.icon-cube {
+	@include icon(cube);
+}
+.icon-cubes {
+	@include icon(cubes);
+}
+.icon-cut {
+	@include icon(cut);
+}
+.icon-cutlery {
+	@include icon(cutlery);
+}
+.icon-dashboard {
+	@include icon(dashboard);
+}
+.icon-dashcube {
+	@include icon(dashcube);
+}
+.icon-database {
+	@include icon(database);
+}
+.icon-dedent {
+	@include icon(dedent);
+}
+.icon-delicious {
+	@include icon(delicious);
+}
+.icon-desktop {
+	@include icon(desktop);
+}
+.icon-deviantart {
+	@include icon(deviantart);
+}
+.icon-diamond {
+	@include icon(diamond);
+}
+.icon-digg {
+	@include icon(digg);
+}
+.icon-dollar {
+	@include icon(dollar);
+}
+.icon-dot-circle-o {
+	@include icon(dot-circle-o);
+}
+.icon-download {
+	@include icon(download);
+}
+.icon-dribbble {
+	@include icon(dribbble);
+}
+.icon-dropbox {
+	@include icon(dropbox);
+}
+.icon-drupal {
+	@include icon(drupal);
+}
+.icon-edge {
+	@include icon(edge);
+}
+.icon-edit {
+	@include icon(edit);
+}
+.icon-eject {
+	@include icon(eject);
+}
+.icon-ellipsis-h {
+	@include icon(ellipsis-h);
+}
+.icon-ellipsis-v {
+	@include icon(ellipsis-v);
+}
+.icon-empire {
+	@include icon(empire);
+}
+.icon-envelope-o {
+	@include icon(envelope-o);
+}
+.icon-envelope-square {
+	@include icon(envelope-square);
+}
+.icon-envelope {
+	@include icon(envelope);
+}
+.icon-eraser {
+	@include icon(eraser);
+}
+.icon-eur {
+	@include icon(eur);
+}
+.icon-euro {
+	@include icon(euro);
+}
+.icon-exchange {
+	@include icon(exchange);
+}
+.icon-exclamation-circle {
+	@include icon(exclamation-circle);
+}
+.icon-exclamation-triangle {
+	@include icon(exclamation-triangle);
+}
+.icon-exclamation {
+	@include icon(exclamation);
+}
+.icon-expand {
+	@include icon(expand);
+}
+.icon-expeditedssl {
+	@include icon(expeditedssl);
+}
+.icon-external-link-square {
+	@include icon(external-link-square);
+}
+.icon-external-link {
+	@include icon(external-link);
+}
+.icon-eye-slash {
+	@include icon(eye-slash);
+}
+.icon-eye {
+	@include icon(eye);
+}
+.icon-eyedropper {
+	@include icon(eyedropper);
+}
+.icon-facebook-f {
+	@include icon(facebook-f);
+}
+.icon-facebook-official {
+	@include icon(facebook-official);
+}
+.icon-facebook-square {
+	@include icon(facebook-square);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-fast-backward {
+	@include icon(fast-backward);
+}
+.icon-fast-forward {
+	@include icon(fast-forward);
+}
+.icon-fax {
+	@include icon(fax);
+}
+.icon-feed {
+	@include icon(feed);
+}
+.icon-female {
+	@include icon(female);
+}
+.icon-fighter-jet {
+	@include icon(fighter-jet);
+}
+.icon-file-archive-o {
+	@include icon(file-archive-o);
+}
+.icon-file-audio-o {
+	@include icon(file-audio-o);
+}
+.icon-file-code-o {
+	@include icon(file-code-o);
+}
+.icon-file-excel-o {
+	@include icon(file-excel-o);
+}
+.icon-file-image-o {
+	@include icon(file-image-o);
+}
+.icon-file-movie-o {
+	@include icon(file-movie-o);
+}
+.icon-file-o {
+	@include icon(file-o);
+}
+.icon-file-pdf-o {
+	@include icon(file-pdf-o);
+}
+.icon-file-photo-o {
+	@include icon(file-photo-o);
+}
+.icon-file-picture-o {
+	@include icon(file-picture-o);
+}
+.icon-file-powerpoint-o {
+	@include icon(file-powerpoint-o);
+}
+.icon-file-sound-o {
+	@include icon(file-sound-o);
+}
+.icon-file-text-o {
+	@include icon(file-text-o);
+}
+.icon-file-text {
+	@include icon(file-text);
+}
+.icon-file-video-o {
+	@include icon(file-video-o);
+}
+.icon-file-word-o {
+	@include icon(file-word-o);
+}
+.icon-file-zip-o {
+	@include icon(file-zip-o);
+}
+.icon-file {
+	@include icon(file);
+}
+.icon-files-o {
+	@include icon(files-o);
+}
+.icon-film {
+	@include icon(film);
+}
+.icon-filter {
+	@include icon(filter);
+}
+.icon-fire-extinguisher {
+	@include icon(fire-extinguisher);
+}
+.icon-fire {
+	@include icon(fire);
+}
+.icon-firefox {
+	@include icon(firefox);
+}
+.icon-flag-checkered {
+	@include icon(flag-checkered);
+}
+.icon-flag-o {
+	@include icon(flag-o);
+}
+.icon-flag {
+	@include icon(flag);
+}
+.icon-flash {
+	@include icon(flash);
+}
+.icon-flask {
+	@include icon(flask);
+}
+.icon-flickr {
+	@include icon(flickr);
+}
+.icon-floppy-o {
+	@include icon(floppy-o);
+}
+.icon-folder-o {
+	@include icon(folder-o);
+}
+.icon-folder-open-o {
+	@include icon(folder-open-o);
+}
+.icon-folder-open {
+	@include icon(folder-open);
+}
+.icon-folder {
+	@include icon(folder);
+}
+.icon-font {
+	@include icon(font);
+}
+.icon-fonticons {
+	@include icon(fonticons);
+}
+.icon-fort-awesome {
+	@include icon(fort-awesome);
+}
+.icon-forumbee {
+	@include icon(forumbee);
+}
+.icon-forward {
+	@include icon(forward);
+}
+.icon-foursquare {
+	@include icon(foursquare);
+}
+.icon-frown-o {
+	@include icon(frown-o);
+}
+.icon-futbol-o {
+	@include icon(futbol-o);
+}
+.icon-gamepad {
+	@include icon(gamepad);
+}
+.icon-gavel {
+	@include icon(gavel);
+}
+.icon-gbp {
+	@include icon(gbp);
+}
+.icon-ge {
+	@include icon(ge);
+}
+.icon-gear {
+	@include icon(gear);
+}
+.icon-gears {
+	@include icon(gears);
+}
+.icon-genderless {
+	@include icon(genderless);
+}
+.icon-get-pocket {
+	@include icon(get-pocket);
+}
+.icon-gg-circle {
+	@include icon(gg-circle);
+}
+.icon-gg {
+	@include icon(gg);
+}
+.icon-gift {
+	@include icon(gift);
+}
+.icon-git-square {
+	@include icon(git-square);
+}
+.icon-git {
+	@include icon(git);
+}
+.icon-github-alt {
+	@include icon(github-alt);
+}
+.icon-github-square {
+	@include icon(github-square);
+}
+.icon-github {
+	@include icon(github);
+}
+.icon-gittip {
+	@include icon(gittip);
+}
+.icon-glass {
+	@include icon(glass);
+}
+.icon-globe {
+	@include icon(globe);
+}
+.icon-google-plus-square {
+	@include icon(google-plus-square);
+}
+.icon-google-plus {
+	@include icon(google-plus);
+}
+.icon-google-wallet {
+	@include icon(google-wallet);
+}
+.icon-google {
+	@include icon(google);
+}
+.icon-graduation-cap {
+	@include icon(graduation-cap);
+}
+.icon-gratipay {
+	@include icon(gratipay);
+}
+.icon-group {
+	@include icon(group);
+}
+.icon-h-square {
+	@include icon(h-square);
+}
+.icon-hacker-news {
+	@include icon(hacker-news);
+}
+.icon-hand-grab-o {
+	@include icon(hand-grab-o);
+}
+.icon-hand-lizard-o {
+	@include icon(hand-lizard-o);
+}
+.icon-hand-o-down {
+	@include icon(hand-o-down);
+}
+.icon-hand-o-left {
+	@include icon(hand-o-left);
+}
+.icon-hand-o-right {
+	@include icon(hand-o-right);
+}
+.icon-hand-o-up {
+	@include icon(hand-o-up);
+}
+.icon-hand-paper-o {
+	@include icon(hand-paper-o);
+}
+.icon-hand-peace-o {
+	@include icon(hand-peace-o);
+}
+.icon-hand-pointer-o {
+	@include icon(hand-pointer-o);
+}
+.icon-hand-rock-o {
+	@include icon(hand-rock-o);
+}
+.icon-hand-scissors-o {
+	@include icon(hand-scissors-o);
+}
+.icon-hand-spock-o {
+	@include icon(hand-spock-o);
+}
+.icon-hand-stop-o {
+	@include icon(hand-stop-o);
+}
+.icon-hashtag {
+	@include icon(hashtag);
+}
+.icon-hdd-o {
+	@include icon(hdd-o);
+}
+.icon-header {
+	@include icon(header);
+}
+.icon-headphones {
+	@include icon(headphones);
+}
+.icon-heart-o {
+	@include icon(heart-o);
+}
+.icon-heart {
+	@include icon(heart);
+}
+.icon-heartbeat {
+	@include icon(heartbeat);
+}
+.icon-history {
+	@include icon(history);
+}
+.icon-home {
+	@include icon(home);
+}
+.icon-hospital-o {
+	@include icon(hospital-o);
+}
+.icon-hotel {
+	@include icon(hotel);
+}
+.icon-hourglass-1 {
+	@include icon(hourglass-1);
+}
+.icon-hourglass-2 {
+	@include icon(hourglass-2);
+}
+.icon-hourglass-3 {
+	@include icon(hourglass-3);
+}
+.icon-hourglass-end {
+	@include icon(hourglass-end);
+}
+.icon-hourglass-half {
+	@include icon(hourglass-half);
+}
+.icon-hourglass-o {
+	@include icon(hourglass-o);
+}
+.icon-hourglass-start {
+	@include icon(hourglass-start);
+}
+.icon-hourglass {
+	@include icon(hourglass);
+}
+.icon-houzz {
+	@include icon(houzz);
+}
+.icon-html5 {
+	@include icon(html5);
+}
+.icon-i-cursor {
+	@include icon(i-cursor);
+}
+.icon-ils {
+	@include icon(ils);
+}
+.icon-image {
+	@include icon(image);
+}
+.icon-inbox {
+	@include icon(inbox);
+}
+.icon-indent {
+	@include icon(indent);
+}
+.icon-industry {
+	@include icon(industry);
+}
+.icon-info-circle {
+	@include icon(info-circle);
+}
+.icon-info {
+	@include icon(info);
+}
+.icon-inr {
+	@include icon(inr);
+}
+.icon-instagram {
+	@include icon(instagram);
+}
+.icon-institution {
+	@include icon(institution);
+}
+.icon-internet-explorer {
+	@include icon(internet-explorer);
+}
+.icon-intersex {
+	@include icon(intersex);
+}
+.icon-ioxhost {
+	@include icon(ioxhost);
+}
+.icon-italic {
+	@include icon(italic);
+}
+.icon-joomla {
+	@include icon(joomla);
+}
+.icon-jpy {
+	@include icon(jpy);
+}
+.icon-jsfiddle {
+	@include icon(jsfiddle);
+}
+.icon-key {
+	@include icon(key);
+}
+.icon-keyboard-o {
+	@include icon(keyboard-o);
+}
+.icon-krw {
+	@include icon(krw);
+}
+.icon-language {
+	@include icon(language);
+}
+.icon-laptop {
+	@include icon(laptop);
+}
+.icon-lastfm-square {
+	@include icon(lastfm-square);
+}
+.icon-lastfm {
+	@include icon(lastfm);
+}
+.icon-leaf {
+	@include icon(leaf);
+}
+.icon-leanpub {
+	@include icon(leanpub);
+}
+.icon-legal {
+	@include icon(legal);
+}
+.icon-lemon-o {
+	@include icon(lemon-o);
+}
+.icon-level-down {
+	@include icon(level-down);
+}
+.icon-level-up {
+	@include icon(level-up);
+}
+.icon-life-bouy {
+	@include icon(life-bouy);
+}
+.icon-life-buoy {
+	@include icon(life-buoy);
+}
+.icon-life-ring {
+	@include icon(life-ring);
+}
+.icon-life-saver {
+	@include icon(life-saver);
+}
+.icon-lightbulb-o {
+	@include icon(lightbulb-o);
+}
+.icon-line-chart {
+	@include icon(line-chart);
+}
+.icon-link {
+	@include icon(link);
+}
+.icon-linkedin-square {
+	@include icon(linkedin-square);
+}
+.icon-linkedin {
+	@include icon(linkedin);
+}
+.icon-linux {
+	@include icon(linux);
+}
+.icon-list-alt {
+	@include icon(list-alt);
+}
+.icon-list-ol {
+	@include icon(list-ol);
+}
+.icon-list-ul {
+	@include icon(list-ul);
+}
+.icon-list {
+	@include icon(list);
+}
+.icon-location-arrow {
+	@include icon(location-arrow);
+}
+.icon-lock {
+	@include icon(lock);
+}
+.icon-long-arrow-down {
+	@include icon(long-arrow-down);
+}
+.icon-long-arrow-left {
+	@include icon(long-arrow-left);
+}
+.icon-long-arrow-right {
+	@include icon(long-arrow-right);
+}
+.icon-long-arrow-up {
+	@include icon(long-arrow-up);
+}
+.icon-magic {
+	@include icon(magic);
+}
+.icon-magnet {
+	@include icon(magnet);
+}
+.icon-mail-forward {
+	@include icon(mail-forward);
+}
+.icon-mail-reply-all {
+	@include icon(mail-reply-all);
+}
+.icon-mail-reply {
+	@include icon(mail-reply);
+}
+.icon-male {
+	@include icon(male);
+}
+.icon-map-marker {
+	@include icon(map-marker);
+}
+.icon-map-o {
+	@include icon(map-o);
+}
+.icon-map-pin {
+	@include icon(map-pin);
+}
+.icon-map-signs {
+	@include icon(map-signs);
+}
+.icon-map {
+	@include icon(map);
+}
+.icon-mars-double {
+	@include icon(mars-double);
+}
+.icon-mars-stroke-h {
+	@include icon(mars-stroke-h);
+}
+.icon-mars-stroke-v {
+	@include icon(mars-stroke-v);
+}
+.icon-mars-stroke {
+	@include icon(mars-stroke);
+}
+.icon-mars {
+	@include icon(mars);
+}
+.icon-maxcdn {
+	@include icon(maxcdn);
+}
+.icon-meanpath {
+	@include icon(meanpath);
+}
+.icon-medium {
+	@include icon(medium);
+}
+.icon-medkit {
+	@include icon(medkit);
+}
+.icon-meh-o {
+	@include icon(meh-o);
+}
+.icon-mercury {
+	@include icon(mercury);
+}
+.icon-microphone-slash {
+	@include icon(microphone-slash);
+}
+.icon-microphone {
+	@include icon(microphone);
+}
+.icon-minus-circle {
+	@include icon(minus-circle);
+}
+.icon-minus-square-o {
+	@include icon(minus-square-o);
+}
+.icon-minus-square {
+	@include icon(minus-square);
+}
+.icon-minus {
+	@include icon(minus);
+}
+.icon-mixcloud {
+	@include icon(mixcloud);
+}
+.icon-mobile-phone {
+	@include icon(mobile-phone);
+}
+.icon-mobile {
+	@include icon(mobile);
+}
+.icon-modx {
+	@include icon(modx);
+}
+.icon-money {
+	@include icon(money);
+}
+.icon-moon-o {
+	@include icon(moon-o);
+}
+.icon-mortar-board {
+	@include icon(mortar-board);
+}
+.icon-motorcycle {
+	@include icon(motorcycle);
+}
+.icon-mouse-pointer {
+	@include icon(mouse-pointer);
+}
+.icon-music {
+	@include icon(music);
+}
+.icon-navicon {
+	@include icon(navicon);
+}
+.icon-neuter {
+	@include icon(neuter);
+}
+.icon-newspaper-o {
+	@include icon(newspaper-o);
+}
+.icon-object-group {
+	@include icon(object-group);
+}
+.icon-object-ungroup {
+	@include icon(object-ungroup);
+}
+.icon-odnoklassniki-square {
+	@include icon(odnoklassniki-square);
+}
+.icon-odnoklassniki {
+	@include icon(odnoklassniki);
+}
+.icon-opencart {
+	@include icon(opencart);
+}
+.icon-openid {
+	@include icon(openid);
+}
+.icon-opera {
+	@include icon(opera);
+}
+.icon-optin-monster {
+	@include icon(optin-monster);
+}
+.icon-outdent {
+	@include icon(outdent);
+}
+.icon-pagelines {
+	@include icon(pagelines);
+}
+.icon-paint-brush {
+	@include icon(paint-brush);
+}
+.icon-paper-plane-o {
+	@include icon(paper-plane-o);
+}
+.icon-paper-plane {
+	@include icon(paper-plane);
+}
+.icon-paperclip {
+	@include icon(paperclip);
+}
+.icon-paragraph {
+	@include icon(paragraph);
+}
+.icon-paste {
+	@include icon(paste);
+}
+.icon-pause-circle-o {
+	@include icon(pause-circle-o);
+}
+.icon-pause-circle {
+	@include icon(pause-circle);
+}
+.icon-pause {
+	@include icon(pause);
+}
+.icon-paw {
+	@include icon(paw);
+}
+.icon-paypal {
+	@include icon(paypal);
+}
+.icon-pencil-square-o {
+	@include icon(pencil-square-o);
+}
+.icon-pencil-square {
+	@include icon(pencil-square);
+}
+.icon-pencil {
+	@include icon(pencil);
+}
+.icon-percent {
+	@include icon(percent);
+}
+.icon-phone-square {
+	@include icon(phone-square);
+}
+.icon-phone {
+	@include icon(phone);
+}
+.icon-photo {
+	@include icon(photo);
+}
+.icon-picture-o {
+	@include icon(picture-o);
+}
+.icon-pie-chart {
+	@include icon(pie-chart);
+}
+.icon-pied-piper-alt {
+	@include icon(pied-piper-alt);
+}
+.icon-pied-piper {
+	@include icon(pied-piper);
+}
+.icon-pinterest-p {
+	@include icon(pinterest-p);
+}
+.icon-pinterest-square {
+	@include icon(pinterest-square);
+}
+.icon-pinterest {
+	@include icon(pinterest);
+}
+.icon-plane {
+	@include icon(plane);
+}
+.icon-play-circle-o {
+	@include icon(play-circle-o);
+}
+.icon-play-circle {
+	@include icon(play-circle);
+}
+.icon-play {
+	@include icon(play);
+}
+.icon-plug {
+	@include icon(plug);
+}
+.icon-plus-circle {
+	@include icon(plus-circle);
+}
+.icon-plus-square-o {
+	@include icon(plus-square-o);
+}
+.icon-plus-square {
+	@include icon(plus-square);
+}
+.icon-plus {
+	@include icon(plus);
+}
+.icon-power-off {
+	@include icon(power-off);
+}
+.icon-print {
+	@include icon(print);
+}
+.icon-product-hunt {
+	@include icon(product-hunt);
+}
+.icon-puzzle-piece {
+	@include icon(puzzle-piece);
+}
+.icon-qq {
+	@include icon(qq);
+}
+.icon-qrcode {
+	@include icon(qrcode);
+}
+.icon-question-circle {
+	@include icon(question-circle);
+}
+.icon-question {
+	@include icon(question);
+}
+.icon-quote-left {
+	@include icon(quote-left);
+}
+.icon-quote-right {
+	@include icon(quote-right);
+}
+.icon-ra {
+	@include icon(ra);
+}
+.icon-random {
+	@include icon(random);
+}
+.icon-rebel {
+	@include icon(rebel);
+}
+.icon-recycle {
+	@include icon(recycle);
+}
+.icon-reddit-alien {
+	@include icon(reddit-alien);
+}
+.icon-reddit-square {
+	@include icon(reddit-square);
+}
+.icon-reddit {
+	@include icon(reddit);
+}
+.icon-refresh {
+	@include icon(refresh);
+}
+.icon-registered {
+	@include icon(registered);
+}
+.icon-remove {
+	@include icon(remove);
+}
+.icon-renren {
+	@include icon(renren);
+}
+.icon-reorder {
+	@include icon(reorder);
+}
+.icon-repeat {
+	@include icon(repeat);
+}
+.icon-reply-all {
+	@include icon(reply-all);
+}
+.icon-reply {
+	@include icon(reply);
+}
+.icon-retweet {
+	@include icon(retweet);
+}
+.icon-rmb {
+	@include icon(rmb);
+}
+.icon-road {
+	@include icon(road);
+}
+.icon-rocket {
+	@include icon(rocket);
+}
+.icon-rotate-left {
+	@include icon(rotate-left);
+}
+.icon-rotate-right {
+	@include icon(rotate-right);
+}
+.icon-rouble {
+	@include icon(rouble);
+}
+.icon-rss-square {
+	@include icon(rss-square);
+}
+.icon-rss {
+	@include icon(rss);
+}
+.icon-rub {
+	@include icon(rub);
+}
+.icon-ruble {
+	@include icon(ruble);
+}
+.icon-rupee {
+	@include icon(rupee);
+}
+.icon-safari {
+	@include icon(safari);
+}
+.icon-save {
+	@include icon(save);
+}
+.icon-scissors {
+	@include icon(scissors);
+}
+.icon-scribd {
+	@include icon(scribd);
+}
+.icon-search-minus {
+	@include icon(search-minus);
+}
+.icon-search-plus {
+	@include icon(search-plus);
+}
+.icon-search {
+	@include icon(search);
+}
+.icon-sellsy {
+	@include icon(sellsy);
+}
+.icon-send-o {
+	@include icon(send-o);
+}
+.icon-send {
+	@include icon(send);
+}
+.icon-server {
+	@include icon(server);
+}
+.icon-share-alt-square {
+	@include icon(share-alt-square);
+}
+.icon-share-alt {
+	@include icon(share-alt);
+}
+.icon-share-square-o {
+	@include icon(share-square-o);
+}
+.icon-share-square {
+	@include icon(share-square);
+}
+.icon-share {
+	@include icon(share);
+}
+.icon-shekel {
+	@include icon(shekel);
+}
+.icon-sheqel {
+	@include icon(sheqel);
+}
+.icon-shield {
+	@include icon(shield);
+}
+.icon-ship {
+	@include icon(ship);
+}
+.icon-shirtsinbulk {
+	@include icon(shirtsinbulk);
+}
+.icon-shopping-bag {
+	@include icon(shopping-bag);
+}
+.icon-shopping-basket {
+	@include icon(shopping-basket);
+}
+.icon-shopping-cart {
+	@include icon(shopping-cart);
+}
+.icon-sign-in {
+	@include icon(sign-in);
+}
+.icon-sign-out {
+	@include icon(sign-out);
+}
+.icon-signal {
+	@include icon(signal);
+}
+.icon-simplybuilt {
+	@include icon(simplybuilt);
+}
+.icon-sitemap {
+	@include icon(sitemap);
+}
+.icon-skyatlas {
+	@include icon(skyatlas);
+}
+.icon-skype {
+	@include icon(skype);
+}
+.icon-slack {
+	@include icon(slack);
+}
+.icon-sliders {
+	@include icon(sliders);
+}
+.icon-slideshare {
+	@include icon(slideshare);
+}
+.icon-smile-o {
+	@include icon(smile-o);
+}
+.icon-soccer-ball-o {
+	@include icon(soccer-ball-o);
+}
+.icon-sort-alpha-asc {
+	@include icon(sort-alpha-asc);
+}
+.icon-sort-alpha-desc {
+	@include icon(sort-alpha-desc);
+}
+.icon-sort-amount-asc {
+	@include icon(sort-amount-asc);
+}
+.icon-sort-amount-desc {
+	@include icon(sort-amount-desc);
+}
+.icon-sort-asc {
+	@include icon(sort-asc);
+}
+.icon-sort-desc {
+	@include icon(sort-desc);
+}
+.icon-sort-down {
+	@include icon(sort-down);
+}
+.icon-sort-numeric-asc {
+	@include icon(sort-numeric-asc);
+}
+.icon-sort-numeric-desc {
+	@include icon(sort-numeric-desc);
+}
+.icon-sort-up {
+	@include icon(sort-up);
+}
+.icon-sort {
+	@include icon(sort);
+}
+.icon-soundcloud {
+	@include icon(soundcloud);
+}
+.icon-space-shuttle {
+	@include icon(space-shuttle);
+}
+.icon-spinner {
+	@include icon(spinner);
+}
+.icon-spoon {
+	@include icon(spoon);
+}
+.icon-spotify {
+	@include icon(spotify);
+}
+.icon-square-o {
+	@include icon(square-o);
+}
+.icon-square {
+	@include icon(square);
+}
+.icon-stack-exchange {
+	@include icon(stack-exchange);
+}
+.icon-stack-overflow {
+	@include icon(stack-overflow);
+}
+.icon-star-half-empty {
+	@include icon(star-half-empty);
+}
+.icon-star-half-full {
+	@include icon(star-half-full);
+}
+.icon-star-half-o {
+	@include icon(star-half-o);
+}
+.icon-star-half {
+	@include icon(star-half);
+}
+.icon-star-o {
+	@include icon(star-o);
+}
+.icon-star {
+	@include icon(star);
+}
+.icon-steam-square {
+	@include icon(steam-square);
+}
+.icon-steam {
+	@include icon(steam);
+}
+.icon-step-backward {
+	@include icon(step-backward);
+}
+.icon-step-forward {
+	@include icon(step-forward);
+}
+.icon-stethoscope {
+	@include icon(stethoscope);
+}
+.icon-sticky-note-o {
+	@include icon(sticky-note-o);
+}
+.icon-sticky-note {
+	@include icon(sticky-note);
+}
+.icon-stop-circle-o {
+	@include icon(stop-circle-o);
+}
+.icon-stop-circle {
+	@include icon(stop-circle);
+}
+.icon-stop {
+	@include icon(stop);
+}
+.icon-street-view {
+	@include icon(street-view);
+}
+.icon-strikethrough {
+	@include icon(strikethrough);
+}
+.icon-stumbleupon-circle {
+	@include icon(stumbleupon-circle);
+}
+.icon-stumbleupon {
+	@include icon(stumbleupon);
+}
+.icon-subscript {
+	@include icon(subscript);
+}
+.icon-subway {
+	@include icon(subway);
+}
+.icon-suitcase {
+	@include icon(suitcase);
+}
+.icon-sun-o {
+	@include icon(sun-o);
+}
+.icon-superscript {
+	@include icon(superscript);
+}
+.icon-support {
+	@include icon(support);
+}
+.icon-table {
+	@include icon(table);
+}
+.icon-tablet {
+	@include icon(tablet);
+}
+.icon-tachometer {
+	@include icon(tachometer);
+}
+.icon-tag {
+	@include icon(tag);
+}
+.icon-tags {
+	@include icon(tags);
+}
+.icon-tasks {
+	@include icon(tasks);
+}
+.icon-taxi {
+	@include icon(taxi);
+}
+.icon-television {
+	@include icon(television);
+}
+.icon-tencent-weibo {
+	@include icon(tencent-weibo);
+}
+.icon-terminal {
+	@include icon(terminal);
+}
+.icon-text-height {
+	@include icon(text-height);
+}
+.icon-text-width {
+	@include icon(text-width);
+}
+.icon-th-large {
+	@include icon(th-large);
+}
+.icon-th-list {
+	@include icon(th-list);
+}
+.icon-th {
+	@include icon(th);
+}
+.icon-thumb-tack {
+	@include icon(thumb-tack);
+}
+.icon-thumbs-down {
+	@include icon(thumbs-down);
+}
+.icon-thumbs-o-down {
+	@include icon(thumbs-o-down);
+}
+.icon-thumbs-o-up {
+	@include icon(thumbs-o-up);
+}
+.icon-thumbs-up {
+	@include icon(thumbs-up);
+}
+.icon-ticket {
+	@include icon(ticket);
+}
+.icon-times-circle-o {
+	@include icon(times-circle-o);
+}
+.icon-times-circle {
+	@include icon(times-circle);
+}
+.icon-times {
+	@include icon(times);
+}
+.icon-tint {
+	@include icon(tint);
+}
+.icon-toggle-down {
+	@include icon(toggle-down);
+}
+.icon-toggle-left {
+	@include icon(toggle-left);
+}
+.icon-toggle-off {
+	@include icon(toggle-off);
+}
+.icon-toggle-on {
+	@include icon(toggle-on);
+}
+.icon-toggle-right {
+	@include icon(toggle-right);
+}
+.icon-toggle-up {
+	@include icon(toggle-up);
+}
+.icon-trademark {
+	@include icon(trademark);
+}
+.icon-train {
+	@include icon(train);
+}
+.icon-transgender-alt {
+	@include icon(transgender-alt);
+}
+.icon-transgender {
+	@include icon(transgender);
+}
+.icon-trash-o {
+	@include icon(trash-o);
+}
+.icon-trash {
+	@include icon(trash);
+}
+.icon-tree {
+	@include icon(tree);
+}
+.icon-trello {
+	@include icon(trello);
+}
+.icon-tripadvisor {
+	@include icon(tripadvisor);
+}
+.icon-trophy {
+	@include icon(trophy);
+}
+.icon-truck {
+	@include icon(truck);
+}
+.icon-try {
+	@include icon(try);
+}
+.icon-tty {
+	@include icon(tty);
+}
+.icon-tumblr-square {
+	@include icon(tumblr-square);
+}
+.icon-tumblr {
+	@include icon(tumblr);
+}
+.icon-turkish-lira {
+	@include icon(turkish-lira);
+}
+.icon-tv {
+	@include icon(tv);
+}
+.icon-twitch {
+	@include icon(twitch);
+}
+.icon-twitter-square {
+	@include icon(twitter-square);
+}
+.icon-twitter {
+	@include icon(twitter);
+}
+.icon-umbrella {
+	@include icon(umbrella);
+}
+.icon-underline {
+	@include icon(underline);
+}
+.icon-undo {
+	@include icon(undo);
+}
+.icon-university {
+	@include icon(university);
+}
+.icon-unlink {
+	@include icon(unlink);
+}
+.icon-unlock-alt {
+	@include icon(unlock-alt);
+}
+.icon-unlock {
+	@include icon(unlock);
+}
+.icon-unsorted {
+	@include icon(unsorted);
+}
+.icon-upload {
+	@include icon(upload);
+}
+.icon-usb {
+	@include icon(usb);
+}
+.icon-usd {
+	@include icon(usd);
+}
+.icon-user-md {
+	@include icon(user-md);
+}
+.icon-user-plus {
+	@include icon(user-plus);
+}
+.icon-user-secret {
+	@include icon(user-secret);
+}
+.icon-user-times {
+	@include icon(user-times);
+}
+.icon-user {
+	@include icon(user);
+}
+.icon-users {
+	@include icon(users);
+}
+.icon-venus-double {
+	@include icon(venus-double);
+}
+.icon-venus-mars {
+	@include icon(venus-mars);
+}
+.icon-venus {
+	@include icon(venus);
+}
+.icon-viacoin {
+	@include icon(viacoin);
+}
+.icon-video-camera {
+	@include icon(video-camera);
+}
+.icon-vimeo-square {
+	@include icon(vimeo-square);
+}
+.icon-vimeo {
+	@include icon(vimeo);
+}
+.icon-vine {
+	@include icon(vine);
+}
+.icon-vk {
+	@include icon(vk);
+}
+.icon-volume-down {
+	@include icon(volume-down);
+}
+.icon-volume-off {
+	@include icon(volume-off);
+}
+.icon-volume-up {
+	@include icon(volume-up);
+}
+.icon-warning {
+	@include icon(warning);
+}
+.icon-wechat {
+	@include icon(wechat);
+}
+.icon-weibo {
+	@include icon(weibo);
+}
+.icon-weixin {
+	@include icon(weixin);
+}
+.icon-whatsapp {
+	@include icon(whatsapp);
+}
+.icon-wheelchair {
+	@include icon(wheelchair);
+}
+.icon-wifi {
+	@include icon(wifi);
+}
+.icon-wikipedia-w {
+	@include icon(wikipedia-w);
+}
+.icon-windows {
+	@include icon(windows);
+}
+.icon-won {
+	@include icon(won);
+}
+.icon-wordpress {
+	@include icon(wordpress);
+}
+.icon-wrench {
+	@include icon(wrench);
+}
+.icon-xing-square {
+	@include icon(xing-square);
+}
+.icon-xing {
+	@include icon(xing);
+}
+.icon-y-combinator-square {
+	@include icon(y-combinator-square);
+}
+.icon-y-combinator {
+	@include icon(y-combinator);
+}
+.icon-yahoo {
+	@include icon(yahoo);
+}
+.icon-yc-square {
+	@include icon(yc-square);
+}
+.icon-yc {
+	@include icon(yc);
+}
+.icon-yelp {
+	@include icon(yelp);
+}
+.icon-yen {
+	@include icon(yen);
+}
+.icon-youtube-play {
+	@include icon(youtube-play);
+}
+.icon-youtube-square {
+	@include icon(youtube-square);
+}
+.icon-youtube {
+	@include icon(youtube);
+}

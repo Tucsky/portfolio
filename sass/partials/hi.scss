@@ -1,0 +1,42 @@
+#hi {
+	text-align: center;
+	height: 100vh;
+	width: 100%;
+	> .container {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+
+	h1 {
+		font-size: 4em;
+		font-weight: 600;
+		font-family: $font-family-sans-serif;
+		text-transform: uppercase;
+		text-align: left;
+		line-height: .9em;	
+		color: black;
+		//overflow: hidden;
+
+		filter: url(#glitch);
+		clip-path: polygon(0em 0em, 2.5em 0%, 2.5em 50%, 4.3em 50%, 4.3em 100%, 0% 100%);
+
+		+ p {
+			font-size: 1.2em;
+			font-weight: 300;
+			text-transform: lowercase;
+			text-align: right;
+			z-index: 1;
+			position: relative;
+			color: $gray-light;
+		}
+	}
+
+	@include media-breakpoint-up(sm) {
+		font-size: 1.5rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		font-size: 2rem;
+	}
+}

@@ -1,0 +1,131 @@
+.project {
+	.dialog-content {
+		width: 100%;
+		text-align: left;
+	}
+	
+	.screenshots {
+		background-color: $gray-lightest;
+		border-radius: 4px 4px 0 0;
+		overflow: hidden;
+		height: 50vh;
+		z-index: 1;
+
+		@include media-breakpoint-up(md) {
+			height: 75vh;
+		}
+
+		.flickity-viewport {
+			height: 100% !important;
+		}
+
+		.flickity-slider {
+			> div {
+				background-position: center center;
+				background-size: cover;
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+
+				video {
+					width: 100%;
+					position: absolute;
+					height: 100%;
+					z-index: 10000;
+					object-fit: cover;
+				}
+
+				img {
+					width: 100%;
+					height: 100%;
+					position: relative;
+					object-fit: cover;
+				}
+
+				p {
+					position: absolute;
+					bottom: 15px;
+					width: 100%;
+					text-align: center;
+
+					span {
+						background-color: black;
+						color: white;
+						display: inline-block;
+						padding: $btn-padding-y $btn-padding-x;
+						font-family: $font-family-sans-serif;    
+						opacity: 0;
+						transition: opacity .2s ease-in-out;
+					}
+				}
+
+				&.screenshot-dark {
+					p span {
+						background-color: white;
+						color: black;
+					}
+				}
+			}
+		}
+
+		&:hover {
+			.flickity-slider > div.is-selected {
+				p span {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	h2 {
+		font-family: $font-family-sans-serif;
+		font-size: 3rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: black;
+		text-shadow: 4px 4px #ffffff, 8px 8px rgba(black, .1);
+	}
+
+	.tags {
+		margin: -2px;
+		.btn {
+			margin: 2px;
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+				top: 0;
+				left: 0;
+			}
+
+			@for $i from 1 through 20 {
+				$color: rgba(white, (random(20) / 100));
+				&:nth-child(#{$i}):before {
+					background-color: $color;
+					box-shadow: 0 0 0 2px $color;
+				}
+			}
+
+			@include media-breakpoint-up(lg) {
+				font-size: 1rem;
+				padding: $btn-padding-y $btn-padding-x;
+			}
+		}
+	}
+}
+
+.screenshot-zoom {
+	position: fixed;
+	width: 25vh;
+	height: 25vh;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	background-color: $brand-primary;
+	border: 4px solid white;
+	z-index: 1000;
+	display: none;
+}

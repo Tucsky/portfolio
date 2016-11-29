@@ -1,0 +1,65 @@
+section {
+	padding: 10vh 0;
+
+	h2 {
+		font-family: $font-family-sans-serif;
+		font-size: 3rem;
+		text-transform: uppercase;
+		font-weight: 700;
+		padding: 0 4vw 2vh;
+		color: black;
+		text-shadow: 4px 4px #f4f4f4, 8px 8px rgba(black, .1);
+		@include media-breakpoint-up(sm) {
+			padding: 0 10vw 5vh;
+		}
+	}
+
+	.sub {
+		font-family: $font-family-sans-serif;
+		text-transform: uppercase;
+		font-weight: 700;
+		text-shadow: 2px 2px #f4f4f4, 4px 4px rgba(black, .1);
+	}
+
+	div.sub {
+		font-size: 1.5rem;
+		@include media-breakpoint-up(sm) {
+			font-size: 2rem;
+		}
+	}
+
+	p.attention {
+		margin: 1rem;
+		@include media-breakpoint-up(sm) {
+			margin: 2rem;
+		}
+		@include media-breakpoint-up(md) {
+			margin: 4rem;
+		}
+	}
+	
+	@include media-breakpoint-up(md) {
+		.container {
+			width: 70%;
+		}
+	}
+
+	&.section-odd {
+		background-color: $brand-primary;
+		@include background-pattern();
+		color: white;
+
+		h2 {
+			color: white;
+		}
+		//box-shadow: inset 0px 1px rgba(black, .05);
+
+		h2 {
+			text-shadow: 4px 4px $brand-primary, 8px 8px rgba(black, .1);
+		}
+
+		+ .section-odd {
+			box-shadow: none;
+		}
+	}
+}
