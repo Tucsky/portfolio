@@ -10,6 +10,7 @@ var concat = require('gulp-concat'),
 
 gulp.task('js', function() {
 	gulp.src([
+		'vendor/bowser/src/bowser.js', 
 		'vendor/jquery/dist/jquery.min.js', 
 		'vendor/tether/dist/js/tether.min.js', 
 		'vendor/bootstrap/dist/js/bootstrap.min.js',

@@ -1,3 +1,10 @@
+if (typeof bowser === 'object') {
+	document.documentElement.classList.add(bowser.mobile ? 'mobile' : 'desktop');
+
+	if (bowser.mobile)
+		document.getElementById('hi').style.minHeight = window.outerHeight+'px';
+}
+
 $.extend($.easing, {
 	def: 'easeOutQuad',
 	swing: function (x, t, b, c, d) {

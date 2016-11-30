@@ -13,7 +13,7 @@
 		}
 
 		$project->screenshots = glob('img/portfolio/'.$project->slug.'/*.{jpg,png,gif,jpeg,webm,JPG,PNG,GIF,JPEG,WEBM}', GLOB_BRACE);
-		$project->cover = glob('img/portfolio/'.$project->slug.'.{jpg,png,gif,JPG,PNG,GIF}', GLOB_BRACE);
+		$project->cover = glob('img/portfolio/'.$project->slug.'.{jpg,jpeg,png,gif,JPG,JPEG,PNG,GIF}', GLOB_BRACE);
 
 		if (!count($project->screenshots) && !count($project->cover))
 			continue;
@@ -98,7 +98,7 @@
 				<a class="nav-link active" href="#whoiam">Who Am I ?</a>
 				<a class="nav-link" href="#experiences">Experiences</a>
 				<a class="nav-link" href="#portfolio">Portfolio</a>
-				<a class="nav-link" href="#contact">Get In Touch</a>
+				<a class="nav-link" href="#contact">Get In Touch!</a>
 			</nav>
 		</div>
 		<div id="hi">
@@ -112,11 +112,11 @@
 				<h2>Who I Am ?</h2>
 				<div class="row text-xs-center text-sm-left">
 					<div class="col-xs-12 col-sm-8"><p>I'm an avid programmer from France, passinate about code, design, startup and technology. I like science, travelling and music.</p></div>
-					<div class="col-xs-12 col-sm-8 offset-sm-4"><div class="sub">What I do ?</div><p>I craft websites since the age of 13, build mobile applications, manage servers, design innovative user interfaces / experiences, and will transform your ideas into a finished digital project.</p></div>
+					<div class="col-xs-12 col-sm-8 offset-sm-4"><div class="strong">What I do ?</div><p>I craft websites since the age of 13, build mobile applications, manage servers, design innovative user interfaces / experiences, and will transform your ideas into a finished digital project.</p></div>
 				</div>
-				<p class="attention text-xs-center"><span class="sub">Oh</span> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever,<br><br>
+				<p class="attention text-xs-center"><strong>Oh</strong> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever,<br><br>
 					<a href="#contact" class="btn btn-outline-info"><i class="icon-chat"></i> Contact me :-)</a>
-					<span class="text-dark"> or </span>
+					<span class="text-dark">or</span>
 					<a target="_blank" href="cv_kevinrostagni.pdf" class="btn btn-outline-danger"><i class="icon-cloud-download"></i> Download my CV</a>
 				</p>
 			</div>
@@ -304,7 +304,18 @@
 		<section id="contact">
 			<div class="container">
 				<h2>Contact me</h2>
-				<p>Integer feugiat, mauris cursus consequat suscipit, eros felis volutpat turpis, vehicula viverra lacus metus vel nibh. Nunc varius odio id cursus vestibulum. Curabitur molestie elit turpis. Nunc elementum ut mauris sed vehicula. Morbi tristique tortor accumsan metus euismod faucibus. Nulla quis scelerisque magna. Morbi sagittis volutpat volutpat. Ut blandit, urna vel efficitur ullamcorper, tellus neque lobortis magna, eget maximus augue ex vel risus. Sed lacinia mauris metus, eu eleifend lacus convallis a. Vestibulum laoreet, tellus et tempor dignissim, libero quam euismod lectus, vel semper ante mi eu lorem. Pellentesque sodales blandit libero, eget bibendum tellus pharetra nec. Fusce ut pretium est, eget interdum risus. Nunc mattis pretium leo id placerat. Nullam ac blandit sapien, vitae tincidunt tortor. Quisque gravida eros tortor, sit amet consectetur velit dignissim vitae. Morbi non condimentum nunc.</p>
+				<p>I'm always <strong>interested</strong> in new projects, feel free to e-mail me at <a href="mailto:contact@kevinrostagni.me">contact@kevinrostagni.me</a> and i'll get back to your inquiry ASAP!</p>
+				<ul class="social">
+					<li><a target="_blank" class="social-ma btn" href="mailto:contact@kevinrostagni.me" data-toggle="tooltip" title="contact@kevinrostagni.me">
+						<i class="icon-at"></i>
+					</a></li>
+					<li><a target="_blank" class="social-lk btn" href="https://www.linkedin.com/in/kevinrostagni" data-toggle="tooltip" title="Kevin Rostagni">
+						<i class="icon-linkedin"></i>
+					</a></li>
+					<li><a target="_blank" class="social-tw btn" href="https://twitter.com/Tucsky" data-toggle="tooltip" title="Tucsky">
+						<i class="icon-twitter"></i>
+					</a></li>
+				</ul>
 			</div>
 		</section>
 

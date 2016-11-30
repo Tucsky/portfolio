@@ -10,6 +10,7 @@
 	"description": "A simple neural network implementation featuring the Backward Propagation and the sigmoid function for activation.<br><br>Made in vanilla JS for a school exercise.",
 	"tags": ["jsfiddle", "javascript", "vanilla", "school"],
 	"date": "2016",
+	"classes": "project-invert",
 	"url": "https://jsfiddle.net/Tucsky/sL1wx816/"
 },{
 	"name": "Honi",
@@ -29,6 +30,7 @@
 	"description": "A demonstration of the svg filters effect, through a pleasing drawing experiment only made with the help of vanilla JS.<br><br>Feel free to explore the different presets or play with the settings !",
 	"tags": ["svg", "canvas", "interactive", "codepen.io"],
 	"date": "2015",
+	"classes": "project-invert",
 	"url": "https://codepen.io/tucsky/full/zvRzBO"
 },{
 	"name": "Andesol",

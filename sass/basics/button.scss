@@ -16,6 +16,10 @@
 	i:last-child {
 		position: relative;
 		right: -2px;
+		&:first-child {
+			left: auto;
+			right: auto;
+		}
 	}
 
 	&.btn-sm {

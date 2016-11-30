@@ -1,0 +1,77 @@
+section#contact {
+	ul.social {
+		padding: 0px;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin: 5px;
+			position: relative;
+			a {
+				position: relative;
+				display: block;
+				text-decoration: none;
+				transition: color .5s ease-out .2s, transform .5s $ease-elastic-back .2s;
+				color: white;
+				i {
+					font-size: 2rem;
+					text-shadow: 1px 1px rgba(black, .1);
+				}
+
+				&.social-ma {
+					background-color: $brand-primary;
+					&:hover {
+						background-color: $brand-primary + 10%;
+					}
+					&:active {
+						background-color: $brand-primary + 17%;
+					}
+				}
+
+				&.social-lk {
+					background-color: $linkedin;
+					&:hover {
+						background-color: $linkedin + 10%;
+					}
+					&:active {
+						background-color: $linkedin + 17%;
+					}
+				}
+
+				&.social-tw {
+					background-color: $twitter;
+					&:hover {
+						background-color: $twitter + 10%;
+					}
+					&:active {
+						background-color: $twitter + 17%;
+					}
+				}
+			}
+
+			&:before {
+				content: '';
+				display: block;
+				position: absolute;
+				left: 10%;
+				right: 10%;
+				bottom: 12%;
+				height: 10%;
+
+				transition: box-shadow .5s ease-in-out .2s;
+			}
+
+			&:hover {
+				a {
+					transition: color .2s ease-in-out, transform .4s $ease-elastic;
+					color: white;
+					transform: translateY(-10%);
+				}
+
+				&:before {
+					transition: box-shadow .2s ease-in-out;
+					box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+				}
+			}
+		}
+	}
+}

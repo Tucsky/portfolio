@@ -22,6 +22,15 @@ section {
 		@include media-breakpoint-up(md) {
 			margin: 4rem;
 		}
+
+		.btn + span {
+			display: block;
+			margin: 10px;
+
+			@include media-breakpoint-up(sm) {
+				display: inline-block;
+			}
+		}
 	}
 	
 	@include media-breakpoint-up(md) {
