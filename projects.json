@@ -27,7 +27,7 @@
 	"url": "https://xavierwilliam.com"
 },{
 	"name": "Gooey Effect",
-	"description": "A demonstration of the svg filters effect, through a pleasing drawing experiment only made with the help of vanilla JS.<br><br>Feel free to explore the different presets or play with the settings !",
+	"description": "A demonstration of the svg filters effect, through a pleasing drawing experiment only made with the help of vanilla JS (and a bit of jQuery because of the UI, settings etc).<br><br>Feel free to explore the different presets or play with the settings !",
 	"tags": ["svg", "canvas", "interactive", "codepen.io"],
 	"date": "2015",
 	"classes": "project-invert",

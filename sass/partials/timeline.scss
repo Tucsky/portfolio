@@ -104,11 +104,11 @@ $color-5: #f0ca45; // yellow
 	}
 
 	&.timeline-picture {
-		background: $color-4;
+		background: $brand-danger;
 	}
 
 	&.timeline-movie {
-		background: $color-2;
+		background: $brand-info;
 	}
 
 	&.timeline-location {
@@ -167,7 +167,7 @@ $color-5: #f0ca45; // yellow
 
 	h3 {
 		font-family: $font-family-sans-serif;
-		color: $brand-dark;
+		color: $gray-dark;
 		font-weight: 700;
 		text-transform: uppercase;
 	}

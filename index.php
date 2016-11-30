@@ -306,7 +306,7 @@
 				<h2>Contact me</h2>
 				<p>I'm always <strong>interested</strong> in new projects, feel free to e-mail me at <a href="mailto:contact@kevinrostagni.me">contact@kevinrostagni.me</a> and i'll get back to your inquiry ASAP!</p>
 				<ul class="social">
-					<li><a target="_blank" class="social-ma btn" href="mailto:contact@kevinrostagni.me" data-toggle="tooltip" title="contact@kevinrostagni.me">
+					<li><a class="social-ma btn" href="mailto:contact@kevinrostagni.me" data-toggle="tooltip" title="contact@kevinrostagni.me">
 						<i class="icon-at"></i>
 					</a></li>
 					<li><a target="_blank" class="social-lk btn" href="https://www.linkedin.com/in/kevinrostagni" data-toggle="tooltip" title="Kevin Rostagni">
