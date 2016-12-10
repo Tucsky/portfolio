@@ -117,7 +117,7 @@
 				<p class="attention text-xs-center"><strong>Oh</strong> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever,<br><br>
 					<a href="#contact" class="btn btn-outline-info"><i class="icon-chat"></i> Contact me :-)</a>
 					<span class="text-dark">or</span>
-					<a target="_blank" href="cv_kevinrostagni.pdf" class="btn btn-outline-danger"><i class="icon-cloud-download"></i> Download my CV</a>
+					<a target="_blank" href="cv.pdf" class="btn btn-outline-danger"><i class="icon-cloud-download"></i> Download my CV</a>
 				</p>
 			</div>
 		</section>
@@ -210,7 +210,7 @@
 						</div>
 
 						<div class="timeline-content">
-							<span class="timeline-date">Jan 24</span>
+							<span class="timeline-date">2013</span>
 							<h3>A LEVEL</h3>
 							<p>Science and Technologies of Management</p>
 						</div>
@@ -314,7 +314,7 @@
 					<li><a target="_blank" class="social-lk btn" href="https://www.linkedin.com/in/kevinrostagni" data-toggle="tooltip" title="Kevin Rostagni">
 						<i class="icon-linkedin"></i>
 					</a></li>
-					<li><a target="_blank" class="social-tw btn" href="https://twitter.com/Tucsky" data-toggle="tooltip" title="Tucsky">
+					<li><a target="_blank" class="social-tw btn" href="https://twitter.com/Tucsky" data-toggle="tooltip" title="@Tucsky">
 						<i class="icon-twitter"></i>
 					</a></li>
 				</ul>

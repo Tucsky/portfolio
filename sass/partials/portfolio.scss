@@ -20,10 +20,13 @@
 				.project-title {
 					border-color: $body-color;
 					color: $body-color;
+					box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.05);
+					text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05);
 				}
 
 				.project-date {
 					color: $body-color;
+					text-shadow: none;
 				}
 
 				&:hover {

@@ -6,7 +6,6 @@
 	"date": "2015",
 	"active": true
 },{
-	"name": "Neural Network",
 	"description": "A simple neural network implementation featuring the Backward Propagation and the sigmoid function for activation.<br><br>Made in vanilla JS for a school exercise.",
 	"tags": ["jsfiddle", "javascript", "vanilla", "school"],
 	"date": "2016",

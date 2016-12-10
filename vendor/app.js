@@ -266,13 +266,9 @@ var Motion = function() {
 
 		if (!$(window).scrollTop())
 			$(document).trigger('scroll');
-
-		console.log('motion initialized');
 	}
 
 	that.refresh = function(place) {
-		console.log('refresh', place);
-
 		that.scroll = $(window).scrollTop();
 		that.offset = that.scroll - $('#'+place).offset().top;
 
@@ -425,8 +421,6 @@ function Dialog(el, options) {
 	this.el = typeof el === 'string' ? $(el).get(0) : ((el && typeof el === 'object' && el.nodeName) ? el : (el instanceof jQuery ? el.get(0) : null));
 
 	if (!this.el) {
-		console.log('instanciate new dialog');
-
 		if (typeof el === 'string' && !options)
 			this.options.content = el;
 				
@@ -466,14 +460,10 @@ function Dialog(el, options) {
 
 		document.body.appendChild(this.el);
 	} else if (this.el.data && this.el.data.Dialog) {
-		console.log('instanciate already instanciated dialog');
-
 		if (options === true)
 			return this.el.data.Dialog;
 		else
 			return this.el.data.Dialog.toggle();
-	} else {
-		console.log('instanciate dialog from DOM');
 	}
 
 	this.id = + new Date();
@@ -509,8 +499,6 @@ Dialog.prototype.listen = function(add) {
 
 	var direction = add ? 'addEventListener' : 'removeEventListener';
 
-	console.log('dialog '+(add ? 'add' : 'remove')+' event(s)');
-
 	this.ctrlClose && this.ctrlClose[direction]('click', this._toggle);
 	this.ctrlOverlay && this.ctrlOverlay[direction]('click', this._toggle);
 	document[direction]('keydown', this._toggle);
@@ -520,8 +508,6 @@ Dialog.prototype.listen = function(add) {
 Dialog.prototype.open = function() {
 	if (this.isOpen)
 		return;
-
-	console.log('open dialog');
 
 	clearTimeout(this.timeoutTransition);
 
@@ -544,8 +530,6 @@ Dialog.prototype.close = function() {
 
 	var self = this;
 
-	console.log('close dialog');
-
 	clearTimeout(this.timeoutTransition);
 
 	this.isOpen = false;
@@ -555,8 +539,6 @@ Dialog.prototype.close = function() {
 	this.listen();
 
 	this.el.classList.remove('dialog-open');
-	
-	console.log('hide in', this.options.transitionDuration+'ms');
 	this.timeoutTransition = setTimeout(this.hide.bind(this), this.options.transitionDuration);
 
 	this.options.onClose.apply(this, [this.el]);
@@ -565,16 +547,12 @@ Dialog.prototype.close = function() {
 }
 
 Dialog.prototype.hide = function() {
-	console.log('hide dialog');
-
 	this.isOpen = false;
 
 	this.el.style.display = 'none';
 
 	if (!this.options.ephemeral)
 		return this;
-
-	console.log('remove dialog');
 
 	delete this.el.data.Dialog;
 	this.el.parentElement.removeChild(this.el)
@@ -583,8 +561,6 @@ Dialog.prototype.hide = function() {
 Dialog.prototype.toggle = function(e) {
 	if (e && e.type == 'keydown' && ((e.keyCode || e.which) !== 27 || !this.isOpen))
 		return;
-
-	console.log('toggle', this.isOpen ? 'hide' : 'show');
 
 	if (this.isOpen)
 		this.close();
@@ -603,8 +579,6 @@ Dialog.prototype.center = function(e) {
 
 	margin = parseInt(margin) || 0;
 
-	console.log('resize dialog', margin);
-
 	this.ctrlContent.style.top = parseInt(Math.max(0, (window.innerHeight - this.ctrlContent.clientHeight) / 2 - margin)) + 'px';
 	this.ctrlContent.style.left = parseInt(Math.max(0, (window.innerWidth - this.ctrlContent.clientWidth) / 2 - margin)) + 'px';
 
@@ -612,8 +586,6 @@ Dialog.prototype.center = function(e) {
 }
 
 Dialog.prototype.resize = function(e) {
-	console.log('resize detected');
-
 	clearTimeout(this.timeoutResize);
 
 	this.timeoutResize = setTimeout(this.center.bind(this), this.options.resizeDelay);
@@ -658,8 +630,11 @@ function getImageBrightness(src, callback) {
 	}
 }
 
+Dialog.prototype.options.onClose = function() {
+	//location.hash = 'portfolio';
+}
+
 Dialog.prototype.options.onOpen = function() {
-	console.log('onOpen event handler');
 	$(this.el).find('.screenshots').flickity({
 		// options
 		percentPosition: false,
@@ -688,21 +663,14 @@ Dialog.prototype.options.onOpen = function() {
 
 			$(this).prop('disabled', false);
 		});
-		console.log($(this).find('.is-selected video').length);
+
 		if ($(this).find('.is-selected video').length) {
 			$(this).find('.is-selected video').get(0).play();
 		}
 	}).trigger('select.flickity');
 }
 
-Dialog.prototype.options.onClose = function() {
-	//location.hash = '';
-
-	console.log('close', location.hash);
-}
-
 $('.screenshots').on('click', function(e) {
-	console.log($(e.target).get(0));
 	if ($(e.target).is('video')) {
 		var video = $(e.target).get(0);
 
@@ -749,7 +717,7 @@ $('.screenshots').on('click', function(e) {
 $('[data-toggle="tooltip"]').tooltip({container: 'body'});
 
 if (location.hash && location.hash.length > 1) {
-	var target = document.getElementById(location.hash.substr(1));
+	var target = document.getElementById('.dialog'+location.hash.substr(1));
 
 	if (target)
 		new Dialog(target);
@@ -757,7 +725,7 @@ if (location.hash && location.hash.length > 1) {
 
 $(window).on('hashchange', function() {
 	if (location.hash && location.hash.length > 1) {
-		var target = document.querySelector(location.hash);
+		var target = document.querySelector('.dialog'+location.hash);
 
 		if (target && !target.classList.contains('dialog-open')) {
 			if ($('.dialog.dialog-open').length)
