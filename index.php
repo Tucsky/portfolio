@@ -104,7 +104,7 @@
 		<div id="hi">
 			<div class="container">
 				<h1>Kevin<br>Rostagni</h1>
-				<p class="text-primary">Full Stack Developer</p>
+				<p class="text-primary">freelance web developer</p>
 			</div>
 		</div>
 		<section id="whoiam">
@@ -124,7 +124,6 @@
 		<section id="experiences" class="section-odd">
 			<div class="container">
 				<h2>Experiences</h2>
-				<p>Integer feugiat, mauris cursus consequat suscipit, eros felis volutpat turpis, vehicula viverra lacus metus vel nibh. Nunc varius odio id cursus vestibulum. Curabitur molestie elit turpis. Nunc elementum ut mauris sed vehicula.</p>
 				<div id="timeline">
 					<div class="timeline-block">
 						<div class="timeline-img timeline-picture">
@@ -257,7 +256,10 @@
 									</video>
 								</div>
 							<?php else: ?>
-								<div data-flickity-bg-lazyload="<?php echo implode('/', array_map('rawurlencode', explode('/', $screenshot))); ?>">
+								<?php 
+									$commands = explode('|', pathinfo($screenshot, PATHINFO_BASENAME));
+								?>
+								<div <?php echo in_array('c', $commands) ? 'style="background-position:center center;"' :  ''; ?>data-flickity-bg-lazyload="<?php echo implode('/', array_map('rawurlencode', explode('/', $screenshot))); ?>">
 									<?php if (preg_match('/\((.*)\)/', $screenshot, $match) && count($match) > 1): ?>
 										<p><span><?php echo $match[1]; ?></span></p>	
 									<?php endif; ?>

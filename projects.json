@@ -45,6 +45,12 @@
 	"date": "2015",
 	"url": "http://snorkeling-report.com"
 },{
+	"name": "Docopro",
+	"description": "I lead 2 developers and 1 designer into the conception of a web app dedicated to co-ownership associations management.",
+	"tags": ["laravel"],
+	"date": "2014",
+	"classes": "project-invert"
+},{
 	"name": "Flap.IO",
 	"slug": "flapio",
 	"description": "A fun Socket.IO + HTML Canvas experiement I made based on the game Flappy Bird which consisted in playing the original game but this time going all multiplayer !",

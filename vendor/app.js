@@ -158,7 +158,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
 
 		if (target.length) {
 			$(target).scrollTo();
-			return false;
+			//return false;
 		}
 	}
 });
@@ -217,6 +217,8 @@ jQuery(document).ready(function($) {
 		return false;
 
 	new Dialog(target);
+
+	location.hash = $(this).data('dialog');
 
 	return false;
 })
@@ -693,6 +695,12 @@ Dialog.prototype.options.onOpen = function() {
 	}).trigger('select.flickity');
 }
 
+Dialog.prototype.options.onClose = function() {
+	//location.hash = '';
+
+	console.log('close', location.hash);
+}
+
 $('.screenshots').on('click', function(e) {
 	console.log($(e.target).get(0));
 	if ($(e.target).is('video')) {
@@ -739,3 +747,23 @@ $('.screenshots').on('click', function(e) {
 });
 
 $('[data-toggle="tooltip"]').tooltip({container: 'body'});
+
+if (location.hash && location.hash.length > 1) {
+	var target = document.getElementById(location.hash.substr(1));
+
+	if (target)
+		new Dialog(target);
+}
+
+$(window).on('hashchange', function() {
+	if (location.hash && location.hash.length > 1) {
+		var target = document.querySelector(location.hash);
+
+		if (target && !target.classList.contains('dialog-open')) {
+			if ($('.dialog.dialog-open').length)
+				new Dialog($('.dialog.dialog-open')[0]);
+
+			new Dialog(target);
+		}
+	}
+});
