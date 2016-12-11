@@ -53,9 +53,9 @@
 		<meta name="robots" content="index">
 		<meta name="keywords" content="kevin rostagni, portfolio, web developer, freelance web developer, full stack developer">
 		<meta name="Indentifier-URL" content="https://kevinrostagni.me">
-		<meta name="theme-color" content="#e74c3c">
-		<meta name="msapplication-navbutton-color" content="#e74c3c">
-		<meta name="apple-mobile-web-app-status-bar-style" content="#e74c3c">
+		<meta name="theme-color" content="#EC9454">
+		<meta name="msapplication-navbutton-color" content="#EC9454">
+		<meta name="apple-mobile-web-app-status-bar-style" content="#EC9454">
 
 		<title>Kevin Rostagni - Freelance developer</title>
 
@@ -80,8 +80,6 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Roboto+Condensed:300,400,700" rel="stylesheet">
 		<link href="app.min.css?t=<?php echo time(); ?>" rel="stylesheet">
-
-		<meta name="theme-color" content="#e74c3c">
 
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

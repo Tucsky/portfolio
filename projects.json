@@ -55,5 +55,5 @@
 	"description": "A fun Socket.IO + HTML Canvas experiement I made based on the game Flappy Bird which consisted in playing the original game but this time going all multiplayer !",
 	"tags": ["node.js", "socket.io", "canvas"],
 	"date": "2014",
-	"url": "https://kevinrostagni.me/flap.io"
+	"url": "http://flapio.kevinrostagni.me"
 }]
