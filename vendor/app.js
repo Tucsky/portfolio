@@ -717,7 +717,7 @@ $('.screenshots').on('click', function(e) {
 $('[data-toggle="tooltip"]').tooltip({container: 'body'});
 
 if (location.hash && location.hash.length > 1) {
-	var target = document.getElementById('.dialog'+location.hash.substr(1));
+	var target = document.querySelector('.dialog'+location.hash);
 
 	if (target)
 		new Dialog(target);

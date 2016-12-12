@@ -13,8 +13,10 @@
 	"url": "https://jsfiddle.net/Tucsky/sL1wx816/"
 },{
 	"name": "Honi",
-	"description": "Honi is a free mobile application for couples allowing them to spice up their everyday's life by doing some missions.",
-	"tags": ["laravel", "angular", "parse server"],
+	"description": "Honi is a free mobile application for couples allowing them to spice up their everyday's life by doing some missions and challenge with your other half.<br><br>
+	I'm in charge of the server infrastructures, promotional website and I help in the development of the hybrid app that is presently available for iOS and Android.<br><br>
+	As Honi is experiencing a real traffic increase over the past 6 months, we are now focused on the business development of the project and I recently started working on Honi Store, our shop made with Prestashop 1.7.",
+	"tags": ["laravel", "angularjs", "parse server", "prestashop 1.7"],
 	"date": "2015",
 	"active": true,
 	"url": "https://gethoni.com"

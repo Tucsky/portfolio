@@ -107,10 +107,10 @@
 		</div>
 		<section id="whoiam">
 			<div class="container">
-				<h2>Who I Am ?</h2>
+				<h2>Who I am</h2>
 				<div class="row text-xs-center text-sm-left">
 					<div class="col-xs-12 col-sm-8"><p>I'm an avid programmer from France, passinate about code, design, startup and technology. I like science, travelling and music.</p></div>
-					<div class="col-xs-12 col-sm-8 offset-sm-4"><div class="strong">What I do ?</div><p>I craft websites since the age of 13, build mobile applications, manage servers, design innovative user interfaces / experiences, and will transform your ideas into a finished digital project.</p></div>
+					<div class="col-xs-12 col-sm-8 offset-sm-4"><div class="strong">What I do</div><p>I craft websites since the age of 13, build mobile applications, manage servers, design innovative user interfaces / experiences, and will transform your ideas into a finished digital project.</p></div>
 				</div>
 				<p class="attention text-xs-center"><strong>Oh</strong> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever,<br><br>
 					<a href="#contact" class="btn btn-outline-info"><i class="icon-chat"></i> Contact me :-)</a>

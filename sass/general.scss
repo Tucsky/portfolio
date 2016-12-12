@@ -86,6 +86,12 @@ html.mobile {
 	}
 }
 
+html.no-backgroundblendmode {
+	section.section-odd {
+		background-image: none !important;
+	}
+}
+
 svg {
 	position: absolute;
 	height: 0px;
