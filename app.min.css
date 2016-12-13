@@ -8472,11 +8472,7 @@ http://flickity.metafizzy.co
     text-transform: uppercase;
     text-align: left;
     line-height: .9em;
-    color: black;
-    -webkit-filter: url(#glitch);
-            filter: url(#glitch);
-    -webkit-clip-path: polygon(0em 0em, 2.5em 0%, 2.5em 50%, 4.3em 50%, 4.3em 100%, 0% 100%);
-            clip-path: polygon(0em 0em, 2.5em 0%, 2.5em 50%, 4.3em 50%, 4.3em 100%, 0% 100%); }
+    color: black; }
     #hi h1 + p {
       font-size: 1.2em;
       font-weight: 300;
@@ -8491,6 +8487,12 @@ http://flickity.metafizzy.co
   @media (min-width: 992px) {
     #hi {
       font-size: 2rem; } }
+
+html.glitched #hi h1 {
+  -webkit-filter: url(#glitch);
+          filter: url(#glitch);
+  -webkit-clip-path: polygon(0em 0em, 2.5em 0%, 2.5em 50%, 4.3em 50%, 4.3em 100%, 0% 100%);
+          clip-path: polygon(0em 0em, 2.5em 0%, 2.5em 50%, 4.3em 50%, 4.3em 100%, 0% 100%); }
 
 section {
   padding: 10vh 0; }
@@ -8566,55 +8568,55 @@ section {
               animation: spin 20s linear infinite;
       display: inline-block; }
     #motion i.node-appearing.node-variant-1:before {
-      -webkit-animation-duration: 39s;
-              animation-duration: 39s;
-      -webkit-animation-delay: -22s;
-              animation-delay: -22s; }
-    #motion i.node-appearing.node-variant-2:before {
       -webkit-animation-duration: 23s;
               animation-duration: 23s;
       -webkit-animation-delay: -19s;
               animation-delay: -19s; }
+    #motion i.node-appearing.node-variant-2:before {
+      -webkit-animation-duration: 25s;
+              animation-duration: 25s;
+      -webkit-animation-delay: -30s;
+              animation-delay: -30s; }
     #motion i.node-appearing.node-variant-3:before {
-      -webkit-animation-duration: 24s;
-              animation-duration: 24s;
-      -webkit-animation-delay: -43s;
-              animation-delay: -43s; }
-    #motion i.node-appearing.node-variant-4:before {
-      -webkit-animation-duration: 49s;
-              animation-duration: 49s;
-      -webkit-animation-delay: -22s;
-              animation-delay: -22s; }
-    #motion i.node-appearing.node-variant-5:before {
-      -webkit-animation-duration: 46s;
-              animation-duration: 46s;
-      -webkit-animation-delay: -39s;
-              animation-delay: -39s; }
-    #motion i.node-appearing.node-variant-6:before {
-      -webkit-animation-duration: 50s;
-              animation-duration: 50s;
-      -webkit-animation-delay: -25s;
-              animation-delay: -25s; }
-    #motion i.node-appearing.node-variant-7:before {
       -webkit-animation-duration: 35s;
               animation-duration: 35s;
-      -webkit-animation-delay: -20s;
-              animation-delay: -20s; }
+      -webkit-animation-delay: -2s;
+              animation-delay: -2s; }
+    #motion i.node-appearing.node-variant-4:before {
+      -webkit-animation-duration: 25s;
+              animation-duration: 25s;
+      -webkit-animation-delay: -4s;
+              animation-delay: -4s; }
+    #motion i.node-appearing.node-variant-5:before {
+      -webkit-animation-duration: 50s;
+              animation-duration: 50s;
+      -webkit-animation-delay: -47s;
+              animation-delay: -47s; }
+    #motion i.node-appearing.node-variant-6:before {
+      -webkit-animation-duration: 31s;
+              animation-duration: 31s;
+      -webkit-animation-delay: -28s;
+              animation-delay: -28s; }
+    #motion i.node-appearing.node-variant-7:before {
+      -webkit-animation-duration: 42s;
+              animation-duration: 42s;
+      -webkit-animation-delay: -15s;
+              animation-delay: -15s; }
     #motion i.node-appearing.node-variant-8:before {
-      -webkit-animation-duration: 27s;
-              animation-duration: 27s;
-      -webkit-animation-delay: -20s;
-              animation-delay: -20s; }
+      -webkit-animation-duration: 26s;
+              animation-duration: 26s;
+      -webkit-animation-delay: -46s;
+              animation-delay: -46s; }
     #motion i.node-appearing.node-variant-9:before {
-      -webkit-animation-duration: 30s;
-              animation-duration: 30s;
-      -webkit-animation-delay: -23s;
-              animation-delay: -23s; }
+      -webkit-animation-duration: 39s;
+              animation-duration: 39s;
+      -webkit-animation-delay: -12s;
+              animation-delay: -12s; }
     #motion i.node-appearing.node-variant-10:before {
-      -webkit-animation-duration: 40s;
-              animation-duration: 40s;
-      -webkit-animation-delay: -35s;
-              animation-delay: -35s; }
+      -webkit-animation-duration: 34s;
+              animation-duration: 34s;
+      -webkit-animation-delay: -18s;
+              animation-delay: -18s; }
   #motion i.node-disappearing {
     -webkit-transform: scale(2);
         -ms-transform: scale(2);
@@ -8885,16 +8887,16 @@ section {
 			width: (1/3*100)+%;
 		}*/ }
     .grid .grid-item.project-invert .project .project-title {
-      border-color: #222;
-      color: #222;
-      box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.05);
+      border-color: black;
+      color: black;
+      box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.05);
       text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.05); }
     .grid .grid-item.project-invert .project .project-date {
       color: #222;
       text-shadow: none; }
     .grid .grid-item.project-invert .project:hover .project-title {
-      background-color: #222;
-      border-color: #222;
+      background-color: black;
+      border-color: black;
       color: white; }
     .grid .grid-item.one-one:before {
       padding-top: 56.25%; }
@@ -8910,6 +8912,9 @@ section {
     .grid .grid-item div.project {
       display: block;
       background-color: #EC9454;
+      -webkit-transition: all .4s ease-out;
+      transition: all .4s ease-out;
+      box-shadow: 0px 0px rgba(0, 0, 0, 0.1);
       background-blend-mode: multiply;
       background-image: url(img/fabric.png);
       background-position: center center; }
@@ -8961,24 +8966,23 @@ section {
         right: 20px;
         max-width: -webkit-calc(100% - 40px);
         max-width: calc(100% - 40px);
-        box-shadow: 5px 5px 0 2px rgba(0, 0, 0, 0.1);
+        box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.1);
         font-weight: 700;
         text-transform: uppercase;
         white-space: initial;
         text-align: right;
         text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.1); }
-      .grid .grid-item div.project:hover .project-thumbnail > div {
-        -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-                transform: scale(1.1);
-        -webkit-transition: -webkit-transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1);
-        transition: -webkit-transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1);
-        transition: transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1);
-        transition: transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1), -webkit-transform 0.2s cubic-bezier(0.34, 1.61, 0.7, 1); }
-      .grid .grid-item div.project:hover .project-title {
-        color: #222;
-        background-color: white;
-        text-shadow: none; }
+      .grid .grid-item div.project:hover {
+        -webkit-transition: all 0.5s cubic-bezier(0.34, 1.61, 0.7, 1);
+        transition: all 0.5s cubic-bezier(0.34, 1.61, 0.7, 1);
+        -webkit-transform: translate(-10px, -10px);
+            -ms-transform: translate(-10px, -10px);
+                transform: translate(-10px, -10px);
+        box-shadow: 10px 10px rgba(0, 0, 0, 0.05); }
+        .grid .grid-item div.project:hover .project-title {
+          color: #222;
+          background-color: white;
+          box-shadow: none; }
 
 .project .dialog-content {
   width: 100%;
@@ -9073,65 +9077,65 @@ section {
       top: 0;
       left: 0; }
     .project .tags .btn:nth-child(1):before {
-      background-color: rgba(255, 255, 255, 0.19);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.19); }
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1); }
     .project .tags .btn:nth-child(2):before {
-      background-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2); }
-    .project .tags .btn:nth-child(3):before {
-      background-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2); }
-    .project .tags .btn:nth-child(4):before {
-      background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.01); }
-    .project .tags .btn:nth-child(5):before {
-      background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.01); }
-    .project .tags .btn:nth-child(6):before {
-      background-color: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05); }
-    .project .tags .btn:nth-child(7):before {
-      background-color: rgba(255, 255, 255, 0.07);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.07); }
-    .project .tags .btn:nth-child(8):before {
-      background-color: rgba(255, 255, 255, 0.06);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.06); }
-    .project .tags .btn:nth-child(9):before {
       background-color: rgba(255, 255, 255, 0.15);
       box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15); }
-    .project .tags .btn:nth-child(10):before {
-      background-color: rgba(255, 255, 255, 0.2);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.2); }
-    .project .tags .btn:nth-child(11):before {
-      background-color: rgba(255, 255, 255, 0.01);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.01); }
-    .project .tags .btn:nth-child(12):before {
-      background-color: rgba(255, 255, 255, 0.19);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.19); }
-    .project .tags .btn:nth-child(13):before {
-      background-color: rgba(255, 255, 255, 0.16);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.16); }
-    .project .tags .btn:nth-child(14):before {
-      background-color: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05); }
-    .project .tags .btn:nth-child(15):before {
+    .project .tags .btn:nth-child(3):before {
+      background-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18); }
+    .project .tags .btn:nth-child(4):before {
+      background-color: rgba(255, 255, 255, 0.14);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.14); }
+    .project .tags .btn:nth-child(5):before {
       background-color: rgba(255, 255, 255, 0.09);
       box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.09); }
+    .project .tags .btn:nth-child(6):before {
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1); }
+    .project .tags .btn:nth-child(7):before {
+      background-color: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.06); }
+    .project .tags .btn:nth-child(8):before {
+      background-color: rgba(255, 255, 255, 0.18);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.18); }
+    .project .tags .btn:nth-child(9):before {
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1); }
+    .project .tags .btn:nth-child(10):before {
+      background-color: rgba(255, 255, 255, 0.17);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.17); }
+    .project .tags .btn:nth-child(11):before {
+      background-color: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.08); }
+    .project .tags .btn:nth-child(12):before {
+      background-color: rgba(255, 255, 255, 0.14);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.14); }
+    .project .tags .btn:nth-child(13):before {
+      background-color: rgba(255, 255, 255, 0.03);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.03); }
+    .project .tags .btn:nth-child(14):before {
+      background-color: rgba(255, 255, 255, 0.06);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.06); }
+    .project .tags .btn:nth-child(15):before {
+      background-color: rgba(255, 255, 255, 0.14);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.14); }
     .project .tags .btn:nth-child(16):before {
+      background-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12); }
+    .project .tags .btn:nth-child(17):before {
+      background-color: rgba(255, 255, 255, 0.04);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.04); }
+    .project .tags .btn:nth-child(18):before {
+      background-color: rgba(255, 255, 255, 0.16);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.16); }
+    .project .tags .btn:nth-child(19):before {
+      background-color: rgba(255, 255, 255, 0.12);
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.12); }
+    .project .tags .btn:nth-child(20):before {
       background-color: rgba(255, 255, 255, 0.07);
       box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.07); }
-    .project .tags .btn:nth-child(17):before {
-      background-color: rgba(255, 255, 255, 0.05);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.05); }
-    .project .tags .btn:nth-child(18):before {
-      background-color: rgba(255, 255, 255, 0.02);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.02); }
-    .project .tags .btn:nth-child(19):before {
-      background-color: rgba(255, 255, 255, 0.11);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.11); }
-    .project .tags .btn:nth-child(20):before {
-      background-color: rgba(255, 255, 255, 0.02);
-      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.02); }
     @media (min-width: 992px) {
       .project .tags .btn {
         font-size: 1rem;

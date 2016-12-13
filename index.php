@@ -39,6 +39,16 @@
 
 		$projects[] = $project;
 	}
+/*
+	function glitch($length = 20) {
+		var output = [];
+
+		function glithDetermine = function() {
+			var start = rand(0, 1);
+		}
+
+		if (start > 0)
+	}*/
 ?>
 
 <!DOCTYPE html>
@@ -355,7 +365,7 @@
 				    		values="103px; 104px; 69px; 53px; 42px; 104px; 78px; 89px; 96px; 100px; 67px; 50px; 96px; 66px; 88px; 42px; 13px; 100px; 100px; 104px;" 
 				    		keyTimes="0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 0.548; 0.577; 0.613; 1" />
 		 
-						<animate attributeName="height" id="h" dur="3s" repeatCount="indefinite"
+						<animate attributeName="height" id="h" dur="4s" repeatCount="indefinite"
 							values="0px; 0px; 0px; 16px; 16px; 12px; 12px; 0px; 0px; 5px; 10px; 22px; 33px; 11px; 0px; 0px; 10px" keyTimes="0; 0.055; 0.100; 0.125; 0.159; 0.182; 0.202; 0.236; 0.268; 0.326; 0.357; 0.400; 0.408; 0.461; 0.493; 0.513; 1" />
 				    </feMerge>
 					

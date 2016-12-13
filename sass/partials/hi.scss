@@ -18,9 +18,6 @@
 		color: black;
 		//overflow: hidden;
 
-		filter: url(#glitch);
-		clip-path: polygon(0em 0em, 2.5em 0%, 2.5em 50%, 4.3em 50%, 4.3em 100%, 0% 100%);
-
 		+ p {
 			font-size: 1.2em;
 			font-weight: 300;
@@ -39,4 +36,9 @@
 	@include media-breakpoint-up(lg) {
 		font-size: 2rem;
 	}
+}
+
+html.glitched #hi h1 {
+	filter: url(#glitch);
+	clip-path: polygon(0em 0em, 2.5em 0%, 2.5em 50%, 4.3em 50%, 4.3em 100%, 0% 100%);
 }

@@ -185,6 +185,10 @@ $('.grid').masonry({
 })
 
 jQuery(document).ready(function($) {
+	setTimeout(function() {
+		$('html').addClass('glitched');
+	}, 2000 + Math.random()*1000);
+
 	var timelineBlocks = $('.timeline-block'),
 		offset = 0.8;
 
