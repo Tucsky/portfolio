@@ -39,16 +39,6 @@
 
 		$projects[] = $project;
 	}
-/*
-	function glitch($length = 20) {
-		var output = [];
-
-		function glithDetermine = function() {
-			var start = rand(0, 1);
-		}
-
-		if (start > 0)
-	}*/
 ?>
 
 <!DOCTYPE html>
@@ -89,7 +79,7 @@
 		<meta property="og:description" content="Kevin Rostagni, freelance web developer based in Paris">
 
 		<link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Roboto+Condensed:300,400,700" rel="stylesheet">
-		<link href="app.min.css?t=<?php echo time(); ?>" rel="stylesheet">
+		<link href="app.min.css" rel="stylesheet">
 
 		<!--[if lt IE 9]>
 		  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -112,7 +102,7 @@
 		<div id="hi">
 			<div class="container">
 				<h1>Kevin<br>Rostagni</h1>
-				<p class="text-primary">freelance web developer</p>
+				<p>freelance web developer</p>
 			</div>
 		</div>
 		<section id="whoiam">
@@ -123,7 +113,7 @@
 					<div class="col-xs-12 col-sm-8 offset-sm-4"><div class="strong">What I do</div><p>I craft websites since the age of 13, build mobile applications, manage servers, design innovative user interfaces / experiences, and will transform your ideas into a finished digital project.</p></div>
 				</div>
 				<p class="attention text-xs-center"><strong>Oh</strong> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever,<br><br>
-					<a href="#contact" class="btn btn-outline-info"><i class="icon-chat"></i> Contact me :-)</a>
+					<a href="#contact" class="btn btn-outline-info btn-lga"><i class="icon-chat"></i> Contact me :-)</a>
 					<span class="text-dark">or</span>
 					<a target="_blank" href="cv.pdf" class="btn btn-outline-danger"><i class="icon-cloud-download"></i> Download my CV</a>
 				</p>
@@ -133,6 +123,18 @@
 			<div class="container">
 				<h2>Experiences</h2>
 				<div id="timeline">
+					<div class="timeline-block">
+						<div class="timeline-img timeline-movie">
+							<i class="icon-building"></i>
+						</div>
+
+						<div class="timeline-content">
+							<span class="timeline-date">2017</span>
+							<h3>Fullstack Web developer at <a href="http://www.aptea.net">Aptea</a></h3>
+							<p>Current position <i class="icon-smile-o"></i></p>
+							<!--<a href="#0" class="btn btn-dark btn-tilt">Read more</a>-->
+						</div>
+					</div>
 					<div class="timeline-block">
 						<div class="timeline-img timeline-picture">
 							<i class="icon-graduate-certificate"></i>
@@ -332,7 +334,7 @@
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<defs>
 				<filter id="glitch">
-				    <feFlood flood-color="#f4f4f4" result="white" />
+				    <feFlood flood-color="#111" result="white" />
 				    <feFlood flood-color="blue" result="flood1" />
 				    <feFlood flood-color="yellow" result="flood2" />
 					<feOffset in="SourceGraphic" dx="5" dy="0" result="off1a"/>
@@ -378,7 +380,6 @@
 			</defs>
 		</svg>
 
-		<!--<script src="https://use.fontawesome.com/2325cfb746.js"></script>-->
-		<script src="app.min.js?t=<?php echo time(); ?>"></script>
+		<script src="app.min.js"></script>
 	</body>
 </html>

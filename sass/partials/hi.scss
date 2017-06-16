@@ -2,10 +2,13 @@
 	text-align: center;
 	height: 100vh;
 	width: 100%;
+	background-color: #111;
+
 	> .container {
 		position: relative;
 		top: 50%;
 		transform: translateY(-50%);
+		max-width: 700px;
 	}
 
 	h1 {
@@ -15,7 +18,7 @@
 		text-transform: uppercase;
 		text-align: left;
 		line-height: .9em;	
-		color: black;
+		color: white;
 		//overflow: hidden;
 
 		+ p {
@@ -25,7 +28,7 @@
 			text-align: right;
 			z-index: 1;
 			position: relative;
-			color: $gray-light;
+			color: white;
 		}
 	}
 

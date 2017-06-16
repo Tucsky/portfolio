@@ -37,7 +37,7 @@ gulp.task('js', function() {
 gulp.task('sass', function() {
 	gulp.src('sass/app.scss')
 		.pipe(sass({
-			style: 'compressed'
+			outputStyle: 'compressed'
 		}).on('error', sass.logError))
 		.pipe(autoprefixer({
 			browsers: ['last 8 versions']
