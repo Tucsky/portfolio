@@ -24,10 +24,18 @@
 
 		a {
 			color: white;
-			transition: color .5s ease-out .2s;
+			transition: all .4s $ease-elastic .2s;
+			font-weight: 700;
+			transform-origin: bottom;
+
 			&:hover {
 				color: $brand-primary;
-				transition: color .2s ease-in-out;
+				transition: all .2s $ease-elastic;
+
+				@include media-breakpoint-up(lg) {
+					text-shadow: 0 10px 20px rgba(black, .25);
+					transform: scale(1.2, 1.4);
+				}
 			}
 		}
 	}

@@ -2,7 +2,8 @@
 	text-align: center;
 	height: 100vh;
 	width: 100%;
-	background-color: #111;
+	background-color: #112233;
+	@include background-pattern();
 
 	> .container {
 		position: relative;

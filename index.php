@@ -1,11 +1,11 @@
 <?php 
 	$projects = array();
 
-	$raw = preg_replace("/\t/", "", preg_replace("/\n/", "", file_get_contents('projects.json')));
+	$raw = preg_replace("/\s+/", " ", file_get_contents('projects.json'));
 
 	foreach (json_decode($raw) ?: array() as $index => $project) {
 		if (!isset($project->name))
-			continue;
+			continue;	
 
 		if (!isset($project->slug)) {
 			$project->slug = iconv('utf-8', 'us-ascii//TRANSLIT', preg_replace('~[^\pL\d]+~u', '-', $project->name));
@@ -40,7 +40,6 @@
 		$projects[] = $project;
 	}
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 	<head>
@@ -131,7 +130,18 @@
 						<div class="timeline-content">
 							<span class="timeline-date">2017</span>
 							<h3>Fullstack Web developer at <a href="http://www.aptea.net">Aptea</a></h3>
-							<p>Current position <i class="icon-smile-o"></i></p>
+							<p>Making the next corportate website of the company</p>
+							<ul>
+								<li>Development of the back-end architecture, integrated CRM & front-end.</li>
+								<li>Cutting edge design, using SASS, GULP, SVG</li>
+							</ul>
+							<p>Tierce maintenance application for CampusFrance</p>
+							<ul>
+								<li>Technical poject management (taking every operative decisions)</li>
+								<li>Ensurint customer relationship</li>
+								<li>Performance optimisations</li>
+								<li>Developpement front/back CodeIgniter php framework</li>
+							</ul>
 							<!--<a href="#0" class="btn btn-dark btn-tilt">Read more</a>-->
 						</div>
 					</div>
@@ -237,10 +247,10 @@
 						<div class="grid-item col-xs-12 <?php echo (isset($project->cols) ? $project->cols : 'col-md-6 col-lg-4 col-xl-3').(isset($project->classes) ? ' '.$project->classes : ''); ?>">
 							<div class="<?php echo isset($project->ratio) ? $project->ratio : 'four-three' ?>">
 								<div class="project">
-									<a data-dialog="<?php echo $project->slug; ?>" href="#" class="project-thumbnail">
+									<a data-dialog="<?php echo $project->slug; ?>" title="<?php echo $project->name; ?>" href="#" class="project-thumbnail">
 										<div style="background-image:url('<?php echo $project->cover; ?>');"></div>
 									</a>
-									<a data-dialog="<?php echo $project->slug; ?>" href="#" class="btn btn-outline-white project-title"><?php echo $project->name; ?></a>
+									<a data-dialog="<?php echo $project->slug; ?>" title="<?php echo $project->name; ?>" href="#" class="btn btn-outline-white project-title"><?php echo $project->name; ?></a>
 									<span class="project-date"><?php echo $project->date.($project->active ? '+ <i class="icon-bolt text-danger" data-toggle="tooltip" title="Active"></i>' : ''); ?></span>
 								</div>
 							</div>
@@ -334,7 +344,7 @@
 		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 			<defs>
 				<filter id="glitch">
-				    <feFlood flood-color="#111" result="white" />
+				    <feFlood flood-color="#112233" result="white" />
 				    <feFlood flood-color="blue" result="flood1" />
 				    <feFlood flood-color="yellow" result="flood2" />
 					<feOffset in="SourceGraphic" dx="5" dy="0" result="off1a"/>
