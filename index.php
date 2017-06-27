@@ -1,4 +1,9 @@
 <?php 
+	if (isset($_GET['hash']) && mb_strlen($hash = trim($_GET['hash']))):
+		header("Location: /#$hash");
+		exit;
+	endif;
+	
 	$projects = array();
 
 	$raw = preg_replace("/\s+/", " ", file_get_contents('projects.json'));
