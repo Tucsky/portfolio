@@ -92,10 +92,10 @@
 		</div>
 		<div id="top">
 			<nav class="nav nav-inline">
-				<a class="nav-link active" href="#whoiam">Who Am I ?</a>
-				<a class="nav-link" href="#experiences">Experiences</a>
-				<a class="nav-link" href="#portfolio">Portfolio</a>
-				<a class="nav-link" href="#contact">Get In Touch!</a>
+				<a class="nav-link active" href="#whoiam" data-label="Who Am I ?">Who Am I ?</a>
+				<a class="nav-link" href="#experiences" data-label="Experiences">Experiences</a>
+				<a class="nav-link" href="#portfolio" data-label="Portfolio">Portfolio</a>
+				<a class="nav-link" href="#contact" data-label="Get In Touch!">Get In Touch!</a>
 			</nav>
 		</div>
 		<div id="hi">
