@@ -22,10 +22,17 @@
 			font-size: 1.4rem;
 		}
 
+		&:hover {
+			a {
+				color: rgba(255, 255, 255, .2);
+			}
+		}
+
 		a {
 			color: white;
 			transition: all .4s $ease-elastic .2s;
-			font-weight: 700;
+			font-weight: 400;
+			text-transform: uppercase;
 			transform-origin: bottom;
 			position: relative;
 
