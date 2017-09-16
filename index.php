@@ -101,16 +101,16 @@
 		</div>
 		<div id="top">
 			<div class="row">
-				<div class="col">
+				<div class="col-6 col-md-3">
 					<a class="active" href="#whoiam" data-label="Who Am I ?">Who Am I ?</a>
 				</div>
-				<div class="col">
+				<div class="col-6 col-md-3">
 					<a href="#experiences" data-label="Experiences">Experiences</a>
 				</div>
-				<div class="col">
+				<div class="col-6 col-md-3">
 					<a href="#portfolio" data-label="Portfolio">Portfolio</a>
 				</div>
-				<div class="col">
+				<div class="col-6 col-md-3">
 					<a href="#contact" data-label="Get In Touch!">Get In Touch!</a>
 				</div>
 			</div>

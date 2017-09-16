@@ -8,6 +8,10 @@
 	//background-color: rgba(white, .7);
 
 	@include media-breakpoint-up(lg) {
+		padding: 5% 10%;
+	}
+
+	@include media-breakpoint-up(xl) {
 		padding: 5% 25%;
 	}
 
@@ -34,7 +38,7 @@
 			transition: all .4s $ease-elastic .2s;
 			font-weight: 400;
 			text-transform: uppercase;
-			transform-origin: bottom;
+			transform-origin: center center;
 			position: relative;
 			white-space: nowrap;
 			padding: 10% 0;
@@ -73,10 +77,11 @@
 			&:hover {
 				color: rgba(0, 255, 0, 1);
 				transition: all .2s $ease-elastic;
+				transform: scale(1.2);
 
 				@include media-breakpoint-up(lg) {
 					text-shadow: 0 10px 20px rgba(black, .25);
-					font-size: 1.5em;
+					transform: scale(1.5);
 				}
 
 				&:before, &:after {
@@ -90,13 +95,23 @@
 				}
 
 				&:before {
-					top: -1px;
-					left: -1px;
+						top: 10%;
+						left: 25%;
+
+					@include media-breakpoint-up(lg) {
+						top: 10%;
+						left: 25%;
+					}
 				}
 
 				&:after {
-					bottom: -1px;
-					right: -1px;
+						bottom: 10%;
+						right: 25%;
+
+					@include media-breakpoint-up(lg) {
+						bottom: 10%;
+						right: 25%;
+					}
 				}
 			}
 		}
