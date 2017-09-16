@@ -1,5 +1,6 @@
 .btn {
 	font-family: $font-family-sans-serif;
+	font-size: 1em;
 	border-width: 2px;
 
 	&.btn-tilt {
@@ -29,23 +30,23 @@
 	}
 }
 
-.btn-primary { @include button-variant(#fff, $brand-primary, $brand-primary); }
-.btn-outline-primary { @include button-outline-variant($brand-primary); }
+.btn-primary { @include button-variant(#fff, theme-color("primary"), theme-color("primary")); }
+.btn-outline-primary { @include button-outline-variant(theme-color("primary")); }
 
-.btn-success { @include button-variant(#fff, $brand-success, $brand-success); }
-.btn-outline-success { @include button-outline-variant($brand-success); }
+.btn-success { @include button-variant(#fff, theme-color("success"), theme-color("success")); }
+.btn-outline-success { @include button-outline-variant(theme-color("success")); }
 
-.btn-warning { @include button-variant(#fff, $brand-warning, $brand-warning); }
-.btn-outline-warning { @include button-outline-variant($brand-warning); }
+.btn-warning { @include button-variant(#fff, theme-color("warning"), theme-color("warning")); }
+.btn-outline-warning { @include button-outline-variant(theme-color("warning")); }
 
-.btn-info { @include button-variant(#fff, $brand-info, $brand-info); }
-.btn-outline-info { @include button-outline-variant($brand-info); }
+.btn-info { @include button-variant(#fff, theme-color("info"), theme-color("info")); }
+.btn-outline-info { @include button-outline-variant(theme-color("info")); }
 
-.btn-danger { @include button-variant(#fff, $brand-danger, $brand-danger); }
-.btn-outline-danger { @include button-outline-variant($brand-danger); }
+.btn-danger { @include button-variant(#fff, theme-color("danger"), theme-color("danger")); }
+.btn-outline-danger { @include button-outline-variant(theme-color("danger")); }
 
-.btn-dark { @include button-variant(#fff, $brand-dark, $brand-dark); }
-.btn-outline-dark { @include button-outline-variant($brand-dark); }
+.btn-dark { @include button-variant(#fff, theme-color("dark"), theme-color("dark")); }
+.btn-outline-dark { @include button-outline-variant(theme-color("dark")); }
 
-.btn-white { @include button-variant($brand-dark, #fff, #fff); }
+.btn-white { @include button-variant(theme-color("dark"), #fff, #fff); }
 .btn-outline-white { @include button-outline-variant(#fff, $body-color); }

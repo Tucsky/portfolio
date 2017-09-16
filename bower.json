@@ -9,11 +9,11 @@
   "homepage": "",
   "private": true,
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.5",
     "masonry": "^4.1.1",
     "owl.carousel": "^2.2.0",
     "flickity": "^2.0.5",
     "flickity-bg-lazyload": "^1.0.0",
-    "bowser": "^1.5.0"
+    "bowser": "^1.5.0",
+    "bootstrap": "v4.0.0-beta"
   }
 }

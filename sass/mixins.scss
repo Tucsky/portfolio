@@ -1,106 +1,72 @@
-@mixin button-outline-variant($color:#fff, $color-active:#fff) {
-	$border: $color !default;
+@mixin button-outline-variant($color, $color-hover: #fff) {
+  color: $color;
+  background-color: transparent;
+  background-image: none;
+  border-color: $color;
 
-	color: $color;
-	background-image: none;
-	background-color: transparent;
-	border-color: $color;
+  @include hover {
+    color: $color-hover;
+    background-color: $color;
+    border-color: $color;
+  }
 
-	@include hover {
-		color: $color-active;
-		background-color: $border;
-		border-color: $color;
-	}
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 0 3px rgba($color, .5);
+  }
 
-	&:focus,
-	&.focus {
-		color: $color-active;
-		background-color: $border;
-		border-color: $color;
-	}
+  &.disabled,
+  &:disabled {
+    color: $color;
+    background-color: transparent;
+  }
 
-	&:active,
-	&.active,
-	.open > &.dropdown-toggle {
-		color: $color-active;
-		background-color: $border;
-		border-color: $border;
-
-		&:hover,
-		&:focus,
-		&.focus {
-			color: $color-active;
-			background-color: darken($border, 17%);
-			border-color: darken($border, 17%);
-		}
-	}
-
-	&.disabled,
-	&:disabled {
-		&:focus,
-		&.focus {
-			border-color: lighten($border, 20%);
-		}
-		@include hover {
-			border-color: lighten($border, 20%);
-		}
-	}
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    color: $color-hover;
+    background-color: $color;
+    border-color: $color;
+  }
 }
 
+@mixin button-variant($background, $border, $active-background: darken($background, 7.5%), $active-border: darken($border, 10%)) {
+  @include color-yiq($background);
+  background-color: $background;
+  border-color: $border;
+  @include box-shadow($btn-box-shadow);
 
-@mixin button-variant($color, $background, $border) {
-	$active-background: darken($background, 10%);
-	$active-border: darken($background, 10%);
+  &:hover {
+    @include color-yiq($background);
+    background-color: $active-background;
+    border-color: $active-border;
+  }
 
-	color: $color;
-	background-color: $background;
-	border-color: $border;
-	@include box-shadow($btn-box-shadow);
+  &:focus,
+  &.focus {
+    // Avoid using mixin so we can pass custom focus shadow properly
+    @if $enable-shadows {
+      box-shadow: $btn-box-shadow, 0 0 0 3px rgba($border, .5);
+    } @else {
+      box-shadow: 0 0 0 3px rgba($border, .5);
+    }
+  }
 
-	@include hover {
-		color: $color;
-		background-color: $active-background;
-		border-color: $active-border;
-	}
+  // Disabled comes first so active can properly restyle
+  &.disabled,
+  &:disabled {
+    background-color: $background;
+    border-color: $border;
+  }
 
-	&:focus,
-	&.focus {
-		color: $color;
-		background-color: $active-background;
-		border-color: $active-border;
-	}
-
-	&:active,
-	&.active,
-	.open > &.dropdown-toggle {
-		color: $color;
-		background-color: $active-background;
-		border-color: $active-border;
-		// Remove the gradient for the pressed/active state
-		background-image: none;
-		@include box-shadow($btn-active-box-shadow);
-
-		&:hover,
-		&:focus,
-		&.focus {
-			color: $color;
-			background-color: darken($background, 17%);
-			border-color: darken($background, 17%);
-		}
-	}
-
-	&.disabled,
-	&:disabled {
-		&:focus,
-		&.focus {
-			background-color: $background;
-			border-color: $border;
-		}
-		@include hover {
-			background-color: $background;
-			border-color: $border;
-		}
-	}
+  &:active,
+  &.active,
+  .show > &.dropdown-toggle {
+    background-color: $active-background;
+    background-image: none; // Remove the gradient for the pressed/active state
+    border-color: $active-border;
+    @include box-shadow($btn-active-box-shadow);
+  }
 }
 
 @mixin linear-gradient($direction, $color-stops...) {

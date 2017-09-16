@@ -5,12 +5,18 @@ $font-family-serif: 'Droid Serif', serif;
 $body-color: #222;
 $pattern: 'fabric';
 
-$brand-primary: #EC9454;
-$brand-warning: #FABC41;
-$brand-success: #A1DE93;
-$brand-dark: #53435B;
-$brand-info: #70A1D7;
-$link-color: $brand-primary;
+$theme-colors: (
+  primary: #EC9454,
+  secondary: #868e96,
+  success: #A1DE93,
+  info: #70A1D7,
+  warning: #FABC41,
+  danger: #dc3545,
+  light:  #f8f9fa,
+  dark: #53435B
+);
+
+$link-color: map-get($theme-colors, 'primary');
 
 $grid-breakpoints: (
 	xs: 0,

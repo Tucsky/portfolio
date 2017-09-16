@@ -102,7 +102,7 @@
 	font-size: 1.5rem;
 	width: 40px;
 	height: 40px;
-	background-color: $brand-danger;
+	background-color: theme-color("danger");
 	border-radius: 50%;
 	transition: all .3s $ease-elastic;
 	cursor: pointer;
@@ -120,7 +120,7 @@
 	}
 
 	&:hover {
-		background-color: $brand-danger - 20%;
+		background-color: theme-color("danger") - 20%;
 		transform: scale(1.5);
 	}
 }

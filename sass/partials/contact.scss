@@ -20,12 +20,12 @@ section#contact {
 				}
 
 				&.social-ma {
-					background-color: $brand-primary;
+					background-color: theme-color("primary");
 					&:hover {
-						background-color: $brand-primary + 10%;
+						background-color: theme-color("primary") + 10%;
 					}
 					&:active {
-						background-color: $brand-primary + 17%;
+						background-color: theme-color("primary") + 17%;
 					}
 				}
 

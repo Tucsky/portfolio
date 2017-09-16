@@ -57,9 +57,13 @@
 		<meta name="robots" content="index">
 		<meta name="keywords" content="kevin rostagni, portfolio, web developer, freelance web developer, full stack developer">
 		<meta name="Indentifier-URL" content="https://kevinrostagni.me">
-		<meta name="theme-color" content="#EC9454">
-		<meta name="msapplication-navbutton-color" content="#EC9454">
-		<meta name="apple-mobile-web-app-status-bar-style" content="#EC9454">
+
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#112233">
+		<meta name="theme-color" content="#112233">
 
 		<title>Kevin Rostagni - Freelance developer</title>
 
@@ -96,12 +100,20 @@
 			
 		</div>
 		<div id="top">
-			<nav class="nav nav-inline">
-				<a class="nav-link active" href="#whoiam" data-label="Who Am I ?">Who Am I ?</a>
-				<a class="nav-link" href="#experiences" data-label="Experiences">Experiences</a>
-				<a class="nav-link" href="#portfolio" data-label="Portfolio">Portfolio</a>
-				<a class="nav-link" href="#contact" data-label="Get In Touch!">Get In Touch!</a>
-			</nav>
+			<div class="row">
+				<div class="col">
+					<a class="active" href="#whoiam" data-label="Who Am I ?">Who Am I ?</a>
+				</div>
+				<div class="col">
+					<a href="#experiences" data-label="Experiences">Experiences</a>
+				</div>
+				<div class="col">
+					<a href="#portfolio" data-label="Portfolio">Portfolio</a>
+				</div>
+				<div class="col">
+					<a href="#contact" data-label="Get In Touch!">Get In Touch!</a>
+				</div>
+			</div>
 		</div>
 		<div id="hi">
 			<div class="container">
@@ -112,11 +124,11 @@
 		<section id="whoiam">
 			<div class="container">
 				<h2>Who I am</h2>
-				<div class="row text-xs-center text-sm-left">
-					<div class="col-xs-12 col-sm-8"><p>I'm an avid programmer from France, passinate about code, design, startup and technology. I like science, travelling and music.</p></div>
-					<div class="col-xs-12 col-sm-8 offset-sm-4"><div class="strong">What I do</div><p>I craft websites since the age of 13, build mobile applications, manage servers, design innovative user interfaces / experiences, and will transform your ideas into a finished digital project.</p></div>
+				<div class="row text-center text-sm-left">
+					<div class="col-12 col-sm-8"><p>I'm an avid programmer from France, passinate about code, design, startup and technology. I like science, travelling and music.</p></div>
+					<div class="col-12 col-sm-8 ml-auto"><div class="strong">What I do</div><p>I craft websites since the age of 13, build mobile applications, manage servers, design innovative user interfaces / experiences, and will transform your ideas into a finished digital project.</p></div>
 				</div>
-				<p class="attention text-xs-center"><strong>Oh</strong> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever,<br><br>
+				<p class="attention text-center"><strong>Oh</strong> and I’m currently self-employed and available, so if you want to work with me or just say hello for no reason what so ever,<br><br>
 					<a href="#contact" class="btn btn-outline-info btn-lga"><i class="icon-chat"></i> Contact me :-)</a>
 					<span class="text-dark">or</span>
 					<a target="_blank" href="cv.pdf" class="btn btn-outline-danger"><i class="icon-cloud-download"></i> Download my CV</a>
@@ -124,7 +136,7 @@
 			</div>
 		</section>
 		<section id="experiences" class="section-odd">
-			<div class="container">
+			<div class="container-fluid w-75">
 				<h2>Experiences</h2>
 				<div id="timeline">
 					<div class="timeline-block">
@@ -247,9 +259,9 @@
 			<div class="container">
 				<h2>My works</h2>
 				<div class="row grid">
-					<div class="grid-sizer col-xs-12 col-sm-6 col-lg-4 col-xl-3"></div>
+					<div class="grid-sizer col-12 col-sm-6 col-lg-4 col-xl-3"></div>
 					<?php foreach ($projects as $project): ?>
-						<div class="grid-item col-xs-12 <?php echo (isset($project->cols) ? $project->cols : 'col-md-6 col-lg-4 col-xl-3').(isset($project->classes) ? ' '.$project->classes : ''); ?>">
+						<div class="grid-item col-12 <?php echo (isset($project->cols) ? $project->cols : 'col-md-6 col-lg-4 col-xl-3').(isset($project->classes) ? ' '.$project->classes : ''); ?>">
 							<div class="<?php echo isset($project->ratio) ? $project->ratio : 'four-three' ?>">
 								<div class="project">
 									<a data-dialog="<?php echo $project->slug; ?>" title="<?php echo $project->name; ?>" href="#" class="project-thumbnail">
@@ -295,7 +307,7 @@
 				<?php endif; ?>
 				<div class="dialog-padding">
 					<div class="row">
-						<div class="col-xs-12 col-sm-9 project-left">
+						<div class="col-12 col-sm-9 project-left">
 							<h2><?php echo $project->name; ?></h2>
 							<?php if (isset($project->description)):
 								if (file_exists($project->slug.'.project.php')):
@@ -308,7 +320,7 @@
 							<?php endif; 
 							endif; ?>
 						</div>
-						<div class="col-xs-12 col-sm-3 text-xs-left text-sm-right project-right">
+						<div class="col-12 col-sm-3 text-xs-left text-sm-right project-right">
 							<ul class="meta">
 								<?php if (isset($project->url)): ?>
 									<li><a target="_blank" href="<?php echo $project->url; ?>"><?php echo $project->_url; ?> <i class="icon-link"></i></a></li>

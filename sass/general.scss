@@ -12,6 +12,12 @@ body {
 			background-size: 410px;
 		}
 	}
+	@include media-breakpoint-up(lg) {
+		font-size: 1.2em;
+	}
+	@include media-breakpoint-up(xl) {
+		font-size: 1.4em;
+	}
 }
 
 .container {
@@ -22,7 +28,7 @@ body {
 		width: 75%;
 	}
 	@include media-breakpoint-up(md) {
-		width: 50%;
+		width: 60%;
 	}
 }
 

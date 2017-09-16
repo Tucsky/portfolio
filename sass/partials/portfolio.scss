@@ -57,7 +57,7 @@
 
 		div.project {
 			display: block;
-			background-color: $brand-primary;
+			background-color: theme-color("primary");
 			transition: all .4s ease-out;
 			box-shadow: 0px 0px rgba(0, 0, 0, .1);
 			@include background-pattern();
@@ -78,7 +78,7 @@
 				text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
 
 				i {
-					text-shadow: 0 0 2px $brand-danger;
+					text-shadow: 0 0 2px theme-color("danger");
 					top: -1px;
 					position: relative;
 				}

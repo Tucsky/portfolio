@@ -3,23 +3,24 @@
 	width: 100%;
 	text-align: center;
 	z-index: 1;
+	padding: 10%;
 	//@include linear-gradient(white, rgba(white, 0%));
 	//background-color: rgba(white, .7);
 
-	.nav {
-		margin: 3vh 0 15px;
+	@include media-breakpoint-up(lg) {
+		padding: 5% 25%;
+	}
 
-		@include media-breakpoint-up(sm) {
-			margin: 10vh 0 50px;
-			font-size: 1.1rem;
-		}
+	.row {    
+		font-size: 1.2em;
+		//margin: 3vh 0 15px;
 
 		@include media-breakpoint-up(md) {
-			font-size: 1.2rem;
+			font-size: 1.3em;
 		}
 
 		@include media-breakpoint-up(lg) {
-			font-size: 1.4rem;
+			font-size: 1.4em;
 		}
 
 		&:hover {
@@ -35,6 +36,19 @@
 			text-transform: uppercase;
 			transform-origin: bottom;
 			position: relative;
+			white-space: nowrap;
+			padding: 10% 0;
+			text-decoration: none;
+			display: block;
+
+			@include media-breakpoint-up(sm) {
+				padding: 5% 0;
+			}
+
+			@include media-breakpoint-up(lg) {
+				font-weight: 400;
+				padding: 0%;
+			}
 
 			&:before, &:after {
 				content: attr(data-label);
