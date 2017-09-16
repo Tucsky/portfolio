@@ -30,23 +30,23 @@
 	}
 }
 
-.btn-primary { @include button-variant(#fff, theme-color("primary"), theme-color("primary")); }
+.btn-primary { @include button-variant(theme-color("primary"), theme-color("primary")); }
 .btn-outline-primary { @include button-outline-variant(theme-color("primary")); }
 
-.btn-success { @include button-variant(#fff, theme-color("success"), theme-color("success")); }
+.btn-success { @include button-variant(theme-color("success"), theme-color("success")); }
 .btn-outline-success { @include button-outline-variant(theme-color("success")); }
 
-.btn-warning { @include button-variant(#fff, theme-color("warning"), theme-color("warning")); }
+.btn-warning { @include button-variant(theme-color("warning"), theme-color("warning")); }
 .btn-outline-warning { @include button-outline-variant(theme-color("warning")); }
 
-.btn-info { @include button-variant(#fff, theme-color("info"), theme-color("info")); }
+.btn-info { @include button-variant(theme-color("info"), theme-color("info")); }
 .btn-outline-info { @include button-outline-variant(theme-color("info")); }
 
-.btn-danger { @include button-variant(#fff, theme-color("danger"), theme-color("danger")); }
+.btn-danger { @include button-variant(theme-color("danger"), theme-color("danger")); }
 .btn-outline-danger { @include button-outline-variant(theme-color("danger")); }
 
-.btn-dark { @include button-variant(#fff, theme-color("dark"), theme-color("dark")); }
+.btn-dark { @include button-variant(theme-color("dark"), theme-color("dark")); }
 .btn-outline-dark { @include button-outline-variant(theme-color("dark")); }
 
-.btn-white { @include button-variant(theme-color("dark"), #fff, #fff); }
+.btn-white { @include button-variant(theme-color("dark"), #fff); }
 .btn-outline-white { @include button-outline-variant(#fff, $body-color); }

@@ -136,7 +136,7 @@
 			</div>
 		</section>
 		<section id="experiences" class="section-odd">
-			<div class="container-fluid w-75">
+			<div class="container-fluid">
 				<h2>Experiences</h2>
 				<div id="timeline">
 					<div class="timeline-block">

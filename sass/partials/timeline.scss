@@ -28,6 +28,14 @@ $color-3: #ffffff; // white
 $color-4: #75ce66; // green
 $color-5: #f0ca45; // yellow
 
+#experiences {
+	.container-fluid {
+		@include media-breakpoint-up(md) {
+			width: 75%;
+		}
+	}
+}
+
 #timeline {
 	position: relative;
 	padding: 2em 0;
@@ -163,7 +171,7 @@ $color-5: #f0ca45; // yellow
 	background: $color-3;
 	padding: 1em;
 	clear: both;
-	color: $gray-700;
+	color: $gray-800;
 
 	h3 {
 		font-family: $font-family-sans-serif;
@@ -228,7 +236,7 @@ $color-5: #f0ca45; // yellow
 			position: absolute;
 			width: 100%;
 			left: 130%;
-			top: 6px;
+			top: 0;
 			padding: .8em 0;
 		}
 

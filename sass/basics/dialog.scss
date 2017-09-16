@@ -116,7 +116,8 @@
 		content: icon-char(times);
 		position: relative;
 		color: white;
-		display: inline-block;
+		display: inline-block;    
+		top: -1px;
 	}
 
 	&:hover {
