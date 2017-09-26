@@ -10,6 +10,10 @@
 		top: 50%;
 		transform: translateY(-50%);
 		max-width: 780px;
+
+		@include media-breakpoint-down(sm) {
+			padding: 0 20%;
+		}
 	}
 
 	h1 {
@@ -30,6 +34,14 @@
 			z-index: 1;
 			position: relative;
 			color: white;
+		}
+
+		@include media-breakpoint-up(lg) {
+			font-size: 3em;
+		}
+
+		@include media-breakpoint-up(xl) {
+			font-size: 2.5em;
 		}
 	}
 
